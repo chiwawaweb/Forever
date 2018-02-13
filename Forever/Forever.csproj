@@ -31,6 +31,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon_forever_64.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
@@ -67,19 +70,19 @@
     <Compile Include="Forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\OrderEditform.cs">
+    <Compile Include="Forms\OrderEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\OrderEditform.Designer.cs">
-      <DependentUpon>OrderEditform.cs</DependentUpon>
+    <Compile Include="Forms\OrderEditForm.Designer.cs">
+      <DependentUpon>OrderEditForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\OrderEditform.resx">
-      <DependentUpon>OrderEditform.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\OrderEditForm.resx">
+      <DependentUpon>OrderEditForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -119,6 +122,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icon_forever_128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_forever_64.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icon_forever_64.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -13,14 +13,29 @@ namespace Forever.Forms
 {
     public partial class MainForm : Form
     {
-
-
         public MainForm()
         {
             InitializeComponent();
 
             OrderProvider orderProvider = new OrderProvider();
             orderProvider.CountAll();
+        }
+
+        private void TsbNewOrder_Click(object sender, EventArgs e)
+        {
+            OpenOrderForm();
+        }
+
+        private void OpenOrderForm()
+        {
+            if (Application.OpenForms["OrderEditForm"] == null)
+            {
+                OrderEditForm orderEditForm = new OrderEditForm()
+                {
+                    MdiParent = this
+                };
+                orderEditForm.Show();
+            }
         }
     }
 }

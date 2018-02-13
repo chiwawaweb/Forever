@@ -10,11 +10,13 @@ using System.Windows.Forms;
 
 namespace Forever.Forms
 {
-    public partial class OrderEditform : Form
+    public partial class OrderEditForm : Form
     {
-        public OrderEditform()
+        public OrderEditForm()
         {
             InitializeComponent();
         }
+
+
     }
 }
