@@ -56,6 +56,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAL\Context.cs" />
+    <Compile Include="DAL\OrderProvider.cs" />
     <Compile Include="DTO\Order.cs" />
     <Compile Include="Forms\MainForm.cs">
       <SubType>Form</SubType>
