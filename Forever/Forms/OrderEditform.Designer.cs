@@ -1,6 +1,6 @@
 ﻿namespace Forever.Forms
 {
-    partial class MainForm
+    partial class OrderEditform
     {
         /// <summary>
         /// Required designer variable.
@@ -30,14 +30,13 @@
         {
             this.SuspendLayout();
             // 
-            // MainForm
+            // OrderEditform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(807, 605);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "MainForm";
-            this.Text = "Forever";
+            this.ClientSize = new System.Drawing.Size(889, 719);
+            this.Name = "OrderEditform";
+            this.Text = "OrderEditform";
             this.ResumeLayout(false);
 
         }
