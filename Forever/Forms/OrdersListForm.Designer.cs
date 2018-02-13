@@ -41,7 +41,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "OrdersListForm";
             this.ShowInTaskbar = false;
-            this.Text = "OrdersListForm";
+            this.Text = "Commandes";
             this.ResumeLayout(false);
 
         }

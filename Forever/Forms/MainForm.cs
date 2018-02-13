@@ -19,6 +19,13 @@ namespace Forever.Forms
 
             OrderProvider orderProvider = new OrderProvider();
             orderProvider.CountAll();
+
+            OpenListeCommandes();
+        }
+
+        private void OpenListeCommandes()
+        {
+            //////////////
         }
 
         private void TsbNewOrder_Click(object sender, EventArgs e)
