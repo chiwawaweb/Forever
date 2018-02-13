@@ -37,5 +37,10 @@ namespace Forever.Forms
                 orderEditForm.Show();
             }
         }
+
+        private void quitterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

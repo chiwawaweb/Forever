@@ -10,6 +10,7 @@ namespace Forever.DTO
     {
         public int? Id { get; set; }
         public DateTime Date { get; set; }
+        public string Vendeur { get; set; }
         public string Nom { get; set; }
         public string Prenom { get; set; }
         public string Adresse { get; set; }
