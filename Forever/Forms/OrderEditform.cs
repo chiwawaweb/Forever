@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Forever.DAL;
+using Forever.DTO;
+using Forever.Classes;
 
 namespace Forever.Forms
 {
@@ -16,13 +19,18 @@ namespace Forever.Forms
         int _id;
 
         MainForm _owner;
+        OrderProvider orderProvider = new OrderProvider();
+        Utils utils = new Utils();
 
         public OrderEditForm(MainForm owner, bool update, int id=0)
         {
             _owner = owner;
             _id = id;
 
+
+            FormClosed += new FormClosedEventHandler(OrderEditForm_FormClosed);
             InitializeComponent();
+            
         }
 
         private void BtnAnnuler_Click(object sender, EventArgs e)
@@ -32,7 +40,7 @@ namespace Forever.Forms
 
         private void OrderEditForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            //_owner.RefreshData();
+            _owner.RefreshData();
         }
     }
 }
