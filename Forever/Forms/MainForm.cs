@@ -56,14 +56,10 @@ namespace Forever.Forms
 
         private void OpenOrderForm()
         {
-            if (Application.OpenForms["OrderEditForm"] == null)
-            {
-                OrderEditForm orderEditForm = new OrderEditForm()
-                {
-                    MdiParent = this
-                };
-                orderEditForm.Show();
-            }
+
+            OrderEditForm orderEditForm = new OrderEditForm();
+            orderEditForm.ShowDialog();
+            
         }
 
         private void quitterToolStripMenuItem_Click(object sender, EventArgs e)
