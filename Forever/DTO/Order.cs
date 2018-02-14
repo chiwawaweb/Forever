@@ -29,7 +29,7 @@ namespace Forever.DTO
         public int NbNegatifs { get; set; }
         public bool DvdStandard { get; set; }
         public bool DvdPersonnalise { get; set; }
-        public int NbCopySupp { get; set; }
+        public int NbCopiesSupp { get; set; }
         public bool MontageAvi { get; set; }
         public bool CleUsb { get; set; }
         public bool Hdd { get; set; }

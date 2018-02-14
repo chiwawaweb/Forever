@@ -49,10 +49,9 @@
             this.ToolStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.ToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.TsbNewOrder});
-            this.ToolStrip.Location = new System.Drawing.Point(0, 35);
+            this.ToolStrip.Location = new System.Drawing.Point(0, 24);
             this.ToolStrip.Name = "ToolStrip";
-            this.ToolStrip.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
-            this.ToolStrip.Size = new System.Drawing.Size(807, 32);
+            this.ToolStrip.Size = new System.Drawing.Size(628, 31);
             this.ToolStrip.TabIndex = 0;
             this.ToolStrip.Text = "toolStrip1";
             // 
@@ -61,17 +60,17 @@
             this.TsbNewOrder.Image = global::Forever.Properties.Resources.icon_new_24;
             this.TsbNewOrder.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.TsbNewOrder.Name = "TsbNewOrder";
-            this.TsbNewOrder.Size = new System.Drawing.Size(204, 29);
+            this.TsbNewOrder.Size = new System.Drawing.Size(146, 28);
             this.TsbNewOrder.Text = "Nouvelle commande";
             this.TsbNewOrder.Click += new System.EventHandler(this.TsbNewOrder_Click);
             // 
             // StatusStrip
             // 
             this.StatusStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.StatusStrip.Location = new System.Drawing.Point(0, 583);
+            this.StatusStrip.Location = new System.Drawing.Point(0, 462);
             this.StatusStrip.Name = "StatusStrip";
-            this.StatusStrip.Padding = new System.Windows.Forms.Padding(2, 0, 21, 0);
-            this.StatusStrip.Size = new System.Drawing.Size(807, 22);
+            this.StatusStrip.Padding = new System.Windows.Forms.Padding(1, 0, 16, 0);
+            this.StatusStrip.Size = new System.Drawing.Size(628, 22);
             this.StatusStrip.SizingGrip = false;
             this.StatusStrip.TabIndex = 1;
             this.StatusStrip.Text = "statusStrip1";
@@ -83,8 +82,8 @@
             this.fichiersToolStripMenuItem});
             this.MenuStrip.Location = new System.Drawing.Point(0, 0);
             this.MenuStrip.Name = "MenuStrip";
-            this.MenuStrip.Padding = new System.Windows.Forms.Padding(9, 3, 0, 3);
-            this.MenuStrip.Size = new System.Drawing.Size(807, 35);
+            this.MenuStrip.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
+            this.MenuStrip.Size = new System.Drawing.Size(628, 24);
             this.MenuStrip.TabIndex = 3;
             this.MenuStrip.Text = "menuStrip1";
             // 
@@ -93,13 +92,13 @@
             this.fichiersToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.quitterToolStripMenuItem});
             this.fichiersToolStripMenuItem.Name = "fichiersToolStripMenuItem";
-            this.fichiersToolStripMenuItem.Size = new System.Drawing.Size(82, 29);
+            this.fichiersToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
             this.fichiersToolStripMenuItem.Text = "Fichiers";
             // 
             // quitterToolStripMenuItem
             // 
             this.quitterToolStripMenuItem.Name = "quitterToolStripMenuItem";
-            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(151, 30);
+            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
             this.quitterToolStripMenuItem.Text = "Quitter";
             this.quitterToolStripMenuItem.Click += new System.EventHandler(this.quitterToolStripMenuItem_Click);
             // 
@@ -115,7 +114,8 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DgvOrders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvOrders.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.DgvOrders.Location = new System.Drawing.Point(0, 140);
+            this.DgvOrders.Location = new System.Drawing.Point(0, 112);
+            this.DgvOrders.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.DgvOrders.Name = "DgvOrders";
             this.DgvOrders.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.DgvOrders.RowTemplate.Height = 28;
@@ -124,39 +124,44 @@
             this.DgvOrders.ShowCellToolTips = false;
             this.DgvOrders.ShowEditingIcon = false;
             this.DgvOrders.ShowRowErrors = false;
-            this.DgvOrders.Size = new System.Drawing.Size(807, 440);
+            this.DgvOrders.Size = new System.Drawing.Size(628, 352);
             this.DgvOrders.TabIndex = 5;
+            this.DgvOrders.TabStop = false;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 101);
+            this.label1.Location = new System.Drawing.Point(9, 81);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(95, 20);
+            this.label1.Size = new System.Drawing.Size(78, 16);
             this.label1.TabIndex = 6;
             this.label1.Text = "Recherche :";
             // 
             // TxtSearch
             // 
-            this.TxtSearch.Location = new System.Drawing.Point(113, 98);
+            this.TxtSearch.Location = new System.Drawing.Point(87, 79);
+            this.TxtSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TxtSearch.Name = "TxtSearch";
-            this.TxtSearch.Size = new System.Drawing.Size(313, 26);
+            this.TxtSearch.Size = new System.Drawing.Size(244, 22);
             this.TxtSearch.TabIndex = 7;
             // 
             // BtnSearch
             // 
-            this.BtnSearch.Location = new System.Drawing.Point(433, 97);
+            this.BtnSearch.Location = new System.Drawing.Point(337, 77);
+            this.BtnSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnSearch.Name = "BtnSearch";
-            this.BtnSearch.Size = new System.Drawing.Size(154, 27);
+            this.BtnSearch.Size = new System.Drawing.Size(77, 26);
             this.BtnSearch.TabIndex = 8;
             this.BtnSearch.Text = "Chercher";
             this.BtnSearch.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AcceptButton = this.BtnSearch;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(807, 605);
+            this.ClientSize = new System.Drawing.Size(628, 484);
             this.Controls.Add(this.BtnSearch);
             this.Controls.Add(this.TxtSearch);
             this.Controls.Add(this.label1);
@@ -164,9 +169,10 @@
             this.Controls.Add(this.StatusStrip);
             this.Controls.Add(this.ToolStrip);
             this.Controls.Add(this.MenuStrip);
+            this.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.MenuStrip;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Forever";
