@@ -105,6 +105,7 @@
             // 
             // TxtPrenom
             // 
+            this.TxtPrenom.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.TxtPrenom.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold);
             this.TxtPrenom.Location = new System.Drawing.Point(97, 66);
             this.TxtPrenom.Margin = new System.Windows.Forms.Padding(4);
@@ -115,6 +116,7 @@
             // 
             // textBox3
             // 
+            this.textBox3.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBox3.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold);
             this.textBox3.Location = new System.Drawing.Point(97, 100);
             this.textBox3.Margin = new System.Windows.Forms.Padding(4);
@@ -125,6 +127,7 @@
             // 
             // textBox4
             // 
+            this.textBox4.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBox4.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold);
             this.textBox4.Location = new System.Drawing.Point(97, 132);
             this.textBox4.Margin = new System.Windows.Forms.Padding(4);
@@ -135,6 +138,7 @@
             // 
             // textBox5
             // 
+            this.textBox5.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBox5.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold);
             this.textBox5.Location = new System.Drawing.Point(204, 132);
             this.textBox5.Margin = new System.Windows.Forms.Padding(4);
@@ -145,6 +149,7 @@
             // 
             // textBox6
             // 
+            this.textBox6.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
             this.textBox6.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold);
             this.textBox6.Location = new System.Drawing.Point(97, 223);
             this.textBox6.Margin = new System.Windows.Forms.Padding(4);
