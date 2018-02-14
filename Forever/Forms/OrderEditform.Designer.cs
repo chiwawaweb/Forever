@@ -277,7 +277,7 @@
             // TxtCopiesSupp
             // 
             this.TxtCopiesSupp.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold);
-            this.TxtCopiesSupp.Location = new System.Drawing.Point(152, 85);
+            this.TxtCopiesSupp.Location = new System.Drawing.Point(150, 85);
             this.TxtCopiesSupp.Margin = new System.Windows.Forms.Padding(4);
             this.TxtCopiesSupp.Name = "TxtCopiesSupp";
             this.TxtCopiesSupp.Size = new System.Drawing.Size(32, 26);
@@ -576,7 +576,7 @@
             // LblCopiesSupp
             // 
             this.LblCopiesSupp.AutoSize = true;
-            this.LblCopiesSupp.Location = new System.Drawing.Point(45, 85);
+            this.LblCopiesSupp.Location = new System.Drawing.Point(45, 92);
             this.LblCopiesSupp.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblCopiesSupp.Name = "LblCopiesSupp";
             this.LblCopiesSupp.Size = new System.Drawing.Size(99, 16);
