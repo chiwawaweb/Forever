@@ -61,6 +61,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Utils.cs" />
     <Compile Include="DAL\Context.cs" />
     <Compile Include="DAL\OrderProvider.cs" />
     <Compile Include="DTO\Order.cs" />
@@ -76,12 +77,6 @@
     <Compile Include="Forms\OrderEditForm.Designer.cs">
       <DependentUpon>OrderEditForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\OrdersListForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\OrdersListForm.Designer.cs">
-      <DependentUpon>OrdersListForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\MainForm.resx">
@@ -89,9 +84,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\OrderEditForm.resx">
       <DependentUpon>OrderEditForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\OrdersListForm.resx">
-      <DependentUpon>OrdersListForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -117,9 +109,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Classes\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\icon_forever_16.png" />
   </ItemGroup>

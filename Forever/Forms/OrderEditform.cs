@@ -12,8 +12,16 @@ namespace Forever.Forms
 {
     public partial class OrderEditForm : Form
     {
-        public OrderEditForm()
+        /* Déclaration des variables */
+        int _id;
+
+        MainForm _owner;
+
+        public OrderEditForm(MainForm owner, bool update, int id=0)
         {
+            _owner = owner;
+            _id = id;
+
             InitializeComponent();
         }
 
@@ -22,6 +30,9 @@ namespace Forever.Forms
             Close();
         }
 
-
+        private void OrderEditForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            //_owner.RefreshData();
+        }
     }
 }

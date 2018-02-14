@@ -35,8 +35,13 @@
             this.MenuStrip = new System.Windows.Forms.MenuStrip();
             this.fichiersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.DgvOrders = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.TxtSearch = new System.Windows.Forms.TextBox();
+            this.BtnSearch = new System.Windows.Forms.Button();
             this.ToolStrip.SuspendLayout();
             this.MenuStrip.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvOrders)).BeginInit();
             this.SuspendLayout();
             // 
             // ToolStrip
@@ -98,16 +103,68 @@
             this.quitterToolStripMenuItem.Text = "Quitter";
             this.quitterToolStripMenuItem.Click += new System.EventHandler(this.quitterToolStripMenuItem_Click);
             // 
+            // DgvOrders
+            // 
+            this.DgvOrders.AllowUserToAddRows = false;
+            this.DgvOrders.AllowUserToDeleteRows = false;
+            this.DgvOrders.AllowUserToOrderColumns = true;
+            this.DgvOrders.AllowUserToResizeColumns = false;
+            this.DgvOrders.AllowUserToResizeRows = false;
+            this.DgvOrders.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.DgvOrders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvOrders.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.DgvOrders.Location = new System.Drawing.Point(0, 140);
+            this.DgvOrders.Name = "DgvOrders";
+            this.DgvOrders.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.DgvOrders.RowTemplate.Height = 28;
+            this.DgvOrders.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DgvOrders.ShowCellErrors = false;
+            this.DgvOrders.ShowCellToolTips = false;
+            this.DgvOrders.ShowEditingIcon = false;
+            this.DgvOrders.ShowRowErrors = false;
+            this.DgvOrders.Size = new System.Drawing.Size(807, 440);
+            this.DgvOrders.TabIndex = 5;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 101);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(95, 20);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Recherche :";
+            // 
+            // TxtSearch
+            // 
+            this.TxtSearch.Location = new System.Drawing.Point(113, 98);
+            this.TxtSearch.Name = "TxtSearch";
+            this.TxtSearch.Size = new System.Drawing.Size(313, 26);
+            this.TxtSearch.TabIndex = 7;
+            // 
+            // BtnSearch
+            // 
+            this.BtnSearch.Location = new System.Drawing.Point(433, 97);
+            this.BtnSearch.Name = "BtnSearch";
+            this.BtnSearch.Size = new System.Drawing.Size(154, 27);
+            this.BtnSearch.TabIndex = 8;
+            this.BtnSearch.Text = "Chercher";
+            this.BtnSearch.UseVisualStyleBackColor = true;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(807, 605);
+            this.Controls.Add(this.BtnSearch);
+            this.Controls.Add(this.TxtSearch);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.DgvOrders);
             this.Controls.Add(this.StatusStrip);
             this.Controls.Add(this.ToolStrip);
             this.Controls.Add(this.MenuStrip);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.IsMdiContainer = true;
             this.MainMenuStrip = this.MenuStrip;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "MainForm";
@@ -118,6 +175,7 @@
             this.ToolStrip.PerformLayout();
             this.MenuStrip.ResumeLayout(false);
             this.MenuStrip.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvOrders)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -131,5 +189,9 @@
         private System.Windows.Forms.MenuStrip MenuStrip;
         private System.Windows.Forms.ToolStripMenuItem fichiersToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quitterToolStripMenuItem;
+        private System.Windows.Forms.DataGridView DgvOrders;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox TxtSearch;
+        private System.Windows.Forms.Button BtnSearch;
     }
 }

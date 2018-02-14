@@ -86,7 +86,7 @@
             this.LblNom.Location = new System.Drawing.Point(51, 41);
             this.LblNom.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblNom.Name = "LblNom";
-            this.LblNom.Size = new System.Drawing.Size(44, 16);
+            this.LblNom.Size = new System.Drawing.Size(62, 23);
             this.LblNom.TabIndex = 0;
             this.LblNom.Text = "Nom :";
             // 
@@ -98,7 +98,7 @@
             this.TxtNom.Margin = new System.Windows.Forms.Padding(4);
             this.TxtNom.MaxLength = 27;
             this.TxtNom.Name = "TxtNom";
-            this.TxtNom.Size = new System.Drawing.Size(295, 26);
+            this.TxtNom.Size = new System.Drawing.Size(295, 36);
             this.TxtNom.TabIndex = 0;
             // 
             // CbxVendeur
@@ -108,7 +108,7 @@
             this.CbxVendeur.Location = new System.Drawing.Point(128, 13);
             this.CbxVendeur.Margin = new System.Windows.Forms.Padding(4);
             this.CbxVendeur.Name = "CbxVendeur";
-            this.CbxVendeur.Size = new System.Drawing.Size(178, 27);
+            this.CbxVendeur.Size = new System.Drawing.Size(178, 36);
             this.CbxVendeur.TabIndex = 0;
             // 
             // TxtPrenom
@@ -119,7 +119,7 @@
             this.TxtPrenom.Margin = new System.Windows.Forms.Padding(4);
             this.TxtPrenom.MaxLength = 27;
             this.TxtPrenom.Name = "TxtPrenom";
-            this.TxtPrenom.Size = new System.Drawing.Size(295, 26);
+            this.TxtPrenom.Size = new System.Drawing.Size(295, 36);
             this.TxtPrenom.TabIndex = 1;
             // 
             // textBox3
@@ -130,7 +130,7 @@
             this.textBox3.Margin = new System.Windows.Forms.Padding(4);
             this.textBox3.MaxLength = 27;
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(252, 26);
+            this.textBox3.Size = new System.Drawing.Size(252, 36);
             this.textBox3.TabIndex = 2;
             // 
             // textBox4
@@ -141,7 +141,7 @@
             this.textBox4.Margin = new System.Windows.Forms.Padding(4);
             this.textBox4.MaxLength = 5;
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(55, 26);
+            this.textBox4.Size = new System.Drawing.Size(55, 36);
             this.textBox4.TabIndex = 3;
             // 
             // textBox5
@@ -152,7 +152,7 @@
             this.textBox5.Margin = new System.Windows.Forms.Padding(4);
             this.textBox5.MaxLength = 20;
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(189, 26);
+            this.textBox5.Size = new System.Drawing.Size(189, 36);
             this.textBox5.TabIndex = 4;
             // 
             // textBox6
@@ -163,7 +163,7 @@
             this.textBox6.Margin = new System.Windows.Forms.Padding(4);
             this.textBox6.MaxLength = 54;
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(296, 26);
+            this.textBox6.Size = new System.Drawing.Size(296, 36);
             this.textBox6.TabIndex = 7;
             // 
             // textBox7
@@ -173,7 +173,7 @@
             this.textBox7.Margin = new System.Windows.Forms.Padding(4);
             this.textBox7.MaxLength = 2;
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(32, 26);
+            this.textBox7.Size = new System.Drawing.Size(32, 36);
             this.textBox7.TabIndex = 0;
             this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -184,7 +184,7 @@
             this.textBox8.Margin = new System.Windows.Forms.Padding(4);
             this.textBox8.MaxLength = 2;
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(32, 26);
+            this.textBox8.Size = new System.Drawing.Size(32, 36);
             this.textBox8.TabIndex = 1;
             this.textBox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -195,7 +195,7 @@
             this.textBox9.Margin = new System.Windows.Forms.Padding(4);
             this.textBox9.MaxLength = 4;
             this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(52, 26);
+            this.textBox9.Size = new System.Drawing.Size(52, 36);
             this.textBox9.TabIndex = 4;
             this.textBox9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -206,7 +206,7 @@
             this.textBox10.Margin = new System.Windows.Forms.Padding(4);
             this.textBox10.MaxLength = 4;
             this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(52, 26);
+            this.textBox10.Size = new System.Drawing.Size(52, 36);
             this.textBox10.TabIndex = 5;
             this.textBox10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -217,7 +217,7 @@
             this.textBox11.Margin = new System.Windows.Forms.Padding(4);
             this.textBox11.MaxLength = 4;
             this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(52, 26);
+            this.textBox11.Size = new System.Drawing.Size(52, 36);
             this.textBox11.TabIndex = 6;
             this.textBox11.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -228,7 +228,7 @@
             this.textBox12.Margin = new System.Windows.Forms.Padding(4);
             this.textBox12.MaxLength = 4;
             this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(52, 26);
+            this.textBox12.Size = new System.Drawing.Size(52, 36);
             this.textBox12.TabIndex = 7;
             this.textBox12.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -239,7 +239,7 @@
             this.checkBox3.Location = new System.Drawing.Point(32, 33);
             this.checkBox3.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(133, 20);
+            this.checkBox3.Size = new System.Drawing.Size(184, 27);
             this.checkBox3.TabIndex = 0;
             this.checkBox3.Text = "DVD standard(s)";
             this.checkBox3.UseVisualStyleBackColor = true;
@@ -251,7 +251,7 @@
             this.checkBox4.Location = new System.Drawing.Point(7, 61);
             this.checkBox4.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(158, 20);
+            this.checkBox4.Size = new System.Drawing.Size(217, 27);
             this.checkBox4.TabIndex = 1;
             this.checkBox4.Text = "DVD personnalisé(s)";
             this.checkBox4.UseVisualStyleBackColor = true;
@@ -263,7 +263,7 @@
             this.checkBox5.Location = new System.Drawing.Point(215, 33);
             this.checkBox5.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(192, 20);
+            this.checkBox5.Size = new System.Drawing.Size(264, 27);
             this.checkBox5.TabIndex = 3;
             this.checkBox5.Text = "Fichiers de montage (.avi)";
             this.checkBox5.UseVisualStyleBackColor = true;
@@ -274,7 +274,7 @@
             this.textBox13.Location = new System.Drawing.Point(152, 85);
             this.textBox13.Margin = new System.Windows.Forms.Padding(4);
             this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(32, 26);
+            this.textBox13.Size = new System.Drawing.Size(32, 36);
             this.textBox13.TabIndex = 2;
             this.textBox13.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -285,7 +285,7 @@
             this.checkBox6.Location = new System.Drawing.Point(266, 61);
             this.checkBox6.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(141, 20);
+            this.checkBox6.Size = new System.Drawing.Size(200, 27);
             this.checkBox6.TabIndex = 4;
             this.checkBox6.Text = "Clé USB (MPEG4)";
             this.checkBox6.UseVisualStyleBackColor = true;
@@ -297,7 +297,7 @@
             this.checkBox7.Location = new System.Drawing.Point(471, 33);
             this.checkBox7.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(167, 20);
+            this.checkBox7.Size = new System.Drawing.Size(226, 27);
             this.checkBox7.TabIndex = 5;
             this.checkBox7.Text = "Disque dur numérique";
             this.checkBox7.UseVisualStyleBackColor = true;
@@ -309,7 +309,7 @@
             this.checkBox8.Location = new System.Drawing.Point(462, 61);
             this.checkBox8.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(176, 20);
+            this.checkBox8.Size = new System.Drawing.Size(241, 27);
             this.checkBox8.TabIndex = 6;
             this.checkBox8.Text = "Lien de téléchargement";
             this.checkBox8.UseVisualStyleBackColor = true;
@@ -320,7 +320,7 @@
             this.label2.Location = new System.Drawing.Point(448, 41);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 16);
+            this.label2.Size = new System.Drawing.Size(90, 23);
             this.label2.TabIndex = 23;
             this.label2.Text = "Prénom :";
             // 
@@ -330,7 +330,7 @@
             this.label3.Location = new System.Drawing.Point(27, 75);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(68, 16);
+            this.label3.Size = new System.Drawing.Size(95, 23);
             this.label3.TabIndex = 23;
             this.label3.Text = "Adresse :";
             // 
@@ -340,7 +340,7 @@
             this.label4.Location = new System.Drawing.Point(421, 75);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(92, 16);
+            this.label4.Size = new System.Drawing.Size(128, 23);
             this.label4.TabIndex = 23;
             this.label4.Text = "Code postal :";
             // 
@@ -350,7 +350,7 @@
             this.label5.Location = new System.Drawing.Point(463, 108);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(50, 16);
+            this.label5.Size = new System.Drawing.Size(70, 23);
             this.label5.TabIndex = 23;
             this.label5.Text = "Email :";
             // 
@@ -360,7 +360,7 @@
             this.label6.Location = new System.Drawing.Point(577, 75);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(42, 16);
+            this.label6.Size = new System.Drawing.Size(58, 23);
             this.label6.TabIndex = 24;
             this.label6.Text = "Ville :";
             // 
@@ -370,7 +370,7 @@
             this.label7.Location = new System.Drawing.Point(216, 108);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(69, 16);
+            this.label7.Size = new System.Drawing.Size(96, 23);
             this.label7.TabIndex = 28;
             this.label7.Text = "Portable :";
             // 
@@ -380,7 +380,7 @@
             this.label8.Location = new System.Drawing.Point(10, 108);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(84, 16);
+            this.label8.Size = new System.Drawing.Size(113, 23);
             this.label8.TabIndex = 27;
             this.label8.Text = "Téléphone :";
             // 
@@ -391,7 +391,7 @@
             this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.MaxLength = 10;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(99, 26);
+            this.textBox1.Size = new System.Drawing.Size(99, 36);
             this.textBox1.TabIndex = 6;
             // 
             // textBox2
@@ -401,7 +401,7 @@
             this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.MaxLength = 10;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(99, 26);
+            this.textBox2.Size = new System.Drawing.Size(99, 36);
             this.textBox2.TabIndex = 5;
             // 
             // label1
@@ -410,7 +410,7 @@
             this.label1.Location = new System.Drawing.Point(57, 18);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 16);
+            this.label1.Size = new System.Drawing.Size(94, 23);
             this.label1.TabIndex = 29;
             this.label1.Text = "Vendeur :";
             // 
@@ -469,7 +469,7 @@
             this.radioButton2.AutoSize = true;
             this.radioButton2.Location = new System.Drawing.Point(728, 33);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(92, 20);
+            this.radioButton2.Size = new System.Drawing.Size(126, 27);
             this.radioButton2.TabIndex = 3;
             this.radioButton2.Text = "Sur papier";
             this.radioButton2.UseVisualStyleBackColor = true;
@@ -480,7 +480,7 @@
             this.radioButton1.Checked = true;
             this.radioButton1.Location = new System.Drawing.Point(622, 33);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(100, 20);
+            this.radioButton1.Size = new System.Drawing.Size(136, 27);
             this.radioButton1.TabIndex = 2;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Sur internet";
@@ -491,7 +491,7 @@
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(217, 35);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(171, 16);
+            this.label13.Size = new System.Drawing.Size(241, 23);
             this.label13.TabIndex = 10;
             this.label13.Text = "Nombre de CASSETTES :";
             // 
@@ -500,7 +500,7 @@
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(17, 35);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(148, 16);
+            this.label10.Size = new System.Drawing.Size(212, 23);
             this.label10.TabIndex = 8;
             this.label10.Text = "Nombre de BOBINES :";
             // 
@@ -509,7 +509,7 @@
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(433, 35);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(174, 16);
+            this.label14.Size = new System.Drawing.Size(239, 23);
             this.label14.TabIndex = 12;
             this.label14.Text = "Personnalisation du DVD :";
             // 
@@ -518,7 +518,7 @@
             this.label16.AutoSize = true;
             this.label16.Location = new System.Drawing.Point(501, 146);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(107, 16);
+            this.label16.Size = new System.Drawing.Size(149, 23);
             this.label16.TabIndex = 16;
             this.label16.Text = "Nb de négatifs :";
             // 
@@ -527,7 +527,7 @@
             this.label15.AutoSize = true;
             this.label15.Location = new System.Drawing.Point(508, 112);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(100, 16);
+            this.label15.Size = new System.Drawing.Size(139, 23);
             this.label15.TabIndex = 15;
             this.label15.Text = "Nb de photos :";
             // 
@@ -536,7 +536,7 @@
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(508, 78);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(99, 16);
+            this.label12.Size = new System.Drawing.Size(138, 23);
             this.label12.TabIndex = 14;
             this.label12.Text = "Nb de diapos :";
             // 
@@ -545,7 +545,7 @@
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(26, 78);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(190, 16);
+            this.label11.Size = new System.Drawing.Size(260, 23);
             this.label11.TabIndex = 13;
             this.label11.Text = "Nb unités conditionnements :";
             // 
@@ -572,7 +572,7 @@
             this.label9.Location = new System.Drawing.Point(45, 85);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(99, 16);
+            this.label9.Size = new System.Drawing.Size(137, 23);
             this.label9.TabIndex = 24;
             this.label9.Text = "Copies supp. :";
             // 
@@ -599,7 +599,7 @@
             // 
             // OrderEditForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(922, 607);
             this.Controls.Add(this.BtnAnnuler);
@@ -618,6 +618,7 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Commande Forever";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.OrderEditForm_FormClosed);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
