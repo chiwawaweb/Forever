@@ -159,7 +159,12 @@ namespace Forever.Forms
                     {
                         AddDatabase();
                     }
+
+                    Enabled = false;
                     Close();
+                    MessageBox.Show(_id.ToString());
+                    OrderToPdf orderToPdf = new OrderToPdf(_id);
+                    orderToPdf.ShowDialog();
                 }
             }
 
@@ -203,6 +208,8 @@ namespace Forever.Forms
             order.CreatedAt = DateTime.Now;
 
             orderProvider.Create(order);
+
+            _id = order.Id;
         }
 
         #region Gestion des événements
