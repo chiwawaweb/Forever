@@ -128,6 +128,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icon_forever_64.ico" />
+    <None Include="Resources\icon_quitter_24.png" />
+    <None Include="Resources\icon_poubelle_24.png" />
+    <None Include="Resources\icon_consulter_24.png" />
+    <None Include="Resources\icon_close_24.png" />
+    <None Include="Resources\icon_close_16.png" />
     <None Include="Resources\icon_forever_24.ico" />
     <None Include="Resources\icon_new_128.png" />
     <None Include="Resources\icon_new_32.png" />

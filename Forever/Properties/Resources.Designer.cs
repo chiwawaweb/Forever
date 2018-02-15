@@ -63,6 +63,36 @@ namespace Forever.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_close_16 {
+            get {
+                object obj = ResourceManager.GetObject("icon_close_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_close_24 {
+            get {
+                object obj = ResourceManager.GetObject("icon_close_24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_consulter_24 {
+            get {
+                object obj = ResourceManager.GetObject("icon_consulter_24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_forever_128 {
             get {
                 object obj = ResourceManager.GetObject("icon_forever_128", resourceCulture);
@@ -156,6 +186,26 @@ namespace Forever.Properties {
         internal static System.Drawing.Bitmap icon_new_32 {
             get {
                 object obj = ResourceManager.GetObject("icon_new_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_poubelle_24 {
+            get {
+                object obj = ResourceManager.GetObject("icon_poubelle_24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_quitter_24 {
+            get {
+                object obj = ResourceManager.GetObject("icon_quitter_24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

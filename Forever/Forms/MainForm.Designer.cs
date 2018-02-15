@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.ToolStrip = new System.Windows.Forms.ToolStrip();
             this.TsbNewOrder = new System.Windows.Forms.ToolStripButton();
+            this.TsbView = new System.Windows.Forms.ToolStripButton();
             this.StatusStrip = new System.Windows.Forms.StatusStrip();
             this.MenuStrip = new System.Windows.Forms.MenuStrip();
             this.fichiersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,7 +49,8 @@
             // 
             this.ToolStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.ToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.TsbNewOrder});
+            this.TsbNewOrder,
+            this.TsbView});
             this.ToolStrip.Location = new System.Drawing.Point(0, 24);
             this.ToolStrip.Name = "ToolStrip";
             this.ToolStrip.Size = new System.Drawing.Size(628, 31);
@@ -63,6 +65,15 @@
             this.TsbNewOrder.Size = new System.Drawing.Size(146, 28);
             this.TsbNewOrder.Text = "Nouvelle commande";
             this.TsbNewOrder.Click += new System.EventHandler(this.TsbNewOrder_Click);
+            // 
+            // TsbView
+            // 
+            this.TsbView.Image = global::Forever.Properties.Resources.icon_consulter_24;
+            this.TsbView.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.TsbView.Name = "TsbView";
+            this.TsbView.Size = new System.Drawing.Size(84, 28);
+            this.TsbView.Text = "Visualiser";
+            this.TsbView.Click += new System.EventHandler(this.TsbView_Click);
             // 
             // StatusStrip
             // 
@@ -202,5 +213,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox TxtSearch;
         private System.Windows.Forms.Button BtnSearch;
+        private System.Windows.Forms.ToolStripButton TsbView;
     }
 }

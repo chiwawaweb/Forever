@@ -31,10 +31,10 @@ namespace Forever.Forms
             
         }
 
-        private void NewOrderForm()
+        private void OpenOrderForm(bool view)
         {
 
-            OrderEditForm orderEditForm = new OrderEditForm(this, false);
+            OrderEditForm orderEditForm = new OrderEditForm(this, view);
             orderEditForm.ShowDialog();
             
         }
@@ -151,7 +151,7 @@ namespace Forever.Forms
 
         private void TsbNewOrder_Click(object sender, EventArgs e)
         {
-            NewOrderForm();
+            OpenOrderForm(false);
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -162,6 +162,11 @@ namespace Forever.Forms
         private void BtnSearch_Click(object sender, EventArgs e)
         {
             RefreshData();
+        }
+
+        private void TsbView_Click(object sender, EventArgs e)
+        {
+            OpenOrderForm(true);
         }
 
         #endregion
