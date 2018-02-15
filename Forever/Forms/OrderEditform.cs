@@ -161,7 +161,6 @@ namespace Forever.Forms
                     }
 
                     Visible = false;
-                    
                     OrderToPdf orderToPdf = new OrderToPdf(_id);
                     orderToPdf.ShowDialog();
 

@@ -15,15 +15,18 @@ namespace Forever.Forms
     public partial class OrderToPdf : Form
     {
 
-        private int _id;
-        private string PDF_FileName, PDF_Directory;
-        private DateTime date;
+        int _id;
+        double decalage;
+        string PDF_FileName, PDF_Directory;
+        DateTime date;
 
         Utils utils = new Utils();
         OrderProvider orderProvider = new OrderProvider();
-
+        PdfContentByte cb;
         public OrderToPdf(int id)
         {
+            _id = id;
+
             using (var reader = new PdfReader(@"C:\Input.pdf"))
             {
                 using (var fileStream = new FileStream(@"C:\Output.pdf", FileMode.Create, FileAccess.Write))
@@ -32,39 +35,40 @@ namespace Forever.Forms
                     var writer = PdfWriter.GetInstance(document, fileStream);
 
                     document.Open();
-
-                    
                     document.NewPage();
+                    
+                    decalage = 15.25; // Décalage entre 2 cases sur le formulaire
 
-                    var baseFont = BaseFont.CreateFont(BaseFont.HELVETICA_BOLD, BaseFont.CP1252, BaseFont.NOT_EMBEDDED);
+                    var baseFont = BaseFont.CreateFont(BaseFont.COURIER_BOLD, BaseFont.CP1252, BaseFont.NOT_EMBEDDED);
                     var importedPage = writer.GetImportedPage(reader, 1);
 
-                    var cb = writer.DirectContent;
-
+                    cb = writer.DirectContent;
                     cb.AddTemplate(importedPage, 0, 0);
 
+                    string nom = orderProvider.GetOrderById(_id).Nom;
+                    string prenom = orderProvider.GetOrderById(_id).Prenom;
+                    string adresse = orderProvider.GetOrderById(_id).Adresse;
+                    string cp = orderProvider.GetOrderById(_id).CP;
+                    string ville = orderProvider.GetOrderById(_id).Ville;
+                    string tel = orderProvider.GetOrderById(_id).Tel;
+                    string gsm = orderProvider.GetOrderById(_id).Gsm;
+
+                    /* Remplissage du formulaire */
                     cb.BeginText();
-                    cb.SetFontAndSize(baseFont, 12);
 
-                    var multiLineString = "Hello,\r\nWorld!".Split('\n');
+                    /* Partie coordonnées */
+                    cb.SetFontAndSize(baseFont, 14);
 
-                    string footerL1 = "HIFI INTERNATIONAL SA - Route de Luxembourg - B.P. 1 - L-3201 BETTEMBOURG";
-                    string footerL2 = "Tél.: (352) 40 24 24 - Fax: (352) 40 22 33 - www.hifi.lu - E-mail : info@hifi.lu";
-                    string footerL3 = "N° TVA LU 190 388 17 - RC Luxembourg B 13.377 - CELLLULL LU044 0141 4148 0170 0000 - BGLLLULL LU50 0030 5353 4541 1000";
+                    WriteInCases(nom, 138, 656);
+                    WriteInCases(prenom, 138, 641);
+                    WriteInCases(adresse, 138, 626);
+                    WriteInCases(cp, 138, 612);
+                    WriteInCases(ville, 245, 612);
+                    WriteInCases(tel, 138, 597);
+                    WriteInCases(gsm, 397, 597);
+                    WriteInCases("XXXXXXXXXXXXXXXXXXXXXXXXXXX", 138, 567);
+                    WriteInCases("XXXXXXXXXXXXXXXXXXXXXXXXXX", 153, 552);
 
-
-                    foreach (var line in multiLineString)
-                    {
-                        cb.ShowTextAligned(PdfContentByte.ALIGN_LEFT, line, 200, 200, 0);
-                    }
-
-                    cb.EndText();
-
-
-                    cb.BeginText();
-                    cb.ShowTextAligned(PdfContentByte.ALIGN_CENTER, footerL1, 297, 140, 0);
-                    cb.ShowTextAligned(PdfContentByte.ALIGN_CENTER, footerL2, 297, 230, 0);
-                    cb.ShowTextAligned(PdfContentByte.ALIGN_CENTER, footerL3, 297, 220, 0);
                     cb.EndText();
 
 
@@ -74,19 +78,28 @@ namespace Forever.Forms
                     document.Close();
                     writer.Close();
                 }
+
+                
             }
 
-                 
-
-            
-
-            
-
-            
             InitializeComponent();
 
-
             pdfDoc.LoadFile(PDF_Directory + PDF_FileName);
+        }
+
+        /// <summary>
+        /// Ecrit dans les cases en respectant le décalage.
+        /// </summary>
+        /// <param name="phrase">Texte à écrire</param>
+        private void WriteInCases(string phrase, int x, int y)
+        {
+            int nbChars = phrase.Length;
+
+            for (int i = 0; i < nbChars; i++)
+            {
+                int d = Convert.ToInt16(i * decalage);
+                cb.ShowTextAligned(PdfContentByte.ALIGN_LEFT, phrase.Substring(i, 1), x + d, y, 0);
+            }
         }
     }
 }
