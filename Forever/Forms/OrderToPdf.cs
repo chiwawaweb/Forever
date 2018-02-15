@@ -28,6 +28,9 @@ namespace Forever.Forms
 
             date = orderProvider.GetOrderById(_id).Date;
 
+            string oldFile = "oldFile.pdf";
+            string newFile = "newFile.pdf";
+
             PDF_Directory = @"temp\";
             PDF_FileName = "forever_" + _id.ToString("00000") + ".pdf";
 
@@ -40,11 +43,58 @@ namespace Forever.Forms
                 File.Delete(fName);
             }
 
+            PdfWriter writer = PdfWriter.GetInstance(doc, fs);
+            // the pdf content
+            PdfContentByte cb = writer.DirectContent;
 
+            // open the reader
+            PdfReader reader = new PdfReader(oldFile);
+            Rectangle size = reader.GetPageSizeWithRotation(1);
 
+            // write the text in the pdf content
+            cb.BeginText();
+            string text = "Some random blablablabla...";
+            // put the alignment and coordinates here
+            cb.ShowTextAligned(1, text, 520, 640, 0);
+            cb.EndText();
+            cb.BeginText();
+            text = "Other random blabla...";
+            // put the alignment and coordinates here
+            cb.ShowTextAligned(2, text, 100, 200, 0);
+            cb.EndText();
+
+            // create the new page and add it to the pdf
+            PdfImportedPage page = writer.GetImportedPage(reader, 1);
+            cb.AddTemplate(page, 0, 0);
+
+            Document doc = new Document(PageSize.A4, 0, 0, 0, 15);
+            try
+            {
+                PdfWriter writer = PdfWriter.GetInstance(doc, new FileStream(PDF_Directory + PDF_FileName, FileMode.Create));
+                writer.ViewerPreferences = PdfWriter.FitWindow;
+                writer.PageEvent = new ITextEvents(_id);
+
+                /* entête du fichier */
+                doc.AddTitle("Commande Forever du " + date.ToShortDateString());
+                doc.AddAuthor("Forever");
+                doc.Open();
+
+                doc.Add(new Phrase("\n")); // Ne pas supprimer !!
+
+                /* Clôture du document */
+                doc.Close();
+                writer.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK);
+            }
 
 
             InitializeComponent();
+
+
+            pdfDoc.LoadFile(PDF_Directory + PDF_FileName);
         }
     }
 }

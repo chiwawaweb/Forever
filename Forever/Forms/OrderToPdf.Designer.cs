@@ -40,6 +40,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pdfDoc.Enabled = true;
             this.pdfDoc.Location = new System.Drawing.Point(0, 26);
+            this.pdfDoc.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pdfDoc.Name = "pdfDoc";
             this.pdfDoc.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("pdfDoc.OcxState")));
             this.pdfDoc.Size = new System.Drawing.Size(502, 566);
@@ -47,11 +48,12 @@
             // 
             // OrderToPdf
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(502, 592);
+            this.ClientSize = new System.Drawing.Size(753, 911);
             this.Controls.Add(this.pdfDoc);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "OrderToPdf";

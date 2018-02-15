@@ -161,10 +161,11 @@ namespace Forever.Forms
                     }
 
                     Visible = false;
-                    Close();
-                    MessageBox.Show(_id.ToString());
+                    
                     OrderToPdf orderToPdf = new OrderToPdf(_id);
                     orderToPdf.ShowDialog();
+
+                    Close();
                 }
             }
 

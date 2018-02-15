@@ -62,6 +62,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\ITextEvents.cs" />
     <Compile Include="Classes\Utils.cs" />
     <Compile Include="DAL\Context.cs" />
     <Compile Include="DAL\OrderProvider.cs" />
