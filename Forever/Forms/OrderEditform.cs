@@ -78,17 +78,17 @@ namespace Forever.Forms
             email = TxtEmail.Text.Trim().ToLower();
             tel = utils.RemoveDiacritics(TxtTel.Text).Trim().ToUpper();
             gsm = utils.RemoveDiacritics(TxtGsm.Text).Trim().ToUpper();
-            nbBobines = int.Parse(TxtNbBobines.Text.Trim());
-            nbCassettes = int.Parse(TxtNbCassettes.Text.Trim());
+            if (String.IsNullOrEmpty(TxtNbBobines.Text)) { nbBobines = 0; } else { nbBobines = int.Parse(TxtNbBobines.Text); ; }
+            if (String.IsNullOrEmpty(TxtNbCassettes.Text)) { nbCassettes = 0; } else { nbCassettes = int.Parse(TxtNbCassettes.Text); ; }
             persoDvdInternet = RbtPersoDvdInternet.Checked;
             persoDvdPapier = RbtDvdPapier.Checked;
-            nbUnitCond = int.Parse(TxtNbUnitCond.Text.Trim());
-            nbDiapos = int.Parse(TxtNbDiapos.Text.Trim());
-            nbPhotos = int.Parse(TxtNbPhotos.Text.Trim());
-            nbNegatifs = int.Parse(TxtNbNegatifs.Text.Trim());
+            if (String.IsNullOrEmpty(TxtNbUnitCond.Text)) { nbUnitCond = 0; } else { nbUnitCond = int.Parse(TxtNbUnitCond.Text); ; }
+            if (String.IsNullOrEmpty(TxtNbDiapos.Text)) { nbDiapos = 0; } else { nbDiapos = int.Parse(TxtNbDiapos.Text); ; }
+            if (String.IsNullOrEmpty(TxtNbPhotos.Text)) { nbPhotos = 0; } else { nbPhotos = int.Parse(TxtNbPhotos.Text); ; }
+            if (String.IsNullOrEmpty(TxtNbNegatifs.Text)) { nbNegatifs = 0; } else { nbNegatifs = int.Parse(TxtNbNegatifs.Text); ; }
             dvdStandard = ChkDvdStandard.Checked;
             dvdPersonnalise = ChkDvdPersonnalise.Checked;
-            nbCopiesSupp = int.Parse(TxtCopiesSupp.Text);
+            if (String.IsNullOrEmpty(TxtCopiesSupp.Text)) { nbCopiesSupp = 0; } else { nbCopiesSupp = int.Parse(TxtCopiesSupp.Text); ; }
             montageAvi = ChkMontageAvi.Checked;
             cleUsb = ChkCleUsb.Checked;
             hdd = ChkHdd.Checked;
