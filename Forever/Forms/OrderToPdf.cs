@@ -17,7 +17,7 @@ namespace Forever.Forms
 
         int _id;
         double decalage;
-        string PDF_FileName, PDF_Directory;
+        string PDF_FileName, PDF_Directory, emailUser, emailDomain;
         DateTime date;
 
         Utils utils = new Utils();
@@ -52,7 +52,23 @@ namespace Forever.Forms
                     string ville = orderProvider.GetOrderById(_id).Ville;
                     string tel = orderProvider.GetOrderById(_id).Tel;
                     string gsm = orderProvider.GetOrderById(_id).Gsm;
+                    string email = orderProvider.GetOrderById(_id).Email;
+                    int nbBobines = orderProvider.GetOrderById(_id).NbBobines;
+                    int nbCassettes = orderProvider.GetOrderById(_id).NbCassettes;
+                    int nbUnitCond = orderProvider.GetOrderById(_id).NbUnitCond;
+                    int nbDiapos = orderProvider.GetOrderById(_id).NbDiapos;
+                    int nbPhotos = orderProvider.GetOrderById(_id).NbPhotos;
+                    int nbNegatifs = orderProvider.GetOrderById(_id).NbNegatifs;
 
+
+                    /* Split de l'adresse email */
+                    if (email != "")
+                    {
+                        MailAddress emailSplit = new MailAddress(email);
+                        emailUser = emailSplit.User;
+                        emailDomain = emailSplit.Host;
+                        
+                    }
                     /* Remplissage du formulaire */
                     cb.BeginText();
 
@@ -66,8 +82,19 @@ namespace Forever.Forms
                     WriteInCases(ville, 245, 612);
                     WriteInCases(tel, 138, 597);
                     WriteInCases(gsm, 397, 597);
-                    WriteInCases("XXXXXXXXXXXXXXXXXXXXXXXXXXX", 138, 567);
-                    WriteInCases("XXXXXXXXXXXXXXXXXXXXXXXXXX", 153, 552);
+                    WriteInCases(emailUser, 138, 567);
+                    WriteInCases(emailDomain, 153, 552);
+
+                    /* Partie élements déposes */
+                    cb.SetFontAndSize(baseFont, 22);
+
+                    WriteInBigCase(nbBobines, 255, 512);
+                    WriteInBigCase(nbCassettes, 511, 512);
+                    WriteInBigCase(nbUnitCond, 190 , 404);
+                    WriteInBigCase(nbDiapos, 350, 404);
+                    WriteInBigCase(nbPhotos, 430, 404);
+                    WriteInBigCase(nbNegatifs, 511, 404);
+
 
                     cb.EndText();
 
@@ -93,13 +120,21 @@ namespace Forever.Forms
         /// <param name="phrase">Texte à écrire</param>
         private void WriteInCases(string phrase, int x, int y)
         {
-            int nbChars = phrase.Length;
-
-            for (int i = 0; i < nbChars; i++)
+            if (!string.IsNullOrEmpty(phrase))
             {
-                int d = Convert.ToInt16(i * decalage);
-                cb.ShowTextAligned(PdfContentByte.ALIGN_LEFT, phrase.Substring(i, 1), x + d, y, 0);
+                int nbChars = phrase.Length;
+
+                for (int i = 0; i < nbChars; i++)
+                {
+                    int d = Convert.ToInt16(i * decalage);
+                    cb.ShowTextAligned(PdfContentByte.ALIGN_LEFT, phrase.Substring(i, 1), x + d, y, 0);
+                }
             }
+        }
+
+        private void WriteInBigCase(int phrase = 0, int x = 0, int y = 0)
+        {
+            cb.ShowTextAligned(PdfContentByte.ALIGN_CENTER, phrase.ToString(), x, y, 0);
         }
     }
 }
