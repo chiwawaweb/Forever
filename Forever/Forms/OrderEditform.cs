@@ -172,7 +172,37 @@ namespace Forever.Forms
 
         private void AddDatabase()
         {
+            Order order = new Order();
 
+            order.Date = Convert.ToDateTime(DateTime.Now.ToShortDateString());
+            order.Vendeur = vendeur;
+            order.Nom = nom;
+            order.Prenom = prenom;
+            order.Adresse = adresse;
+            order.CP = cp;
+            order.Ville = ville;
+            order.Email = email;
+            order.Tel = tel;
+            order.Gsm = gsm;
+            order.NbBobines = nbBobines;
+            order.NbCassettes = nbCassettes;
+            order.PersoDvdInternet = persoDvdInternet;
+            order.PersoDvdPapier = persoDvdPapier;
+            order.NbUnitCond = nbUnitCond;
+            order.NbDiapos = nbDiapos;
+            order.NbPhotos = nbPhotos;
+            order.NbNegatifs = nbNegatifs;
+            order.DvdStandard = dvdStandard;
+            order.DvdPersonnalise = dvdPersonnalise;
+            order.NbCopiesSupp = nbCopiesSupp;
+            order.MontageAvi = montageAvi;
+            order.CleUsb = cleUsb;
+            order.Hdd = hdd;
+            order.Link = link;
+            order.Notes = notes;
+            order.CreatedAt = DateTime.Now;
+
+            orderProvider.Create(order);
         }
 
         #region Gestion des événements
