@@ -160,7 +160,7 @@ namespace Forever.Forms
                         AddDatabase();
                     }
 
-                    Enabled = false;
+                    Visible = false;
                     Close();
                     MessageBox.Show(_id.ToString());
                     OrderToPdf orderToPdf = new OrderToPdf(_id);
