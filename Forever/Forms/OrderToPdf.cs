@@ -24,73 +24,65 @@ namespace Forever.Forms
 
         public OrderToPdf(int id)
         {
-            _id = id;
-
-            date = orderProvider.GetOrderById(_id).Date;
-
-            string oldFile = "oldFile.pdf";
-            string newFile = "newFile.pdf";
-
-            PDF_Directory = @"temp\";
-            PDF_FileName = "forever_" + _id.ToString("00000") + ".pdf";
-
-            /* Création du répertoire temporaire */
-            Directory.CreateDirectory(PDF_Directory);
-            string path = @"temp\";
-            string[] filenames = Directory.GetFiles(path, "*.*", SearchOption.TopDirectoryOnly);
-            foreach (string fName in filenames)
+            using (var reader = new PdfReader(@"C:\Input.pdf"))
             {
-                File.Delete(fName);
+                using (var fileStream = new FileStream(@"C:\Output.pdf", FileMode.Create, FileAccess.Write))
+                {
+                    var document = new Document(reader.GetPageSizeWithRotation(1));
+                    var writer = PdfWriter.GetInstance(document, fileStream);
+
+                    document.Open();
+
+                    
+                    document.NewPage();
+
+                    var baseFont = BaseFont.CreateFont(BaseFont.HELVETICA_BOLD, BaseFont.CP1252, BaseFont.NOT_EMBEDDED);
+                    var importedPage = writer.GetImportedPage(reader, 1);
+
+                    var cb = writer.DirectContent;
+
+                    cb.AddTemplate(importedPage, 0, 0);
+
+                    cb.BeginText();
+                    cb.SetFontAndSize(baseFont, 12);
+
+                    var multiLineString = "Hello,\r\nWorld!".Split('\n');
+
+                    string footerL1 = "HIFI INTERNATIONAL SA - Route de Luxembourg - B.P. 1 - L-3201 BETTEMBOURG";
+                    string footerL2 = "Tél.: (352) 40 24 24 - Fax: (352) 40 22 33 - www.hifi.lu - E-mail : info@hifi.lu";
+                    string footerL3 = "N° TVA LU 190 388 17 - RC Luxembourg B 13.377 - CELLLULL LU044 0141 4148 0170 0000 - BGLLLULL LU50 0030 5353 4541 1000";
+
+
+                    foreach (var line in multiLineString)
+                    {
+                        cb.ShowTextAligned(PdfContentByte.ALIGN_LEFT, line, 200, 200, 0);
+                    }
+
+                    cb.EndText();
+
+
+                    cb.BeginText();
+                    cb.ShowTextAligned(PdfContentByte.ALIGN_CENTER, footerL1, 297, 140, 0);
+                    cb.ShowTextAligned(PdfContentByte.ALIGN_CENTER, footerL2, 297, 230, 0);
+                    cb.ShowTextAligned(PdfContentByte.ALIGN_CENTER, footerL3, 297, 220, 0);
+                    cb.EndText();
+
+
+                    
+                    
+
+                    document.Close();
+                    writer.Close();
+                }
             }
 
-            PdfWriter writer = PdfWriter.GetInstance(doc, fs);
-            // the pdf content
-            PdfContentByte cb = writer.DirectContent;
+                 
 
-            // open the reader
-            PdfReader reader = new PdfReader(oldFile);
-            Rectangle size = reader.GetPageSizeWithRotation(1);
+            
 
-            // write the text in the pdf content
-            cb.BeginText();
-            string text = "Some random blablablabla...";
-            // put the alignment and coordinates here
-            cb.ShowTextAligned(1, text, 520, 640, 0);
-            cb.EndText();
-            cb.BeginText();
-            text = "Other random blabla...";
-            // put the alignment and coordinates here
-            cb.ShowTextAligned(2, text, 100, 200, 0);
-            cb.EndText();
+            
 
-            // create the new page and add it to the pdf
-            PdfImportedPage page = writer.GetImportedPage(reader, 1);
-            cb.AddTemplate(page, 0, 0);
-
-            Document doc = new Document(PageSize.A4, 0, 0, 0, 15);
-            try
-            {
-                PdfWriter writer = PdfWriter.GetInstance(doc, new FileStream(PDF_Directory + PDF_FileName, FileMode.Create));
-                writer.ViewerPreferences = PdfWriter.FitWindow;
-                writer.PageEvent = new ITextEvents(_id);
-
-                /* entête du fichier */
-                doc.AddTitle("Commande Forever du " + date.ToShortDateString());
-                doc.AddAuthor("Forever");
-                doc.Open();
-
-                doc.Add(new Phrase("\n")); // Ne pas supprimer !!
-
-                /* Clôture du document */
-                doc.Close();
-                writer.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK);
-            }
-
-
+            
             InitializeComponent();
 
 
