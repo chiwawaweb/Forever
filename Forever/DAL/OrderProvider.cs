@@ -25,7 +25,7 @@ namespace Forever.DAL
             }
         }
 
-        public List<Order> Search(string keywords, string type)
+        public List<Order> Search(string keywords)
         {
             using (Context context = new Context())
             {

@@ -8,7 +8,7 @@ namespace Forever.DTO
 {
     public class Order
     {
-        public int? Id { get; set; }
+        public int Id { get; set; }
         public DateTime Date { get; set; }
         public string Vendeur { get; set; }
         public string Nom { get; set; }

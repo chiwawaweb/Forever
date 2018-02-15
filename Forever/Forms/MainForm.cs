@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Forever.DAL;
 using Forever.DTO;
+using Forever.Classes;
 
 namespace Forever.Forms
 {
@@ -17,7 +18,8 @@ namespace Forever.Forms
 
         int idRetour;
 
-
+        Utils utils = new Utils();
+        OrderProvider orderProvider = new OrderProvider();
 
         public MainForm()
         {
@@ -29,14 +31,6 @@ namespace Forever.Forms
             
         }
 
-        
-        
-
-        private void TsbNewOrder_Click(object sender, EventArgs e)
-        {
-            NewOrderForm();
-        }
-
         private void NewOrderForm()
         {
 
@@ -44,9 +38,17 @@ namespace Forever.Forms
             orderEditForm.ShowDialog();
             
         }
-        public void RefreshData()
+        public void RefreshData(bool firstLine = false)
         {
+            List<Order> list;
+            list = orderProvider.Search(utils.RemoveDiacritics(TxtSearch.Text));
 
+            if (firstLine == true)
+            {
+                idRetour = 0;
+            }
+
+            CreateTable(list, idRetour);
         }
 
         private void CreateTable(List<Order> list, int _idRetour)
@@ -61,7 +63,44 @@ namespace Forever.Forms
             {
                 Name = "ID",
                 HeaderText = "#",
-                Width=60
+                Width = 60
+            };
+            idCol.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            idCol.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            DataGridViewTextBoxColumn dateCol = new DataGridViewTextBoxColumn
+            {
+                Name = "DATE",
+                HeaderText = "Date",
+                Width = 100
+            };
+
+            DataGridViewTextBoxColumn clientCol = new DataGridViewTextBoxColumn
+            {
+                Name = "CLIENT",
+                HeaderText = "Nom du client",
+                Width = 300
+            };
+
+            DataGridViewTextBoxColumn localiteCol = new DataGridViewTextBoxColumn
+            {
+                Name = "LOCALITE",
+                HeaderText = "Localite",
+                Width = 200
+            };
+
+            DataGridViewTextBoxColumn dateRetourCol = new DataGridViewTextBoxColumn
+            {
+                Name = "DATERETOUR",
+                HeaderText = "Retour",
+                Width = 100
+            };
+
+            DataGridViewTextBoxColumn vendeurCol = new DataGridViewTextBoxColumn
+            {
+                Name = "VENDEUR",
+                HeaderText = "Vendeur",
+                Width = 140
             };
 
 
@@ -69,11 +108,64 @@ namespace Forever.Forms
 
             /* Création des colonnes */
             DgvOrders.Columns.Add(idCol);
+            DgvOrders.Columns.Add(dateCol);
+            DgvOrders.Columns.Add(clientCol);
+            DgvOrders.Columns.Add(localiteCol);
+            DgvOrders.Columns.Add(dateRetourCol);
+            DgvOrders.Columns.Add(vendeurCol);
+
+            /* Ajout des lignes */
+            for (int i = 0; i < list.Count; i++)
+            {
+                int number = DgvOrders.Rows.Add();
+
+                int id = list[i].Id;
+                DateTime date = list[i].Date;
+                string client = (list[i].Nom + " " + list[i].Prenom).Trim();
+                string localite = (list[i].CP + " " + list[i].Ville).Trim();
+                DateTime dateRetour = list[i].DateRetour;
+                string vendeur = list[i].Vendeur;
+
+                DgvOrders.Rows[number].Cells[0].Value = id.ToString("000000");
+                DgvOrders.Rows[number].Cells[1].Value = date.ToShortDateString();
+                DgvOrders.Rows[number].Cells[2].Value = client;
+                DgvOrders.Rows[number].Cells[3].Value = localite;
+                DgvOrders.Rows[number].Cells[4].Value = dateRetour.ToShortDateString();
+                DgvOrders.Rows[number].Cells[5].Value = vendeur;
+
+
+                /* pointe sur l'enregistrement courant */
+                if (list[i].Id == idRetour)
+                {
+                    DgvOrders.Rows[number].Cells[1].Selected = true;
+                }
+            }
         }
+
+        #region Gestion des événements
 
         private void quitterToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
+
+        private void TsbNewOrder_Click(object sender, EventArgs e)
+        {
+            NewOrderForm();
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            RefreshData();
+        }
+
+        private void BtnSearch_Click(object sender, EventArgs e)
+        {
+            RefreshData();
+        }
+
+        #endregion
+
+
     }
 }

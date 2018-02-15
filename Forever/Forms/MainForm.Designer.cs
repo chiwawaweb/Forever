@@ -115,7 +115,7 @@
             this.DgvOrders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvOrders.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.DgvOrders.Location = new System.Drawing.Point(0, 112);
-            this.DgvOrders.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DgvOrders.Margin = new System.Windows.Forms.Padding(2);
             this.DgvOrders.Name = "DgvOrders";
             this.DgvOrders.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.DgvOrders.RowTemplate.Height = 28;
@@ -140,8 +140,9 @@
             // 
             // TxtSearch
             // 
+            this.TxtSearch.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.TxtSearch.Location = new System.Drawing.Point(87, 79);
-            this.TxtSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TxtSearch.Margin = new System.Windows.Forms.Padding(2);
             this.TxtSearch.Name = "TxtSearch";
             this.TxtSearch.Size = new System.Drawing.Size(244, 22);
             this.TxtSearch.TabIndex = 7;
@@ -149,12 +150,13 @@
             // BtnSearch
             // 
             this.BtnSearch.Location = new System.Drawing.Point(337, 77);
-            this.BtnSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnSearch.Margin = new System.Windows.Forms.Padding(2);
             this.BtnSearch.Name = "BtnSearch";
             this.BtnSearch.Size = new System.Drawing.Size(77, 26);
             this.BtnSearch.TabIndex = 8;
             this.BtnSearch.Text = "Chercher";
             this.BtnSearch.UseVisualStyleBackColor = true;
+            this.BtnSearch.Click += new System.EventHandler(this.BtnSearch_Click);
             // 
             // MainForm
             // 
@@ -177,6 +179,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Forever";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.ToolStrip.ResumeLayout(false);
             this.ToolStrip.PerformLayout();
             this.MenuStrip.ResumeLayout(false);
