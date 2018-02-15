@@ -27,9 +27,9 @@ namespace Forever.Forms
         {
             _id = id;
 
-            using (var reader = new PdfReader(@"C:\Input.pdf"))
+            using (var reader = new PdfReader(@"Input.pdf"))
             {
-                using (var fileStream = new FileStream(@"C:\Output.pdf", FileMode.Create, FileAccess.Write))
+                using (var fileStream = new FileStream(@"Output.pdf", FileMode.Create, FileAccess.Write))
                 {
                     var document = new Document(reader.GetPageSizeWithRotation(1));
                     var writer = PdfWriter.GetInstance(document, fileStream);
@@ -59,6 +59,10 @@ namespace Forever.Forms
                     int nbDiapos = orderProvider.GetOrderById(_id).NbDiapos;
                     int nbPhotos = orderProvider.GetOrderById(_id).NbPhotos;
                     int nbNegatifs = orderProvider.GetOrderById(_id).NbNegatifs;
+                    bool persoDvdInternet = orderProvider.GetOrderById(_id).PersoDvdInternet;
+                    bool persoDvdPapier = orderProvider.GetOrderById(_id).PersoDvdPapier;
+
+
 
 
                     /* Split de l'adresse email */
@@ -69,6 +73,9 @@ namespace Forever.Forms
                         emailDomain = emailSplit.Host;
                         
                     }
+
+                    
+
                     /* Remplissage du formulaire */
                     cb.BeginText();
 
@@ -95,12 +102,23 @@ namespace Forever.Forms
                     WriteInBigCase(nbPhotos, 430, 404);
                     WriteInBigCase(nbNegatifs, 511, 404);
 
+                    if (persoDvdInternet == true)
+                    {
+                        WriteInCases("x", 309, 478);
+                    }
+
+                    if (persoDvdPapier == true)
+                    {
+                        WriteInCases("x", 429, 478);
+                    }
+
+                    WriteInCases("X", 195, 370); // nbUnitCond
+                    WriteInCases("X", 300, 370); // montageAvi
+                    WriteInCases("X", 500, 370); // hdd
+                    
+
 
                     cb.EndText();
-
-
-                    
-                    
 
                     document.Close();
                     writer.Close();
