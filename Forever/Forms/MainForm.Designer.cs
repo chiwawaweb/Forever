@@ -127,6 +127,7 @@
             this.DgvOrders.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.DgvOrders.Location = new System.Drawing.Point(0, 112);
             this.DgvOrders.Margin = new System.Windows.Forms.Padding(2);
+            this.DgvOrders.MultiSelect = false;
             this.DgvOrders.Name = "DgvOrders";
             this.DgvOrders.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.DgvOrders.RowTemplate.Height = 28;
@@ -138,6 +139,7 @@
             this.DgvOrders.Size = new System.Drawing.Size(628, 352);
             this.DgvOrders.TabIndex = 5;
             this.DgvOrders.TabStop = false;
+            this.DgvOrders.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvOrders_CellDoubleClick);
             // 
             // label1
             // 

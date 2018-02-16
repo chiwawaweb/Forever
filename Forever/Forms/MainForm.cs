@@ -33,9 +33,21 @@ namespace Forever.Forms
 
         private void OpenOrderForm(bool view)
         {
-
-            OrderEditForm orderEditForm = new OrderEditForm(this, view);
-            orderEditForm.ShowDialog();
+            if (view == true)
+            {
+                if (DgvOrders.RowCount > 0)
+                {
+                    int ID = int.Parse(DgvOrders.CurrentRow.Cells[0].Value.ToString());
+                    idRetour = ID;
+                    OrderEditForm frm = new OrderEditForm(this, view, ID);
+                    frm.ShowDialog();
+                }
+            }
+            else
+            {
+                OrderEditForm frm = new OrderEditForm(this, view);
+                frm.ShowDialog();
+            }
             
         }
         public void RefreshData(bool firstLine = false)
@@ -169,8 +181,12 @@ namespace Forever.Forms
             OpenOrderForm(true);
         }
 
-        #endregion
+        private void DgvOrders_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            OpenOrderForm(true);
+        }
 
+        #endregion
 
     }
 }

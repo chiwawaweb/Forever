@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrderEditForm));
             this.LblNom = new System.Windows.Forms.Label();
             this.TxtNom = new System.Windows.Forms.TextBox();
@@ -62,7 +61,22 @@
             this.TxtTel = new System.Windows.Forms.TextBox();
             this.LblVendeur = new System.Windows.Forms.Label();
             this.GrpCoordonnees = new System.Windows.Forms.GroupBox();
+            this.LblEmailView = new System.Windows.Forms.Label();
+            this.LblVilleView = new System.Windows.Forms.Label();
+            this.LblCpView = new System.Windows.Forms.Label();
+            this.LblGsmView = new System.Windows.Forms.Label();
+            this.LblTelView = new System.Windows.Forms.Label();
+            this.LblAdresseView = new System.Windows.Forms.Label();
+            this.LblPrenomView = new System.Windows.Forms.Label();
+            this.LblNomView = new System.Windows.Forms.Label();
             this.GrpElements = new System.Windows.Forms.GroupBox();
+            this.LblPersonnalisationView = new System.Windows.Forms.Label();
+            this.LblNbNegatifsView = new System.Windows.Forms.Label();
+            this.LblNbPhotosView = new System.Windows.Forms.Label();
+            this.LblNbDiaposView = new System.Windows.Forms.Label();
+            this.LblNbUnitCondView = new System.Windows.Forms.Label();
+            this.LblNbCassettesView = new System.Windows.Forms.Label();
+            this.LblNbBobinesView = new System.Windows.Forms.Label();
             this.RbtDvdPapier = new System.Windows.Forms.RadioButton();
             this.RbtPersoDvdInternet = new System.Windows.Forms.RadioButton();
             this.LblNbCassettes = new System.Windows.Forms.Label();
@@ -73,10 +87,28 @@
             this.LblNbDiapos = new System.Windows.Forms.Label();
             this.LblUnitCond = new System.Windows.Forms.Label();
             this.GrpSupports = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.LblNbCopiesSuppView = new System.Windows.Forms.Label();
+            this.LblLinkView = new System.Windows.Forms.Label();
+            this.LblHddView = new System.Windows.Forms.Label();
+            this.LblCleUsbView = new System.Windows.Forms.Label();
+            this.LblMontageAviView = new System.Windows.Forms.Label();
+            this.LblDvdPersonnaliseView = new System.Windows.Forms.Label();
+            this.LblDvdStandardView = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.LblCopiesSupp = new System.Windows.Forms.Label();
             this.BtnSave = new System.Windows.Forms.Button();
             this.BtnCancel = new System.Windows.Forms.Button();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.LblVendeurView = new System.Windows.Forms.Label();
+            this.BtnFermer = new System.Windows.Forms.Button();
+            this.LblDate = new System.Windows.Forms.Label();
+            this.LblDateView = new System.Windows.Forms.Label();
+            this.LblDateRetour = new System.Windows.Forms.Label();
+            this.LblDateRetourView = new System.Windows.Forms.Label();
             this.GrpCoordonnees.SuspendLayout();
             this.GrpElements.SuspendLayout();
             this.GrpSupports.SuspendLayout();
@@ -246,36 +278,33 @@
             this.ChkDvdStandard.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.ChkDvdStandard.Checked = true;
             this.ChkDvdStandard.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.ChkDvdStandard.Location = new System.Drawing.Point(32, 33);
+            this.ChkDvdStandard.Location = new System.Drawing.Point(150, 36);
             this.ChkDvdStandard.Margin = new System.Windows.Forms.Padding(4);
             this.ChkDvdStandard.Name = "ChkDvdStandard";
-            this.ChkDvdStandard.Size = new System.Drawing.Size(133, 20);
+            this.ChkDvdStandard.Size = new System.Drawing.Size(15, 14);
             this.ChkDvdStandard.TabIndex = 0;
-            this.ChkDvdStandard.Text = "DVD standard(s)";
             this.ChkDvdStandard.UseVisualStyleBackColor = true;
             // 
             // ChkDvdPersonnalise
             // 
             this.ChkDvdPersonnalise.AutoSize = true;
             this.ChkDvdPersonnalise.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.ChkDvdPersonnalise.Location = new System.Drawing.Point(7, 61);
+            this.ChkDvdPersonnalise.Location = new System.Drawing.Point(150, 64);
             this.ChkDvdPersonnalise.Margin = new System.Windows.Forms.Padding(4);
             this.ChkDvdPersonnalise.Name = "ChkDvdPersonnalise";
-            this.ChkDvdPersonnalise.Size = new System.Drawing.Size(158, 20);
+            this.ChkDvdPersonnalise.Size = new System.Drawing.Size(15, 14);
             this.ChkDvdPersonnalise.TabIndex = 1;
-            this.ChkDvdPersonnalise.Text = "DVD personnalisé(s)";
             this.ChkDvdPersonnalise.UseVisualStyleBackColor = true;
             // 
             // ChkMontageAvi
             // 
             this.ChkMontageAvi.AutoSize = true;
             this.ChkMontageAvi.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.ChkMontageAvi.Location = new System.Drawing.Point(215, 33);
+            this.ChkMontageAvi.Location = new System.Drawing.Point(392, 35);
             this.ChkMontageAvi.Margin = new System.Windows.Forms.Padding(4);
             this.ChkMontageAvi.Name = "ChkMontageAvi";
-            this.ChkMontageAvi.Size = new System.Drawing.Size(192, 20);
+            this.ChkMontageAvi.Size = new System.Drawing.Size(15, 14);
             this.ChkMontageAvi.TabIndex = 3;
-            this.ChkMontageAvi.Text = "Fichiers de montage (.avi)";
             this.ChkMontageAvi.UseVisualStyleBackColor = true;
             // 
             // TxtCopiesSupp
@@ -293,36 +322,33 @@
             // 
             this.ChkCleUsb.AutoSize = true;
             this.ChkCleUsb.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.ChkCleUsb.Location = new System.Drawing.Point(266, 61);
+            this.ChkCleUsb.Location = new System.Drawing.Point(393, 67);
             this.ChkCleUsb.Margin = new System.Windows.Forms.Padding(4);
             this.ChkCleUsb.Name = "ChkCleUsb";
-            this.ChkCleUsb.Size = new System.Drawing.Size(141, 20);
+            this.ChkCleUsb.Size = new System.Drawing.Size(15, 14);
             this.ChkCleUsb.TabIndex = 4;
-            this.ChkCleUsb.Text = "Clé USB (MPEG4)";
             this.ChkCleUsb.UseVisualStyleBackColor = true;
             // 
             // ChkHdd
             // 
             this.ChkHdd.AutoSize = true;
             this.ChkHdd.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.ChkHdd.Location = new System.Drawing.Point(471, 33);
+            this.ChkHdd.Location = new System.Drawing.Point(621, 33);
             this.ChkHdd.Margin = new System.Windows.Forms.Padding(4);
             this.ChkHdd.Name = "ChkHdd";
-            this.ChkHdd.Size = new System.Drawing.Size(167, 20);
+            this.ChkHdd.Size = new System.Drawing.Size(15, 14);
             this.ChkHdd.TabIndex = 5;
-            this.ChkHdd.Text = "Disque dur numérique";
             this.ChkHdd.UseVisualStyleBackColor = true;
             // 
             // ChkLink
             // 
             this.ChkLink.AutoSize = true;
             this.ChkLink.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.ChkLink.Location = new System.Drawing.Point(462, 61);
+            this.ChkLink.Location = new System.Drawing.Point(623, 61);
             this.ChkLink.Margin = new System.Windows.Forms.Padding(4);
             this.ChkLink.Name = "ChkLink";
-            this.ChkLink.Size = new System.Drawing.Size(176, 20);
+            this.ChkLink.Size = new System.Drawing.Size(15, 14);
             this.ChkLink.TabIndex = 6;
-            this.ChkLink.Text = "Lien de téléchargement";
             this.ChkLink.UseVisualStyleBackColor = true;
             // 
             // LblPrenom
@@ -429,6 +455,14 @@
             // 
             // GrpCoordonnees
             // 
+            this.GrpCoordonnees.Controls.Add(this.LblEmailView);
+            this.GrpCoordonnees.Controls.Add(this.LblVilleView);
+            this.GrpCoordonnees.Controls.Add(this.LblCpView);
+            this.GrpCoordonnees.Controls.Add(this.LblGsmView);
+            this.GrpCoordonnees.Controls.Add(this.LblTelView);
+            this.GrpCoordonnees.Controls.Add(this.LblAdresseView);
+            this.GrpCoordonnees.Controls.Add(this.LblPrenomView);
+            this.GrpCoordonnees.Controls.Add(this.LblNomView);
             this.GrpCoordonnees.Controls.Add(this.TxtAdresse);
             this.GrpCoordonnees.Controls.Add(this.TxtNom);
             this.GrpCoordonnees.Controls.Add(this.TxtPrenom);
@@ -452,9 +486,104 @@
             this.GrpCoordonnees.TabStop = false;
             this.GrpCoordonnees.Text = "Coordonnées";
             // 
+            // LblEmailView
+            // 
+            this.LblEmailView.AutoSize = true;
+            this.LblEmailView.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblEmailView.Location = new System.Drawing.Point(511, 108);
+            this.LblEmailView.Name = "LblEmailView";
+            this.LblEmailView.Size = new System.Drawing.Size(18, 19);
+            this.LblEmailView.TabIndex = 108;
+            this.LblEmailView.Text = "-";
+            this.LblEmailView.Visible = false;
+            // 
+            // LblVilleView
+            // 
+            this.LblVilleView.AutoSize = true;
+            this.LblVilleView.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblVilleView.Location = new System.Drawing.Point(618, 75);
+            this.LblVilleView.Name = "LblVilleView";
+            this.LblVilleView.Size = new System.Drawing.Size(18, 19);
+            this.LblVilleView.TabIndex = 107;
+            this.LblVilleView.Text = "-";
+            this.LblVilleView.Visible = false;
+            // 
+            // LblCpView
+            // 
+            this.LblCpView.AutoSize = true;
+            this.LblCpView.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblCpView.Location = new System.Drawing.Point(511, 72);
+            this.LblCpView.Name = "LblCpView";
+            this.LblCpView.Size = new System.Drawing.Size(18, 19);
+            this.LblCpView.TabIndex = 106;
+            this.LblCpView.Text = "-";
+            this.LblCpView.Visible = false;
+            // 
+            // LblGsmView
+            // 
+            this.LblGsmView.AutoSize = true;
+            this.LblGsmView.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblGsmView.Location = new System.Drawing.Point(292, 108);
+            this.LblGsmView.Name = "LblGsmView";
+            this.LblGsmView.Size = new System.Drawing.Size(18, 19);
+            this.LblGsmView.TabIndex = 105;
+            this.LblGsmView.Text = "-";
+            this.LblGsmView.Visible = false;
+            // 
+            // LblTelView
+            // 
+            this.LblTelView.AutoSize = true;
+            this.LblTelView.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblTelView.Location = new System.Drawing.Point(96, 108);
+            this.LblTelView.Name = "LblTelView";
+            this.LblTelView.Size = new System.Drawing.Size(18, 19);
+            this.LblTelView.TabIndex = 104;
+            this.LblTelView.Text = "-";
+            this.LblTelView.Visible = false;
+            // 
+            // LblAdresseView
+            // 
+            this.LblAdresseView.AutoSize = true;
+            this.LblAdresseView.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblAdresseView.Location = new System.Drawing.Point(96, 73);
+            this.LblAdresseView.Name = "LblAdresseView";
+            this.LblAdresseView.Size = new System.Drawing.Size(18, 19);
+            this.LblAdresseView.TabIndex = 103;
+            this.LblAdresseView.Text = "-";
+            this.LblAdresseView.Visible = false;
+            // 
+            // LblPrenomView
+            // 
+            this.LblPrenomView.AutoSize = true;
+            this.LblPrenomView.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblPrenomView.Location = new System.Drawing.Point(511, 39);
+            this.LblPrenomView.Name = "LblPrenomView";
+            this.LblPrenomView.Size = new System.Drawing.Size(18, 19);
+            this.LblPrenomView.TabIndex = 102;
+            this.LblPrenomView.Text = "-";
+            this.LblPrenomView.Visible = false;
+            // 
+            // LblNomView
+            // 
+            this.LblNomView.AutoSize = true;
+            this.LblNomView.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblNomView.Location = new System.Drawing.Point(96, 39);
+            this.LblNomView.Name = "LblNomView";
+            this.LblNomView.Size = new System.Drawing.Size(18, 19);
+            this.LblNomView.TabIndex = 101;
+            this.LblNomView.Text = "-";
+            this.LblNomView.Visible = false;
+            // 
             // GrpElements
             // 
             this.GrpElements.BackColor = System.Drawing.SystemColors.Control;
+            this.GrpElements.Controls.Add(this.LblPersonnalisationView);
+            this.GrpElements.Controls.Add(this.LblNbNegatifsView);
+            this.GrpElements.Controls.Add(this.LblNbPhotosView);
+            this.GrpElements.Controls.Add(this.LblNbDiaposView);
+            this.GrpElements.Controls.Add(this.LblNbUnitCondView);
+            this.GrpElements.Controls.Add(this.LblNbCassettesView);
+            this.GrpElements.Controls.Add(this.LblNbBobinesView);
             this.GrpElements.Controls.Add(this.RbtDvdPapier);
             this.GrpElements.Controls.Add(this.RbtPersoDvdInternet);
             this.GrpElements.Controls.Add(this.TxtNbBobines);
@@ -476,6 +605,83 @@
             this.GrpElements.TabIndex = 31;
             this.GrpElements.TabStop = false;
             this.GrpElements.Text = "Eléments déposés";
+            // 
+            // LblPersonnalisationView
+            // 
+            this.LblPersonnalisationView.AutoSize = true;
+            this.LblPersonnalisationView.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblPersonnalisationView.Location = new System.Drawing.Point(610, 33);
+            this.LblPersonnalisationView.Name = "LblPersonnalisationView";
+            this.LblPersonnalisationView.Size = new System.Drawing.Size(18, 19);
+            this.LblPersonnalisationView.TabIndex = 115;
+            this.LblPersonnalisationView.Text = "-";
+            this.LblPersonnalisationView.Visible = false;
+            // 
+            // LblNbNegatifsView
+            // 
+            this.LblNbNegatifsView.AutoSize = true;
+            this.LblNbNegatifsView.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblNbNegatifsView.Location = new System.Drawing.Point(610, 144);
+            this.LblNbNegatifsView.Name = "LblNbNegatifsView";
+            this.LblNbNegatifsView.Size = new System.Drawing.Size(18, 19);
+            this.LblNbNegatifsView.TabIndex = 114;
+            this.LblNbNegatifsView.Text = "-";
+            this.LblNbNegatifsView.Visible = false;
+            // 
+            // LblNbPhotosView
+            // 
+            this.LblNbPhotosView.AutoSize = true;
+            this.LblNbPhotosView.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblNbPhotosView.Location = new System.Drawing.Point(610, 109);
+            this.LblNbPhotosView.Name = "LblNbPhotosView";
+            this.LblNbPhotosView.Size = new System.Drawing.Size(18, 19);
+            this.LblNbPhotosView.TabIndex = 113;
+            this.LblNbPhotosView.Text = "-";
+            this.LblNbPhotosView.Visible = false;
+            // 
+            // LblNbDiaposView
+            // 
+            this.LblNbDiaposView.AutoSize = true;
+            this.LblNbDiaposView.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblNbDiaposView.Location = new System.Drawing.Point(610, 76);
+            this.LblNbDiaposView.Name = "LblNbDiaposView";
+            this.LblNbDiaposView.Size = new System.Drawing.Size(18, 19);
+            this.LblNbDiaposView.TabIndex = 112;
+            this.LblNbDiaposView.Text = "-";
+            this.LblNbDiaposView.Visible = false;
+            // 
+            // LblNbUnitCondView
+            // 
+            this.LblNbUnitCondView.AutoSize = true;
+            this.LblNbUnitCondView.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblNbUnitCondView.Location = new System.Drawing.Point(222, 80);
+            this.LblNbUnitCondView.Name = "LblNbUnitCondView";
+            this.LblNbUnitCondView.Size = new System.Drawing.Size(18, 19);
+            this.LblNbUnitCondView.TabIndex = 111;
+            this.LblNbUnitCondView.Text = "-";
+            this.LblNbUnitCondView.Visible = false;
+            // 
+            // LblNbCassettesView
+            // 
+            this.LblNbCassettesView.AutoSize = true;
+            this.LblNbCassettesView.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblNbCassettesView.Location = new System.Drawing.Point(380, 35);
+            this.LblNbCassettesView.Name = "LblNbCassettesView";
+            this.LblNbCassettesView.Size = new System.Drawing.Size(18, 19);
+            this.LblNbCassettesView.TabIndex = 110;
+            this.LblNbCassettesView.Text = "-";
+            this.LblNbCassettesView.Visible = false;
+            // 
+            // LblNbBobinesView
+            // 
+            this.LblNbBobinesView.AutoSize = true;
+            this.LblNbBobinesView.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblNbBobinesView.Location = new System.Drawing.Point(171, 35);
+            this.LblNbBobinesView.Name = "LblNbBobinesView";
+            this.LblNbBobinesView.Size = new System.Drawing.Size(18, 19);
+            this.LblNbBobinesView.TabIndex = 109;
+            this.LblNbBobinesView.Text = "-";
+            this.LblNbBobinesView.Visible = false;
             // 
             // RbtDvdPapier
             // 
@@ -564,7 +770,17 @@
             // 
             // GrpSupports
             // 
-            this.GrpSupports.Controls.Add(this.LblCopiesSupp);
+            this.GrpSupports.Controls.Add(this.label6);
+            this.GrpSupports.Controls.Add(this.label5);
+            this.GrpSupports.Controls.Add(this.label4);
+            this.GrpSupports.Controls.Add(this.label3);
+            this.GrpSupports.Controls.Add(this.LblNbCopiesSuppView);
+            this.GrpSupports.Controls.Add(this.LblLinkView);
+            this.GrpSupports.Controls.Add(this.LblHddView);
+            this.GrpSupports.Controls.Add(this.LblCleUsbView);
+            this.GrpSupports.Controls.Add(this.LblMontageAviView);
+            this.GrpSupports.Controls.Add(this.LblDvdPersonnaliseView);
+            this.GrpSupports.Controls.Add(this.LblDvdStandardView);
             this.GrpSupports.Controls.Add(this.ChkDvdStandard);
             this.GrpSupports.Controls.Add(this.ChkDvdPersonnalise);
             this.GrpSupports.Controls.Add(this.ChkMontageAvi);
@@ -572,12 +788,146 @@
             this.GrpSupports.Controls.Add(this.TxtCopiesSupp);
             this.GrpSupports.Controls.Add(this.ChkLink);
             this.GrpSupports.Controls.Add(this.ChkHdd);
+            this.GrpSupports.Controls.Add(this.label2);
+            this.GrpSupports.Controls.Add(this.label1);
+            this.GrpSupports.Controls.Add(this.LblCopiesSupp);
             this.GrpSupports.Location = new System.Drawing.Point(31, 408);
             this.GrpSupports.Name = "GrpSupports";
             this.GrpSupports.Size = new System.Drawing.Size(859, 127);
             this.GrpSupports.TabIndex = 32;
             this.GrpSupports.TabStop = false;
             this.GrpSupports.Text = "Supports de restitution";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(454, 65);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(165, 16);
+            this.label6.TabIndex = 126;
+            this.label6.Text = "Lien de téléchargement :";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(463, 35);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(156, 16);
+            this.label5.TabIndex = 125;
+            this.label5.Text = "Disque dur numérique :";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(262, 64);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(130, 16);
+            this.label4.TabIndex = 124;
+            this.label4.Text = "Clé USB (MPEG4) :";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(211, 35);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(181, 16);
+            this.label3.TabIndex = 124;
+            this.label3.Text = "Fichiers de montage (.avi) :";
+            // 
+            // LblNbCopiesSuppView
+            // 
+            this.LblNbCopiesSuppView.AutoSize = true;
+            this.LblNbCopiesSuppView.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblNbCopiesSuppView.Location = new System.Drawing.Point(151, 92);
+            this.LblNbCopiesSuppView.Name = "LblNbCopiesSuppView";
+            this.LblNbCopiesSuppView.Size = new System.Drawing.Size(18, 19);
+            this.LblNbCopiesSuppView.TabIndex = 121;
+            this.LblNbCopiesSuppView.Text = "-";
+            this.LblNbCopiesSuppView.Visible = false;
+            // 
+            // LblLinkView
+            // 
+            this.LblLinkView.AutoSize = true;
+            this.LblLinkView.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblLinkView.Location = new System.Drawing.Point(620, 57);
+            this.LblLinkView.Name = "LblLinkView";
+            this.LblLinkView.Size = new System.Drawing.Size(18, 19);
+            this.LblLinkView.TabIndex = 120;
+            this.LblLinkView.Text = "-";
+            this.LblLinkView.Visible = false;
+            // 
+            // LblHddView
+            // 
+            this.LblHddView.AutoSize = true;
+            this.LblHddView.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblHddView.Location = new System.Drawing.Point(620, 32);
+            this.LblHddView.Name = "LblHddView";
+            this.LblHddView.Size = new System.Drawing.Size(18, 19);
+            this.LblHddView.TabIndex = 119;
+            this.LblHddView.Text = "-";
+            this.LblHddView.Visible = false;
+            // 
+            // LblCleUsbView
+            // 
+            this.LblCleUsbView.AutoSize = true;
+            this.LblCleUsbView.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblCleUsbView.Location = new System.Drawing.Point(389, 61);
+            this.LblCleUsbView.Name = "LblCleUsbView";
+            this.LblCleUsbView.Size = new System.Drawing.Size(18, 19);
+            this.LblCleUsbView.TabIndex = 118;
+            this.LblCleUsbView.Text = "-";
+            this.LblCleUsbView.Visible = false;
+            // 
+            // LblMontageAviView
+            // 
+            this.LblMontageAviView.AutoSize = true;
+            this.LblMontageAviView.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblMontageAviView.Location = new System.Drawing.Point(389, 33);
+            this.LblMontageAviView.Name = "LblMontageAviView";
+            this.LblMontageAviView.Size = new System.Drawing.Size(18, 19);
+            this.LblMontageAviView.TabIndex = 117;
+            this.LblMontageAviView.Text = "-";
+            this.LblMontageAviView.Visible = false;
+            // 
+            // LblDvdPersonnaliseView
+            // 
+            this.LblDvdPersonnaliseView.AutoSize = true;
+            this.LblDvdPersonnaliseView.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblDvdPersonnaliseView.Location = new System.Drawing.Point(147, 62);
+            this.LblDvdPersonnaliseView.Name = "LblDvdPersonnaliseView";
+            this.LblDvdPersonnaliseView.Size = new System.Drawing.Size(18, 19);
+            this.LblDvdPersonnaliseView.TabIndex = 116;
+            this.LblDvdPersonnaliseView.Text = "-";
+            this.LblDvdPersonnaliseView.Visible = false;
+            // 
+            // LblDvdStandardView
+            // 
+            this.LblDvdStandardView.AutoSize = true;
+            this.LblDvdStandardView.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblDvdStandardView.Location = new System.Drawing.Point(147, 32);
+            this.LblDvdStandardView.Name = "LblDvdStandardView";
+            this.LblDvdStandardView.Size = new System.Drawing.Size(18, 19);
+            this.LblDvdStandardView.TabIndex = 115;
+            this.LblDvdStandardView.Text = "-";
+            this.LblDvdStandardView.Visible = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(22, 33);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(122, 16);
+            this.label2.TabIndex = 123;
+            this.label2.Text = "DVD standard(s) :";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(-3, 63);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(147, 16);
+            this.label1.TabIndex = 122;
+            this.label1.Text = "DVD personnalisé(s) :";
             // 
             // LblCopiesSupp
             // 
@@ -611,11 +961,88 @@
             this.BtnCancel.UseVisualStyleBackColor = true;
             this.BtnCancel.Click += new System.EventHandler(this.BtnAnnuler_Click);
             // 
+            // LblVendeurView
+            // 
+            this.LblVendeurView.AutoSize = true;
+            this.LblVendeurView.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblVendeurView.Location = new System.Drawing.Point(127, 16);
+            this.LblVendeurView.Name = "LblVendeurView";
+            this.LblVendeurView.Size = new System.Drawing.Size(18, 19);
+            this.LblVendeurView.TabIndex = 100;
+            this.LblVendeurView.Text = "-";
+            this.LblVendeurView.Visible = false;
+            // 
+            // BtnFermer
+            // 
+            this.BtnFermer.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.BtnFermer.Image = global::Forever.Properties.Resources.icon_close_24;
+            this.BtnFermer.Location = new System.Drawing.Point(787, 557);
+            this.BtnFermer.Name = "BtnFermer";
+            this.BtnFermer.Size = new System.Drawing.Size(103, 34);
+            this.BtnFermer.TabIndex = 101;
+            this.BtnFermer.TabStop = false;
+            this.BtnFermer.Text = "Fermer";
+            this.BtnFermer.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.BtnFermer.UseVisualStyleBackColor = true;
+            this.BtnFermer.Visible = false;
+            this.BtnFermer.Click += new System.EventHandler(this.BtnFermer_Click);
+            // 
+            // LblDate
+            // 
+            this.LblDate.AutoSize = true;
+            this.LblDate.Location = new System.Drawing.Point(649, 24);
+            this.LblDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblDate.Name = "LblDate";
+            this.LblDate.Size = new System.Drawing.Size(139, 16);
+            this.LblDate.TabIndex = 102;
+            this.LblDate.Text = "Date de commande :";
+            this.LblDate.Visible = false;
+            // 
+            // LblDateView
+            // 
+            this.LblDateView.AutoSize = true;
+            this.LblDateView.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblDateView.Location = new System.Drawing.Point(795, 22);
+            this.LblDateView.Name = "LblDateView";
+            this.LblDateView.Size = new System.Drawing.Size(18, 19);
+            this.LblDateView.TabIndex = 109;
+            this.LblDateView.Text = "-";
+            this.LblDateView.Visible = false;
+            // 
+            // LblDateRetour
+            // 
+            this.LblDateRetour.AutoSize = true;
+            this.LblDateRetour.Location = new System.Drawing.Point(28, 557);
+            this.LblDateRetour.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblDateRetour.Name = "LblDateRetour";
+            this.LblDateRetour.Size = new System.Drawing.Size(108, 16);
+            this.LblDateRetour.TabIndex = 110;
+            this.LblDateRetour.Text = "Date de retour :";
+            this.LblDateRetour.Visible = false;
+            // 
+            // LblDateRetourView
+            // 
+            this.LblDateRetourView.AutoSize = true;
+            this.LblDateRetourView.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblDateRetourView.Location = new System.Drawing.Point(143, 555);
+            this.LblDateRetourView.Name = "LblDateRetourView";
+            this.LblDateRetourView.Size = new System.Drawing.Size(45, 19);
+            this.LblDateRetourView.TabIndex = 122;
+            this.LblDateRetourView.Text = "n.c.";
+            this.LblDateRetourView.Visible = false;
+            // 
             // OrderEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.BtnFermer;
             this.ClientSize = new System.Drawing.Size(922, 607);
+            this.Controls.Add(this.LblDateRetourView);
+            this.Controls.Add(this.LblDateRetour);
+            this.Controls.Add(this.LblDateView);
+            this.Controls.Add(this.LblDate);
+            this.Controls.Add(this.BtnFermer);
+            this.Controls.Add(this.LblVendeurView);
             this.Controls.Add(this.BtnCancel);
             this.Controls.Add(this.BtnSave);
             this.Controls.Add(this.GrpSupports);
@@ -692,6 +1119,39 @@
         private System.Windows.Forms.Label LblNbPhotos;
         private System.Windows.Forms.Label LblNbDiapos;
         private System.Windows.Forms.Label LblUnitCond;
-        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Label LblVendeurView;
+        private System.Windows.Forms.Label LblPrenomView;
+        private System.Windows.Forms.Label LblNomView;
+        private System.Windows.Forms.Label LblEmailView;
+        private System.Windows.Forms.Label LblVilleView;
+        private System.Windows.Forms.Label LblCpView;
+        private System.Windows.Forms.Label LblGsmView;
+        private System.Windows.Forms.Label LblTelView;
+        private System.Windows.Forms.Label LblAdresseView;
+        private System.Windows.Forms.Label LblPersonnalisationView;
+        private System.Windows.Forms.Label LblNbNegatifsView;
+        private System.Windows.Forms.Label LblNbPhotosView;
+        private System.Windows.Forms.Label LblNbDiaposView;
+        private System.Windows.Forms.Label LblNbUnitCondView;
+        private System.Windows.Forms.Label LblNbCassettesView;
+        private System.Windows.Forms.Label LblNbBobinesView;
+        private System.Windows.Forms.Label LblNbCopiesSuppView;
+        private System.Windows.Forms.Label LblLinkView;
+        private System.Windows.Forms.Label LblHddView;
+        private System.Windows.Forms.Label LblCleUsbView;
+        private System.Windows.Forms.Label LblMontageAviView;
+        private System.Windows.Forms.Label LblDvdPersonnaliseView;
+        private System.Windows.Forms.Label LblDvdStandardView;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button BtnFermer;
+        private System.Windows.Forms.Label LblDate;
+        private System.Windows.Forms.Label LblDateView;
+        private System.Windows.Forms.Label LblDateRetour;
+        private System.Windows.Forms.Label LblDateRetourView;
     }
 }
