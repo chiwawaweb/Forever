@@ -20,6 +20,9 @@ namespace Forever.Forms
         int _id, nbBobines, nbCassettes, nbUnitCond, nbDiapos, nbPhotos, nbNegatifs, nbCopiesSupp;
         string vendeur, nom, prenom, adresse, cp, ville, email, tel, gsm, notes;
         bool _view, persoDvdInternet, persoDvdPapier, dvdStandard, dvdPersonnalise, montageAvi, cleUsb, hdd, link;
+
+        
+
         DateTime date, dateRetour, createdAt, updatedAt;
 
         MainForm _owner;
@@ -72,6 +75,7 @@ namespace Forever.Forms
             BtnCancel.Visible = false;
             BtnSave.Visible = false;
             BtnFermer.Visible = true;
+            BtnPrint.Visible = true;
             LblDate.Visible = true;
             LblDateView.Visible = true;
             LblDateRetour.Visible = true;
@@ -343,7 +347,7 @@ namespace Forever.Forms
                         AddDatabase();
                     }
 
-                    Visible = false;
+                    //Visible = false;
                     OrderToPdf orderToPdf = new OrderToPdf(_id);
                     orderToPdf.ShowDialog();
 
@@ -360,39 +364,46 @@ namespace Forever.Forms
 
         private void AddDatabase()
         {
-            Order order = new Order();
-
-            order.Date = Convert.ToDateTime(DateTime.Now.ToShortDateString());
-            order.Vendeur = vendeur;
-            order.Nom = nom;
-            order.Prenom = prenom;
-            order.Adresse = adresse;
-            order.CP = cp;
-            order.Ville = ville;
-            order.Email = email;
-            order.Tel = tel;
-            order.Gsm = gsm;
-            order.NbBobines = nbBobines;
-            order.NbCassettes = nbCassettes;
-            order.PersoDvdInternet = persoDvdInternet;
-            order.PersoDvdPapier = persoDvdPapier;
-            order.NbUnitCond = nbUnitCond;
-            order.NbDiapos = nbDiapos;
-            order.NbPhotos = nbPhotos;
-            order.NbNegatifs = nbNegatifs;
-            order.DvdStandard = dvdStandard;
-            order.DvdPersonnalise = dvdPersonnalise;
-            order.NbCopiesSupp = nbCopiesSupp;
-            order.MontageAvi = montageAvi;
-            order.CleUsb = cleUsb;
-            order.Hdd = hdd;
-            order.Link = link;
-            order.Notes = notes;
-            order.CreatedAt = DateTime.Now;
+            Order order = new Order
+            {
+                Date = Convert.ToDateTime(DateTime.Now.ToShortDateString()),
+                Vendeur = vendeur,
+                Nom = nom,
+                Prenom = prenom,
+                Adresse = adresse,
+                CP = cp,
+                Ville = ville,
+                Email = email,
+                Tel = tel,
+                Gsm = gsm,
+                NbBobines = nbBobines,
+                NbCassettes = nbCassettes,
+                PersoDvdInternet = persoDvdInternet,
+                PersoDvdPapier = persoDvdPapier,
+                NbUnitCond = nbUnitCond,
+                NbDiapos = nbDiapos,
+                NbPhotos = nbPhotos,
+                NbNegatifs = nbNegatifs,
+                DvdStandard = dvdStandard,
+                DvdPersonnalise = dvdPersonnalise,
+                NbCopiesSupp = nbCopiesSupp,
+                MontageAvi = montageAvi,
+                CleUsb = cleUsb,
+                Hdd = hdd,
+                Link = link,
+                Notes = notes,
+                CreatedAt = DateTime.Now
+            };
 
             orderProvider.Create(order);
 
             _id = order.Id;
+        }
+
+        private void PrintOrder()
+        {
+            OrderToPdf frm = new OrderToPdf(_id);
+            frm.ShowDialog();
         }
 
         #region Gestion des événements
@@ -460,6 +471,11 @@ namespace Forever.Forms
         private void BtnFermer_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void BtnPrint_Click(object sender, EventArgs e)
+        {
+            PrintOrder();
         }
 
         #endregion

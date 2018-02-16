@@ -62,7 +62,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\ITextEvents.cs" />
     <Compile Include="Classes\Utils.cs" />
     <Compile Include="DAL\Context.cs" />
     <Compile Include="DAL\OrderProvider.cs" />
@@ -116,6 +115,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="ModeleForever.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -156,6 +158,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icon_forever_64.ico" />
+    <None Include="Resources\icon_save_128.png" />
+    <None Include="Resources\icon_save_24.png" />
     <None Include="Resources\icon_quitter_24.png" />
     <None Include="Resources\icon_poubelle_24.png" />
     <None Include="Resources\icon_consulter_24.png" />

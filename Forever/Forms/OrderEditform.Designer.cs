@@ -109,6 +109,7 @@
             this.LblDateView = new System.Windows.Forms.Label();
             this.LblDateRetour = new System.Windows.Forms.Label();
             this.LblDateRetourView = new System.Windows.Forms.Label();
+            this.BtnPrint = new System.Windows.Forms.Button();
             this.GrpCoordonnees.SuspendLayout();
             this.GrpElements.SuspendLayout();
             this.GrpSupports.SuspendLayout();
@@ -941,20 +942,22 @@
             // 
             // BtnSave
             // 
-            this.BtnSave.Location = new System.Drawing.Point(787, 557);
+            this.BtnSave.Image = global::Forever.Properties.Resources.icon_save_24;
+            this.BtnSave.Location = new System.Drawing.Point(759, 557);
             this.BtnSave.Name = "BtnSave";
-            this.BtnSave.Size = new System.Drawing.Size(103, 34);
+            this.BtnSave.Size = new System.Drawing.Size(131, 34);
             this.BtnSave.TabIndex = 99;
             this.BtnSave.TabStop = false;
-            this.BtnSave.Text = "OK";
+            this.BtnSave.Text = "Enregistrer";
+            this.BtnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.BtnSave.UseVisualStyleBackColor = true;
             this.BtnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // BtnCancel
             // 
-            this.BtnCancel.Location = new System.Drawing.Point(678, 557);
+            this.BtnCancel.Location = new System.Drawing.Point(619, 557);
             this.BtnCancel.Name = "BtnCancel";
-            this.BtnCancel.Size = new System.Drawing.Size(103, 34);
+            this.BtnCancel.Size = new System.Drawing.Size(131, 34);
             this.BtnCancel.TabIndex = 33;
             this.BtnCancel.TabStop = false;
             this.BtnCancel.Text = "Annuler";
@@ -976,9 +979,9 @@
             // 
             this.BtnFermer.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.BtnFermer.Image = global::Forever.Properties.Resources.icon_close_24;
-            this.BtnFermer.Location = new System.Drawing.Point(787, 557);
+            this.BtnFermer.Location = new System.Drawing.Point(759, 557);
             this.BtnFermer.Name = "BtnFermer";
-            this.BtnFermer.Size = new System.Drawing.Size(103, 34);
+            this.BtnFermer.Size = new System.Drawing.Size(131, 34);
             this.BtnFermer.TabIndex = 101;
             this.BtnFermer.TabStop = false;
             this.BtnFermer.Text = "Fermer";
@@ -1031,12 +1034,25 @@
             this.LblDateRetourView.Text = "n.c.";
             this.LblDateRetourView.Visible = false;
             // 
+            // BtnPrint
+            // 
+            this.BtnPrint.Location = new System.Drawing.Point(619, 557);
+            this.BtnPrint.Name = "BtnPrint";
+            this.BtnPrint.Size = new System.Drawing.Size(131, 34);
+            this.BtnPrint.TabIndex = 123;
+            this.BtnPrint.TabStop = false;
+            this.BtnPrint.Text = "Réimprimer";
+            this.BtnPrint.UseVisualStyleBackColor = true;
+            this.BtnPrint.Visible = false;
+            this.BtnPrint.Click += new System.EventHandler(this.BtnPrint_Click);
+            // 
             // OrderEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.BtnFermer;
             this.ClientSize = new System.Drawing.Size(922, 607);
+            this.Controls.Add(this.BtnPrint);
             this.Controls.Add(this.LblDateRetourView);
             this.Controls.Add(this.LblDateRetour);
             this.Controls.Add(this.LblDateView);
@@ -1153,5 +1169,6 @@
         private System.Windows.Forms.Label LblDateView;
         private System.Windows.Forms.Label LblDateRetour;
         private System.Windows.Forms.Label LblDateRetourView;
+        private System.Windows.Forms.Button BtnPrint;
     }
 }

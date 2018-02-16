@@ -40,6 +40,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.TxtSearch = new System.Windows.Forms.TextBox();
             this.BtnSearch = new System.Windows.Forms.Button();
+            this.TsbPrint = new System.Windows.Forms.ToolStripButton();
             this.ToolStrip.SuspendLayout();
             this.MenuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvOrders)).BeginInit();
@@ -50,7 +51,8 @@
             this.ToolStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.ToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.TsbNewOrder,
-            this.TsbView});
+            this.TsbView,
+            this.TsbPrint});
             this.ToolStrip.Location = new System.Drawing.Point(0, 24);
             this.ToolStrip.Name = "ToolStrip";
             this.ToolStrip.Size = new System.Drawing.Size(628, 31);
@@ -171,6 +173,15 @@
             this.BtnSearch.UseVisualStyleBackColor = true;
             this.BtnSearch.Click += new System.EventHandler(this.BtnSearch_Click);
             // 
+            // TsbPrint
+            // 
+            this.TsbPrint.Image = ((System.Drawing.Image)(resources.GetObject("TsbPrint.Image")));
+            this.TsbPrint.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.TsbPrint.Name = "TsbPrint";
+            this.TsbPrint.Size = new System.Drawing.Size(97, 28);
+            this.TsbPrint.Text = "Réimprimer";
+            this.TsbPrint.Click += new System.EventHandler(this.TsbPrint_Click);
+            // 
             // MainForm
             // 
             this.AcceptButton = this.BtnSearch;
@@ -216,5 +227,6 @@
         private System.Windows.Forms.TextBox TxtSearch;
         private System.Windows.Forms.Button BtnSearch;
         private System.Windows.Forms.ToolStripButton TsbView;
+        private System.Windows.Forms.ToolStripButton TsbPrint;
     }
 }

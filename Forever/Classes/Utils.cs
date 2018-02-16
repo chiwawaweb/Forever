@@ -8,6 +8,7 @@ using System.Configuration;
 using System.Windows.Forms;
 using System.Net.Mail;
 using System.ComponentModel.DataAnnotations;
+using System.Security.Cryptography;
 
 namespace Forever.Classes
 {
@@ -82,9 +83,18 @@ namespace Forever.Classes
                 e.Handled = true;
         }
 
-        /// <summary>
-        /// Lecture d'un paramètre de configuration
-        /// </summary>
-        /// <param name="key"></param>
+        public string MD5Hash(string input)
+
+        {
+            MD5 md5 = System.Security.Cryptography.MD5.Create();
+            byte[] inputBytes = System.Text.Encoding.ASCII.GetBytes(input);
+            byte[] hash = md5.ComputeHash(inputBytes);
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < hash.Length; i++)
+            {
+                sb.Append(hash[i].ToString("X2"));
+            }
+            return sb.ToString();
+        }
     }
 }

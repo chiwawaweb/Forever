@@ -154,6 +154,17 @@ namespace Forever.Forms
             }
         }
 
+        private void PrintOrder()
+        {
+            if (DgvOrders.RowCount > 0)
+            {
+                int ID = int.Parse(DgvOrders.CurrentRow.Cells[0].Value.ToString());
+                idRetour = ID;
+                OrderToPdf frm = new OrderToPdf(ID);
+                frm.ShowDialog();
+            }
+        }
+
         #region Gestion des événements
 
         private void quitterToolStripMenuItem_Click(object sender, EventArgs e)
@@ -186,7 +197,13 @@ namespace Forever.Forms
             OpenOrderForm(true);
         }
 
+        private void TsbPrint_Click(object sender, EventArgs e)
+        {
+            PrintOrder();
+        }
+
         #endregion
+
 
     }
 }

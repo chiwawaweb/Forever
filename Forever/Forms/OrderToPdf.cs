@@ -18,18 +18,38 @@ namespace Forever.Forms
         int _id;
         double decalage;
         string PDF_FileName, PDF_Directory, emailUser, emailDomain;
-        DateTime date;
 
         Utils utils = new Utils();
         OrderProvider orderProvider = new OrderProvider();
         PdfContentByte cb;
+
+        private void TsbClose_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
         public OrderToPdf(int id)
         {
             _id = id;
 
-            using (var reader = new PdfReader(@"Input.pdf"))
+            PDF_Directory = @"temp\";
+            PDF_FileName = "forever_" + utils.MD5Hash(DateTime.Now.ToString("yyyyMMddHHmmssfff")) + ".pdf";
+
+            /* Création du répertoire temporaire */
+            Directory.CreateDirectory(PDF_Directory);
+            string[] filenames = Directory.GetFiles(PDF_Directory, "*.*", SearchOption.TopDirectoryOnly);
+            foreach (string fName in filenames)
             {
-                using (var fileStream = new FileStream(@"Output.pdf", FileMode.Create, FileAccess.Write))
+                try
+                {
+                    File.Delete(fName);
+                }
+                catch { }
+            }
+
+            using (var reader = new PdfReader(@"ModeleForever.pdf"))
+            {
+                using (var fileStream = new FileStream(PDF_Directory + PDF_FileName, FileMode.Create, FileAccess.Write))
                 {
                     var document = new Document(reader.GetPageSizeWithRotation(1));
                     var writer = PdfWriter.GetInstance(document, fileStream);
@@ -163,7 +183,7 @@ namespace Forever.Forms
         }
 
         /// <summary>
-        /// Ecrit dans les cases en respectant le décalage.
+        /// Ecrit un texte dans les cases en respectant le décalage.
         /// </summary>
         /// <param name="phrase">Texte à écrire</param>
         private void WriteInCases(string phrase, int x, int y)
@@ -180,6 +200,12 @@ namespace Forever.Forms
             }
         }
 
+        /// <summary>
+        /// Ecrit un chiffre dans une case
+        /// </summary>
+        /// <param name="phrase">Chiffre</param>
+        /// <param name="x">Coordonnées X</param>
+        /// <param name="y">Coordonnées Y</param>
         private void WriteInBigCase(int phrase = 0, int x = 0, int y = 0)
         {
             cb.ShowTextAligned(PdfContentByte.ALIGN_CENTER, phrase.ToString(), x, y, 0);
