@@ -278,7 +278,7 @@
             this.ChkDvdStandard.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.ChkDvdStandard.Checked = true;
             this.ChkDvdStandard.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.ChkDvdStandard.Location = new System.Drawing.Point(150, 36);
+            this.ChkDvdStandard.Location = new System.Drawing.Point(164, 36);
             this.ChkDvdStandard.Margin = new System.Windows.Forms.Padding(4);
             this.ChkDvdStandard.Name = "ChkDvdStandard";
             this.ChkDvdStandard.Size = new System.Drawing.Size(15, 14);
@@ -289,7 +289,7 @@
             // 
             this.ChkDvdPersonnalise.AutoSize = true;
             this.ChkDvdPersonnalise.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.ChkDvdPersonnalise.Location = new System.Drawing.Point(150, 64);
+            this.ChkDvdPersonnalise.Location = new System.Drawing.Point(164, 64);
             this.ChkDvdPersonnalise.Margin = new System.Windows.Forms.Padding(4);
             this.ChkDvdPersonnalise.Name = "ChkDvdPersonnalise";
             this.ChkDvdPersonnalise.Size = new System.Drawing.Size(15, 14);
@@ -300,7 +300,7 @@
             // 
             this.ChkMontageAvi.AutoSize = true;
             this.ChkMontageAvi.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.ChkMontageAvi.Location = new System.Drawing.Point(392, 35);
+            this.ChkMontageAvi.Location = new System.Drawing.Point(421, 35);
             this.ChkMontageAvi.Margin = new System.Windows.Forms.Padding(4);
             this.ChkMontageAvi.Name = "ChkMontageAvi";
             this.ChkMontageAvi.Size = new System.Drawing.Size(15, 14);
@@ -310,7 +310,7 @@
             // TxtCopiesSupp
             // 
             this.TxtCopiesSupp.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold);
-            this.TxtCopiesSupp.Location = new System.Drawing.Point(150, 85);
+            this.TxtCopiesSupp.Location = new System.Drawing.Point(164, 88);
             this.TxtCopiesSupp.Margin = new System.Windows.Forms.Padding(4);
             this.TxtCopiesSupp.Name = "TxtCopiesSupp";
             this.TxtCopiesSupp.Size = new System.Drawing.Size(32, 26);
@@ -322,7 +322,7 @@
             // 
             this.ChkCleUsb.AutoSize = true;
             this.ChkCleUsb.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.ChkCleUsb.Location = new System.Drawing.Point(393, 67);
+            this.ChkCleUsb.Location = new System.Drawing.Point(422, 67);
             this.ChkCleUsb.Margin = new System.Windows.Forms.Padding(4);
             this.ChkCleUsb.Name = "ChkCleUsb";
             this.ChkCleUsb.Size = new System.Drawing.Size(15, 14);
@@ -333,7 +333,7 @@
             // 
             this.ChkHdd.AutoSize = true;
             this.ChkHdd.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.ChkHdd.Location = new System.Drawing.Point(621, 33);
+            this.ChkHdd.Location = new System.Drawing.Point(672, 33);
             this.ChkHdd.Margin = new System.Windows.Forms.Padding(4);
             this.ChkHdd.Name = "ChkHdd";
             this.ChkHdd.Size = new System.Drawing.Size(15, 14);
@@ -344,7 +344,7 @@
             // 
             this.ChkLink.AutoSize = true;
             this.ChkLink.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.ChkLink.Location = new System.Drawing.Point(623, 61);
+            this.ChkLink.Location = new System.Drawing.Point(674, 61);
             this.ChkLink.Margin = new System.Windows.Forms.Padding(4);
             this.ChkLink.Name = "ChkLink";
             this.ChkLink.Size = new System.Drawing.Size(15, 14);
@@ -490,7 +490,7 @@
             // 
             this.LblEmailView.AutoSize = true;
             this.LblEmailView.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblEmailView.Location = new System.Drawing.Point(511, 108);
+            this.LblEmailView.Location = new System.Drawing.Point(515, 108);
             this.LblEmailView.Name = "LblEmailView";
             this.LblEmailView.Size = new System.Drawing.Size(18, 19);
             this.LblEmailView.TabIndex = 108;
@@ -501,7 +501,7 @@
             // 
             this.LblVilleView.AutoSize = true;
             this.LblVilleView.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblVilleView.Location = new System.Drawing.Point(618, 75);
+            this.LblVilleView.Location = new System.Drawing.Point(622, 74);
             this.LblVilleView.Name = "LblVilleView";
             this.LblVilleView.Size = new System.Drawing.Size(18, 19);
             this.LblVilleView.TabIndex = 107;
@@ -512,7 +512,7 @@
             // 
             this.LblCpView.AutoSize = true;
             this.LblCpView.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblCpView.Location = new System.Drawing.Point(511, 72);
+            this.LblCpView.Location = new System.Drawing.Point(514, 74);
             this.LblCpView.Name = "LblCpView";
             this.LblCpView.Size = new System.Drawing.Size(18, 19);
             this.LblCpView.TabIndex = 106;
@@ -523,7 +523,7 @@
             // 
             this.LblGsmView.AutoSize = true;
             this.LblGsmView.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblGsmView.Location = new System.Drawing.Point(292, 108);
+            this.LblGsmView.Location = new System.Drawing.Point(293, 107);
             this.LblGsmView.Name = "LblGsmView";
             this.LblGsmView.Size = new System.Drawing.Size(18, 19);
             this.LblGsmView.TabIndex = 105;
@@ -534,7 +534,7 @@
             // 
             this.LblTelView.AutoSize = true;
             this.LblTelView.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblTelView.Location = new System.Drawing.Point(96, 108);
+            this.LblTelView.Location = new System.Drawing.Point(96, 107);
             this.LblTelView.Name = "LblTelView";
             this.LblTelView.Size = new System.Drawing.Size(18, 19);
             this.LblTelView.TabIndex = 104;
@@ -545,7 +545,7 @@
             // 
             this.LblAdresseView.AutoSize = true;
             this.LblAdresseView.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblAdresseView.Location = new System.Drawing.Point(96, 73);
+            this.LblAdresseView.Location = new System.Drawing.Point(97, 74);
             this.LblAdresseView.Name = "LblAdresseView";
             this.LblAdresseView.Size = new System.Drawing.Size(18, 19);
             this.LblAdresseView.TabIndex = 103;
@@ -556,7 +556,7 @@
             // 
             this.LblPrenomView.AutoSize = true;
             this.LblPrenomView.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblPrenomView.Location = new System.Drawing.Point(511, 39);
+            this.LblPrenomView.Location = new System.Drawing.Point(515, 40);
             this.LblPrenomView.Name = "LblPrenomView";
             this.LblPrenomView.Size = new System.Drawing.Size(18, 19);
             this.LblPrenomView.TabIndex = 102;
@@ -567,7 +567,7 @@
             // 
             this.LblNomView.AutoSize = true;
             this.LblNomView.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblNomView.Location = new System.Drawing.Point(96, 39);
+            this.LblNomView.Location = new System.Drawing.Point(97, 40);
             this.LblNomView.Name = "LblNomView";
             this.LblNomView.Size = new System.Drawing.Size(18, 19);
             this.LblNomView.TabIndex = 101;
@@ -610,7 +610,7 @@
             // 
             this.LblPersonnalisationView.AutoSize = true;
             this.LblPersonnalisationView.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblPersonnalisationView.Location = new System.Drawing.Point(610, 33);
+            this.LblPersonnalisationView.Location = new System.Drawing.Point(610, 34);
             this.LblPersonnalisationView.Name = "LblPersonnalisationView";
             this.LblPersonnalisationView.Size = new System.Drawing.Size(18, 19);
             this.LblPersonnalisationView.TabIndex = 115;
@@ -621,7 +621,7 @@
             // 
             this.LblNbNegatifsView.AutoSize = true;
             this.LblNbNegatifsView.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblNbNegatifsView.Location = new System.Drawing.Point(610, 144);
+            this.LblNbNegatifsView.Location = new System.Drawing.Point(614, 145);
             this.LblNbNegatifsView.Name = "LblNbNegatifsView";
             this.LblNbNegatifsView.Size = new System.Drawing.Size(18, 19);
             this.LblNbNegatifsView.TabIndex = 114;
@@ -632,7 +632,7 @@
             // 
             this.LblNbPhotosView.AutoSize = true;
             this.LblNbPhotosView.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblNbPhotosView.Location = new System.Drawing.Point(610, 109);
+            this.LblNbPhotosView.Location = new System.Drawing.Point(614, 111);
             this.LblNbPhotosView.Name = "LblNbPhotosView";
             this.LblNbPhotosView.Size = new System.Drawing.Size(18, 19);
             this.LblNbPhotosView.TabIndex = 113;
@@ -643,7 +643,7 @@
             // 
             this.LblNbDiaposView.AutoSize = true;
             this.LblNbDiaposView.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblNbDiaposView.Location = new System.Drawing.Point(610, 76);
+            this.LblNbDiaposView.Location = new System.Drawing.Point(614, 77);
             this.LblNbDiaposView.Name = "LblNbDiaposView";
             this.LblNbDiaposView.Size = new System.Drawing.Size(18, 19);
             this.LblNbDiaposView.TabIndex = 112;
@@ -654,7 +654,7 @@
             // 
             this.LblNbUnitCondView.AutoSize = true;
             this.LblNbUnitCondView.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblNbUnitCondView.Location = new System.Drawing.Point(222, 80);
+            this.LblNbUnitCondView.Location = new System.Drawing.Point(220, 77);
             this.LblNbUnitCondView.Name = "LblNbUnitCondView";
             this.LblNbUnitCondView.Size = new System.Drawing.Size(18, 19);
             this.LblNbUnitCondView.TabIndex = 111;
@@ -665,7 +665,7 @@
             // 
             this.LblNbCassettesView.AutoSize = true;
             this.LblNbCassettesView.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblNbCassettesView.Location = new System.Drawing.Point(380, 35);
+            this.LblNbCassettesView.Location = new System.Drawing.Point(384, 34);
             this.LblNbCassettesView.Name = "LblNbCassettesView";
             this.LblNbCassettesView.Size = new System.Drawing.Size(18, 19);
             this.LblNbCassettesView.TabIndex = 110;
@@ -676,7 +676,7 @@
             // 
             this.LblNbBobinesView.AutoSize = true;
             this.LblNbBobinesView.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblNbBobinesView.Location = new System.Drawing.Point(171, 35);
+            this.LblNbBobinesView.Location = new System.Drawing.Point(169, 34);
             this.LblNbBobinesView.Name = "LblNbBobinesView";
             this.LblNbBobinesView.Size = new System.Drawing.Size(18, 19);
             this.LblNbBobinesView.TabIndex = 109;
@@ -801,7 +801,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(454, 65);
+            this.label6.Location = new System.Drawing.Point(505, 63);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(165, 16);
             this.label6.TabIndex = 126;
@@ -810,7 +810,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(463, 35);
+            this.label5.Location = new System.Drawing.Point(514, 33);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(156, 16);
             this.label5.TabIndex = 125;
@@ -819,7 +819,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(262, 64);
+            this.label4.Location = new System.Drawing.Point(291, 63);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(130, 16);
             this.label4.TabIndex = 124;
@@ -828,7 +828,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(211, 35);
+            this.label3.Location = new System.Drawing.Point(240, 33);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(181, 16);
             this.label3.TabIndex = 124;
@@ -838,7 +838,7 @@
             // 
             this.LblNbCopiesSuppView.AutoSize = true;
             this.LblNbCopiesSuppView.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblNbCopiesSuppView.Location = new System.Drawing.Point(151, 92);
+            this.LblNbCopiesSuppView.Location = new System.Drawing.Point(164, 92);
             this.LblNbCopiesSuppView.Name = "LblNbCopiesSuppView";
             this.LblNbCopiesSuppView.Size = new System.Drawing.Size(18, 19);
             this.LblNbCopiesSuppView.TabIndex = 121;
@@ -849,7 +849,7 @@
             // 
             this.LblLinkView.AutoSize = true;
             this.LblLinkView.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblLinkView.Location = new System.Drawing.Point(620, 57);
+            this.LblLinkView.Location = new System.Drawing.Point(671, 62);
             this.LblLinkView.Name = "LblLinkView";
             this.LblLinkView.Size = new System.Drawing.Size(18, 19);
             this.LblLinkView.TabIndex = 120;
@@ -860,7 +860,7 @@
             // 
             this.LblHddView.AutoSize = true;
             this.LblHddView.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblHddView.Location = new System.Drawing.Point(620, 32);
+            this.LblHddView.Location = new System.Drawing.Point(671, 32);
             this.LblHddView.Name = "LblHddView";
             this.LblHddView.Size = new System.Drawing.Size(18, 19);
             this.LblHddView.TabIndex = 119;
@@ -871,7 +871,7 @@
             // 
             this.LblCleUsbView.AutoSize = true;
             this.LblCleUsbView.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblCleUsbView.Location = new System.Drawing.Point(389, 61);
+            this.LblCleUsbView.Location = new System.Drawing.Point(418, 62);
             this.LblCleUsbView.Name = "LblCleUsbView";
             this.LblCleUsbView.Size = new System.Drawing.Size(18, 19);
             this.LblCleUsbView.TabIndex = 118;
@@ -882,7 +882,7 @@
             // 
             this.LblMontageAviView.AutoSize = true;
             this.LblMontageAviView.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblMontageAviView.Location = new System.Drawing.Point(389, 33);
+            this.LblMontageAviView.Location = new System.Drawing.Point(418, 32);
             this.LblMontageAviView.Name = "LblMontageAviView";
             this.LblMontageAviView.Size = new System.Drawing.Size(18, 19);
             this.LblMontageAviView.TabIndex = 117;
@@ -893,7 +893,7 @@
             // 
             this.LblDvdPersonnaliseView.AutoSize = true;
             this.LblDvdPersonnaliseView.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblDvdPersonnaliseView.Location = new System.Drawing.Point(147, 62);
+            this.LblDvdPersonnaliseView.Location = new System.Drawing.Point(161, 62);
             this.LblDvdPersonnaliseView.Name = "LblDvdPersonnaliseView";
             this.LblDvdPersonnaliseView.Size = new System.Drawing.Size(18, 19);
             this.LblDvdPersonnaliseView.TabIndex = 116;
@@ -904,7 +904,7 @@
             // 
             this.LblDvdStandardView.AutoSize = true;
             this.LblDvdStandardView.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblDvdStandardView.Location = new System.Drawing.Point(147, 32);
+            this.LblDvdStandardView.Location = new System.Drawing.Point(161, 32);
             this.LblDvdStandardView.Name = "LblDvdStandardView";
             this.LblDvdStandardView.Size = new System.Drawing.Size(18, 19);
             this.LblDvdStandardView.TabIndex = 115;
@@ -914,7 +914,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(22, 33);
+            this.label2.Location = new System.Drawing.Point(36, 33);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(122, 16);
             this.label2.TabIndex = 123;
@@ -923,7 +923,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(-3, 63);
+            this.label1.Location = new System.Drawing.Point(11, 63);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(147, 16);
             this.label1.TabIndex = 122;
@@ -932,7 +932,7 @@
             // LblCopiesSupp
             // 
             this.LblCopiesSupp.AutoSize = true;
-            this.LblCopiesSupp.Location = new System.Drawing.Point(45, 92);
+            this.LblCopiesSupp.Location = new System.Drawing.Point(59, 93);
             this.LblCopiesSupp.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblCopiesSupp.Name = "LblCopiesSupp";
             this.LblCopiesSupp.Size = new System.Drawing.Size(99, 16);
@@ -965,7 +965,7 @@
             // 
             this.LblVendeurView.AutoSize = true;
             this.LblVendeurView.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblVendeurView.Location = new System.Drawing.Point(127, 16);
+            this.LblVendeurView.Location = new System.Drawing.Point(128, 17);
             this.LblVendeurView.Name = "LblVendeurView";
             this.LblVendeurView.Size = new System.Drawing.Size(18, 19);
             this.LblVendeurView.TabIndex = 100;
@@ -1024,7 +1024,7 @@
             // 
             this.LblDateRetourView.AutoSize = true;
             this.LblDateRetourView.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblDateRetourView.Location = new System.Drawing.Point(143, 555);
+            this.LblDateRetourView.Location = new System.Drawing.Point(143, 556);
             this.LblDateRetourView.Name = "LblDateRetourView";
             this.LblDateRetourView.Size = new System.Drawing.Size(45, 19);
             this.LblDateRetourView.TabIndex = 122;
