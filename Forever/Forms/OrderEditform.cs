@@ -51,8 +51,6 @@ namespace Forever.Forms
             }
         }
 
-        
-
         private void New()
         {
             this.Text = "Nouvelle commande";
@@ -262,6 +260,16 @@ namespace Forever.Forms
         private void OrderEditForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             _owner.RefreshData();
+        }
+
+        private void TxtGsm_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            utils.ChiffreOnly(e);
+        }
+
+        private void TxtTel_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            utils.ChiffreOnly(e);
         }
 
         #endregion

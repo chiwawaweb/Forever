@@ -400,6 +400,7 @@
             this.TxtGsm.Name = "TxtGsm";
             this.TxtGsm.Size = new System.Drawing.Size(99, 26);
             this.TxtGsm.TabIndex = 6;
+            this.TxtGsm.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtGsm_KeyPress);
             // 
             // TxtTel
             // 
@@ -410,6 +411,7 @@
             this.TxtTel.Name = "TxtTel";
             this.TxtTel.Size = new System.Drawing.Size(99, 26);
             this.TxtTel.TabIndex = 5;
+            this.TxtTel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtTel_KeyPress);
             // 
             // LblVendeur
             // 

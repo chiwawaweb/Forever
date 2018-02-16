@@ -40,11 +40,14 @@ namespace Forever.Forms
                     decalage = 15.25; // Décalage entre 2 cases sur le formulaire
 
                     var baseFont = BaseFont.CreateFont(BaseFont.COURIER_BOLD, BaseFont.CP1252, BaseFont.NOT_EMBEDDED);
+                    var smallFont = BaseFont.CreateFont(BaseFont.COURIER, BaseFont.CP1252, BaseFont.NOT_EMBEDDED);
+                    var miniFont = BaseFont.CreateFont(BaseFont.HELVETICA, BaseFont.CP1252, BaseFont.NOT_EMBEDDED);
                     var importedPage = writer.GetImportedPage(reader, 1);
 
                     cb = writer.DirectContent;
                     cb.AddTemplate(importedPage, 0, 0);
 
+                    DateTime date = orderProvider.GetOrderById(_id).Date;
                     string nom = orderProvider.GetOrderById(_id).Nom;
                     string prenom = orderProvider.GetOrderById(_id).Prenom;
                     string adresse = orderProvider.GetOrderById(_id).Adresse;
@@ -61,9 +64,13 @@ namespace Forever.Forms
                     int nbNegatifs = orderProvider.GetOrderById(_id).NbNegatifs;
                     bool persoDvdInternet = orderProvider.GetOrderById(_id).PersoDvdInternet;
                     bool persoDvdPapier = orderProvider.GetOrderById(_id).PersoDvdPapier;
-
-
-
+                    bool dvdStandard = orderProvider.GetOrderById(_id).DvdStandard;
+                    bool dvdPersonnalise = orderProvider.GetOrderById(_id).DvdPersonnalise;
+                    int nbCopiesSupp = orderProvider.GetOrderById(_id).NbCopiesSupp;
+                    bool montageAvi = orderProvider.GetOrderById(_id).MontageAvi;
+                    bool cleUsb = orderProvider.GetOrderById(_id).CleUsb;
+                    bool hdd = orderProvider.GetOrderById(_id).Hdd;
+                    bool link = orderProvider.GetOrderById(_id).Link;
 
                     /* Split de l'adresse email */
                     if (email != "")
@@ -71,10 +78,7 @@ namespace Forever.Forms
                         MailAddress emailSplit = new MailAddress(email);
                         emailUser = emailSplit.User;
                         emailDomain = emailSplit.Host;
-                        
                     }
-
-                    
 
                     /* Remplissage du formulaire */
                     cb.BeginText();
@@ -103,28 +107,54 @@ namespace Forever.Forms
                     WriteInBigCase(nbNegatifs, 511, 404);
 
                     if (persoDvdInternet == true)
-                    {
                         WriteInCases("x", 309, 478);
-                    }
 
                     if (persoDvdPapier == true)
-                    {
                         WriteInCases("x", 429, 478);
-                    }
 
-                    WriteInCases("X", 195, 370); // nbUnitCond
-                    WriteInCases("X", 300, 370); // montageAvi
-                    WriteInCases("X", 500, 370); // hdd
-                    
+                    /* Partie supports de restitution */
+                    if (dvdStandard == true)
+                        WriteInCases("X", 195, 321);
 
+                    if (dvdPersonnalise == true)
+                        WriteInCases("X", 195, 294);
+
+                    if (montageAvi == true)
+                        WriteInCases("X", 370, 322);
+
+                    if (cleUsb == true)
+                        WriteInCases("X", 371, 302);
+
+                    if (hdd == true)
+                        WriteInCases("X", 526, 322); // hdd
+
+                    if (link == true)
+                        WriteInCases("X", 525, 302); // link
+
+                    WriteInBigCase(nbCopiesSupp, 206, 264);
+
+                    /* Nom du client, date et téléphone */
+                    string telClient = tel;
+                    if (string.IsNullOrEmpty(tel))
+                        telClient = gsm;
+
+                    cb.SetFontAndSize(smallFont, 9);
+                    cb.ShowTextAligned(PdfContentByte.ALIGN_LEFT, nom.PadRight(20), 470, 771, 0);
+                    cb.ShowTextAligned(PdfContentByte.ALIGN_LEFT, date.ToShortDateString(), 470, 758, 0);
+                    cb.ShowTextAligned(PdfContentByte.ALIGN_LEFT, telClient, 470, 744, 0);
+
+                    /* Nom du magasin */
+                    cb.SetFontAndSize(miniFont, 7);
+                    cb.ShowTextAligned(PdfContentByte.ALIGN_LEFT, "HIFI INTERNATIONAL SA", 452, 708, 0);
+                    cb.ShowTextAligned(PdfContentByte.ALIGN_LEFT, "C.C. BELLE ETOILE", 452, 700, 0);
+                    cb.ShowTextAligned(PdfContentByte.ALIGN_LEFT, "", 452, 692, 0);
+                    cb.ShowTextAligned(PdfContentByte.ALIGN_LEFT, "L-8050 BERTRANGE", 452, 684, 0);
 
                     cb.EndText();
 
                     document.Close();
                     writer.Close();
                 }
-
-                
             }
 
             InitializeComponent();
