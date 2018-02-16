@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrderEditForm));
             this.LblNom = new System.Windows.Forms.Label();
             this.TxtNom = new System.Windows.Forms.TextBox();
@@ -75,6 +76,7 @@
             this.LblCopiesSupp = new System.Windows.Forms.Label();
             this.BtnSave = new System.Windows.Forms.Button();
             this.BtnCancel = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.GrpCoordonnees.SuspendLayout();
             this.GrpElements.SuspendLayout();
             this.GrpSupports.SuspendLayout();
@@ -193,7 +195,7 @@
             // TxtNbUnitCond
             // 
             this.TxtNbUnitCond.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold);
-            this.TxtNbUnitCond.Location = new System.Drawing.Point(223, 73);
+            this.TxtNbUnitCond.Location = new System.Drawing.Point(220, 73);
             this.TxtNbUnitCond.Margin = new System.Windows.Forms.Padding(4);
             this.TxtNbUnitCond.MaxLength = 4;
             this.TxtNbUnitCond.Name = "TxtNbUnitCond";
@@ -242,6 +244,8 @@
             // 
             this.ChkDvdStandard.AutoSize = true;
             this.ChkDvdStandard.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ChkDvdStandard.Checked = true;
+            this.ChkDvdStandard.CheckState = System.Windows.Forms.CheckState.Checked;
             this.ChkDvdStandard.Location = new System.Drawing.Point(32, 33);
             this.ChkDvdStandard.Margin = new System.Windows.Forms.Padding(4);
             this.ChkDvdStandard.Name = "ChkDvdStandard";
@@ -525,29 +529,29 @@
             // LblNbNegatifs
             // 
             this.LblNbNegatifs.AutoSize = true;
-            this.LblNbNegatifs.Location = new System.Drawing.Point(501, 146);
+            this.LblNbNegatifs.Location = new System.Drawing.Point(476, 146);
             this.LblNbNegatifs.Name = "LblNbNegatifs";
-            this.LblNbNegatifs.Size = new System.Drawing.Size(107, 16);
+            this.LblNbNegatifs.Size = new System.Drawing.Size(139, 16);
             this.LblNbNegatifs.TabIndex = 16;
-            this.LblNbNegatifs.Text = "Nb de négatifs :";
+            this.LblNbNegatifs.Text = "Nombre de négatifs :";
             // 
             // LblNbPhotos
             // 
             this.LblNbPhotos.AutoSize = true;
-            this.LblNbPhotos.Location = new System.Drawing.Point(508, 112);
+            this.LblNbPhotos.Location = new System.Drawing.Point(483, 112);
             this.LblNbPhotos.Name = "LblNbPhotos";
-            this.LblNbPhotos.Size = new System.Drawing.Size(100, 16);
+            this.LblNbPhotos.Size = new System.Drawing.Size(132, 16);
             this.LblNbPhotos.TabIndex = 15;
-            this.LblNbPhotos.Text = "Nb de photos :";
+            this.LblNbPhotos.Text = "Nombre de photos :";
             // 
             // LblNbDiapos
             // 
             this.LblNbDiapos.AutoSize = true;
-            this.LblNbDiapos.Location = new System.Drawing.Point(508, 78);
+            this.LblNbDiapos.Location = new System.Drawing.Point(484, 78);
             this.LblNbDiapos.Name = "LblNbDiapos";
-            this.LblNbDiapos.Size = new System.Drawing.Size(99, 16);
+            this.LblNbDiapos.Size = new System.Drawing.Size(131, 16);
             this.LblNbDiapos.TabIndex = 14;
-            this.LblNbDiapos.Text = "Nb de diapos :";
+            this.LblNbDiapos.Text = "Nombre de diapos :";
             // 
             // LblUnitCond
             // 
@@ -688,5 +692,6 @@
         private System.Windows.Forms.Label LblNbPhotos;
         private System.Windows.Forms.Label LblNbDiapos;
         private System.Windows.Forms.Label LblUnitCond;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

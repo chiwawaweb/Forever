@@ -35,7 +35,14 @@ namespace Forever.Forms
             InitializeComponent();
 
             /* Combobox vendeur */
-
+            var dataSourceVendeur = new List<string>();
+            dataSourceVendeur.Add("");
+            foreach (string transfert in orderProvider.GetVendeurs())
+            {
+                dataSourceVendeur.Add(transfert);
+            }
+            CbxVendeur.DataSource = dataSourceVendeur;
+            CbxVendeur.DisplayMember = "Vendeur";
 
             switch (_view)
             {
@@ -132,12 +139,48 @@ namespace Forever.Forms
                 errMsg += "- Ville non spécifiée\n";
             }
 
-            if (utils.IsEmailValid(email)==false)
+            
+
+            /* Au moins un téléphone ou email */
+            if (string.IsNullOrEmpty(tel) && string.IsNullOrEmpty(gsm) && string.IsNullOrEmpty(email))
             {
                 erreurs = true;
-                errMsg += "- Adresse Email incorrecte\n";
+                errMsg += "- Au moins un numéro de téléphone ou adresse email\n";
+            }
+            else
+            {
+                if (tel!="" && tel.Length < 5)
+                {
+                    erreurs = true;
+                    errMsg += "- Numéro de téléphone trop court\n";
+                }
+
+                if (!string.IsNullOrEmpty(gsm) && gsm.Length < 5)
+                {
+                    erreurs = true;
+                    errMsg += "- Numéro de portable trop court\n";
+                }
+
+                if (utils.IsEmailValid(email) == false)
+                {
+                    erreurs = true;
+                    errMsg += "- Adresse email incorrecte\n";
+                }
             }
 
+            if (nbUnitCond<1)
+            {
+                erreurs = true;
+                errMsg += "- Nombre d'unité de conditionnement\n";
+            }
+
+            /* nombre de supports déposés au moins égal à 1 */
+            int nbElementsDeposes = nbBobines + nbCassettes + nbPhotos + nbDiapos + nbNegatifs;
+            if (nbElementsDeposes<1)
+            {
+                erreurs = true;
+                errMsg += "- Nombre d'éléments déposés\n";
+            }
 
             /* Contrôle si erreurs */
             if (erreurs == true)

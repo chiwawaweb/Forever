@@ -115,5 +115,27 @@ namespace Forever.DAL
                 }
             }
         }
+
+        public List<string> GetVendeurs()
+        {
+            using (Context context = new Context())
+            {
+                try
+                {
+                    var result = context.Orders.Select(v => v.Vendeur).Distinct();
+
+                    var vendeurs = from b in context.Orders
+                                   orderby b.Vendeur ascending
+
+                                   select b
+                                   ;
+                    return result.ToList();
+                }
+                catch
+                {
+                    throw;
+                }
+            }
+        }
     }
 }
