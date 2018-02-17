@@ -137,6 +137,7 @@ namespace Forever.Forms
                 LblDateView.Text = date.ToShortDateString();
                 
             });
+            TDate.Start();
 
             Thread TVendeur = new Thread(delegate ()
             {
@@ -145,30 +146,31 @@ namespace Forever.Forms
                 LblVendeurView.Text = vendeur;
                 
             });
+            TVendeur.Start();
 
             Thread TNom = new Thread(delegate ()
             {
                 nom = orderProvider.GetOrderById(_id).Nom;
                 TxtNom.Text = nom;
                 LblNomView.Text = nom;
-                
             });
+            TNom.Start();
 
             Thread TPrenom = new Thread(delegate ()
             {
                 prenom = orderProvider.GetOrderById(_id).Prenom;
                 TxtPrenom.Text = prenom;
                 LblPrenomView.Text = prenom;
-                
             });
+            TPrenom.Start();
 
             Thread TAdresse = new Thread(delegate ()
             {
                 adresse = orderProvider.GetOrderById(_id).Adresse;
                 TxtAdresse.Text = adresse;
                 LblAdresseView.Text = adresse;
-                
             });
+            TAdresse.Start();
 
             Thread TCp = new Thread(delegate ()
             {
@@ -176,6 +178,7 @@ namespace Forever.Forms
                 TxtCp.Text = cp;
                 LblCpView.Text = cp;
             });
+            TCp.Start();
 
             Thread TVille = new Thread(delegate ()
             {
@@ -183,6 +186,7 @@ namespace Forever.Forms
                 TxtVille.Text = ville;
                 LblVilleView.Text = ville;
             });
+            TVille.Start();
 
             Thread TTel = new Thread(delegate ()
             {
@@ -190,6 +194,7 @@ namespace Forever.Forms
                 TxtTel.Text = tel;
                 LblTelView.Text = tel;
             });
+            TTel.Start();
 
             Thread TGsm = new Thread(delegate ()
             {
@@ -197,24 +202,28 @@ namespace Forever.Forms
                 TxtGsm.Text = gsm;
                 LblGsmView.Text = gsm;
             });
+            TGsm.Start();
 
             Thread TEmail = new Thread(delegate ()
             {
                 email = orderProvider.GetOrderById(_id).Email;
                 TxtEmail.Text = LblEmailView.Text = email;
             });
+            TEmail.Start();
 
             Thread TNbBobines = new Thread(delegate ()
             {
                 nbBobines = orderProvider.GetOrderById(_id).NbBobines;
                 TxtNbBobines.Text = LblNbBobinesView.Text = nbBobines.ToString();
             });
+            TNbBobines.Start();
 
             Thread TNbCassettes = new Thread(delegate ()
             {
                 nbCassettes = orderProvider.GetOrderById(_id).NbCassettes;
                 TxtNbCassettes.Text = LblNbCassettesView.Text = nbCassettes.ToString();
             });
+            TNbCassettes.Start();
 
             Thread TPersoDvdInternet = new Thread(delegate ()
             {
@@ -224,8 +233,8 @@ namespace Forever.Forms
                     LblPersonnalisationView.Text = "Sur Internet";
                     RbtPersoDvdInternet.Checked = true;
                 }
-                    
             });
+            TPersoDvdInternet.Start();
 
             Thread TPersoDvdPapier = new Thread(delegate ()
             {
@@ -236,30 +245,35 @@ namespace Forever.Forms
                     RbtDvdPapier.Checked = true;
                 }
             });
+            TPersoDvdPapier.Start();
 
             Thread TNbUnitCond = new Thread(delegate ()
             {
                 nbUnitCond = orderProvider.GetOrderById(_id).NbUnitCond;
                 TxtNbUnitCond.Text = LblNbUnitCondView.Text = nbUnitCond.ToString();
             });
+            TNbUnitCond.Start();
 
             Thread TNbDiapos = new Thread(delegate ()
             {
                 nbDiapos = orderProvider.GetOrderById(_id).NbDiapos;
                 TxtNbDiapos.Text = LblNbDiaposView.Text = nbDiapos.ToString();
             });
+            TNbDiapos.Start();
 
             Thread TNbPhotos = new Thread(delegate ()
             {
                 nbPhotos = orderProvider.GetOrderById(_id).NbPhotos;
                 TxtNbPhotos.Text = LblNbPhotosView.Text = nbPhotos.ToString();
             });
+            TNbPhotos.Start();
 
             Thread TNbNegatifs = new Thread(delegate ()
             {
                 nbNegatifs = orderProvider.GetOrderById(_id).NbNegatifs;
                 TxtNbNegatifs.Text = LblNbNegatifsView.Text = nbNegatifs.ToString();
             });
+            TNbNegatifs.Start();
 
             Thread TDvdStandard = new Thread(delegate ()
             {
@@ -275,54 +289,116 @@ namespace Forever.Forms
                     ChkDvdStandard.Checked = true;
                 }
             });
+            TDvdStandard.Start();
 
             Thread TDvdPersonnalise = new Thread(delegate ()
             {
                 dvdPersonnalise = orderProvider.GetOrderById(_id).DvdPersonnalise;
+                if (dvdPersonnalise == true)
+                {
+                    LblDvdPersonnaliseView.Text = "OUI";
+                    ChkDvdPersonnalise.Checked = true;
+                }
+                else
+                {
+                    LblDvdPersonnaliseView.Text = "NON";
+                    ChkDvdPersonnalise.Checked = false;
+                }
             });
+            TDvdPersonnalise.Start();
 
             Thread TNbCopiesSupp = new Thread(delegate ()
             {
                 nbCopiesSupp = orderProvider.GetOrderById(_id).NbCopiesSupp;
                 TxtCopiesSupp.Text = LblNbCopiesSuppView.Text = nbCopiesSupp.ToString();
             });
+            TNbCopiesSupp.Start();
 
             Thread TMontageAvi = new Thread(delegate ()
             {
                 montageAvi = orderProvider.GetOrderById(_id).MontageAvi;
+                if (montageAvi == true)
+                {
+                    LblMontageAviView.Text = "OUI";
+                    ChkMontageAvi.Checked = true;
+                }
+                else
+                {
+                    LblMontageAviView.Text = "NON";
+                    ChkMontageAvi.Checked = false;
+                }
             });
+            TMontageAvi.Start();
 
             Thread TCleUsb = new Thread(delegate ()
             {
                 cleUsb = orderProvider.GetOrderById(_id).CleUsb;
+                if (cleUsb == true)
+                {
+                    LblCleUsbView.Text = "OUI"; ChkCleUsb.Checked = true;
+                }
+                else
+                {
+                    LblCleUsbView.Text = "NON"; ChkCleUsb.Checked = false;
+                }
             });
+            TCleUsb.Start();
 
             Thread THdd = new Thread(delegate ()
             {
                 hdd = orderProvider.GetOrderById(_id).Hdd;
+                if (hdd == true)
+                {
+                    LblHddView.Text = "OUI";
+
+                }
+                else
+                {
+                    LblHddView.Text = "NON";
+                    ChkHdd.Checked = false;
+                }
             });
+            THdd.Start();
 
             Thread TLink = new Thread(delegate ()
             {
                 link = orderProvider.GetOrderById(_id).Link;
+                if (link == true)
+                {
+                    ChkLink.Checked = true;
+                    LblLinkView.Text = "OUI";
+                }
+                else
+                {
+                    LblLinkView.Text = "NON";
+                    ChkLink.Checked = false;
+                }
             });
+            TLink.Start();
 
             Thread TDateRetour = new Thread(delegate ()
             {
                 dateRetour = orderProvider.GetOrderById(_id).DateRetour;
+                if (dateRetour == new DateTime(1899, 12, 30))
+                    LblDateRetourView.Text = "n.c.";
+                else
+                    LblDateRetourView.Text = dateRetour.ToShortDateString();
             });
+            TDateRetour.Start();
 
             Thread TCreatedAt = new Thread(delegate ()
             {
                 createdAt = orderProvider.GetOrderById(_id).CreatedAt;
             });
+            TCreatedAt.Start();
 
             Thread TUpdatedAt = new Thread(delegate ()
             {
                 updatedAt = orderProvider.GetOrderById(_id).UpdatedAt;
             });
+            TUpdatedAt.Start();
 
-
+            /*
             TDate.Start();
             TVendeur.Start();
             TNom.Start();
@@ -335,45 +411,22 @@ namespace Forever.Forms
             TEmail.Start();
             TNbBobines.Start();
             TNbCassettes.Start();
+            TPersoDvdInternet.Start();
+            TPersoDvdPapier.Start();
+            TNbUnitCond.Start();
+            TNbDiapos.Start();
+            TNbPhotos.Start();
+            TNbNegatifs.Start();
+            TDvdStandard.Start();
+            TDvdPersonnalise.Start();
+            TNbCopiesSupp.Start();
+            TMontageAvi.Start();
+            TCleUsb.Start();
+            THdd.Start();
+            TLink.Start();
+            TDateRetour.Start();
+            */
 
-
-            /* Affichage des données */
-
-
-
-
-
-            
-
-            if (dvdPersonnalise == true)
-                LblDvdPersonnaliseView.Text = "OUI";
-            else
-                LblDvdPersonnaliseView.Text = "NON";
-
-            if (montageAvi == true)
-                LblMontageAviView.Text = "OUI";
-            else
-                LblMontageAviView.Text = "NON";
-
-            if (cleUsb == true)
-                LblCleUsbView.Text = "OUI";
-            else
-                LblCleUsbView.Text = "NON";
-
-            if (hdd == true)
-                LblHddView.Text = "OUI";
-            else
-                LblHddView.Text = "NON";
-
-            if (link == true)
-                LblLinkView.Text = "OUI";
-            else
-                LblLinkView.Text = "NON";
-
-            if (dateRetour == new DateTime(1899, 12, 30))
-                LblDateRetourView.Text = "n.c.";
-            else
-                LblDateRetourView.Text = dateRetour.ToShortDateString();
         }
 
         private void Edit()
