@@ -159,6 +159,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icon_forever_64.ico" />
+    <None Include="Resources\icon_valider_24.png" />
+    <None Include="Resources\icon_information_24.png" />
+    <None Include="Resources\icon_information_16.png" />
+    <None Include="Resources\icon_cadenas_32.png" />
+    <None Include="Resources\icon_cadenas_16.png" />
+    <None Include="Resources\icon_print_128.png" />
+    <None Include="Resources\icon_print_24.png" />
     <None Include="Resources\icon_save_128.png" />
     <None Include="Resources\icon_save_24.png" />
     <None Include="Resources\icon_quitter_24.png" />

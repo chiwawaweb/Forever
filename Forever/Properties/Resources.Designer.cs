@@ -63,6 +63,26 @@ namespace Forever.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_cadenas_16 {
+            get {
+                object obj = ResourceManager.GetObject("icon_cadenas_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_cadenas_32 {
+            get {
+                object obj = ResourceManager.GetObject("icon_cadenas_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_close_16 {
             get {
                 object obj = ResourceManager.GetObject("icon_close_16", resourceCulture);
@@ -153,6 +173,26 @@ namespace Forever.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_information_16 {
+            get {
+                object obj = ResourceManager.GetObject("icon_information_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_information_24 {
+            get {
+                object obj = ResourceManager.GetObject("icon_information_24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_new_128 {
             get {
                 object obj = ResourceManager.GetObject("icon_new_128", resourceCulture);
@@ -203,6 +243,26 @@ namespace Forever.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_print_128 {
+            get {
+                object obj = ResourceManager.GetObject("icon_print_128", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_print_24 {
+            get {
+                object obj = ResourceManager.GetObject("icon_print_24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_quitter_24 {
             get {
                 object obj = ResourceManager.GetObject("icon_quitter_24", resourceCulture);
@@ -226,6 +286,16 @@ namespace Forever.Properties {
         internal static System.Drawing.Bitmap icon_save_24 {
             get {
                 object obj = ResourceManager.GetObject("icon_save_24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_valider_24 {
+            get {
+                object obj = ResourceManager.GetObject("icon_valider_24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

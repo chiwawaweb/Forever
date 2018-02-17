@@ -30,11 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrderToPdf));
             this.pdfDoc = new AxAcroPDFLib.AxAcroPDF();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.ToolStrip = new System.Windows.Forms.ToolStrip();
             this.TsbPrint = new System.Windows.Forms.ToolStripButton();
             this.TsbClose = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.pdfDoc)).BeginInit();
-            this.toolStrip1.SuspendLayout();
+            this.ToolStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // pdfDoc
@@ -43,27 +43,26 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pdfDoc.Enabled = true;
-            this.pdfDoc.Location = new System.Drawing.Point(0, 26);
+            this.pdfDoc.Location = new System.Drawing.Point(0, 29);
+            this.pdfDoc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pdfDoc.Name = "pdfDoc";
             this.pdfDoc.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("pdfDoc.OcxState")));
-            this.pdfDoc.Size = new System.Drawing.Size(627, 616);
+            this.pdfDoc.Size = new System.Drawing.Size(592, 600);
             this.pdfDoc.TabIndex = 0;
             // 
-            // toolStrip1
+            // ToolStrip
             // 
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.TsbPrint,
             this.TsbClose});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(627, 25);
-            this.toolStrip1.Stretch = true;
-            this.toolStrip1.TabIndex = 1;
-            this.toolStrip1.Text = "toolStrip1";
+            this.ToolStrip.Location = new System.Drawing.Point(0, 0);
+            this.ToolStrip.Name = "ToolStrip";
+            this.ToolStrip.Size = new System.Drawing.Size(592, 25);
+            this.ToolStrip.TabIndex = 1;
             // 
             // TsbPrint
             // 
-            this.TsbPrint.Image = ((System.Drawing.Image)(resources.GetObject("TsbPrint.Image")));
+            this.TsbPrint.Image = global::Forever.Properties.Resources.icon_print_24;
             this.TsbPrint.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.TsbPrint.Name = "TsbPrint";
             this.TsbPrint.Size = new System.Drawing.Size(76, 22);
@@ -82,12 +81,14 @@
             // 
             // OrderToPdf
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(627, 642);
-            this.Controls.Add(this.toolStrip1);
+            this.ClientSize = new System.Drawing.Size(592, 629);
+            this.Controls.Add(this.ToolStrip);
             this.Controls.Add(this.pdfDoc);
+            this.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "OrderToPdf";
@@ -96,8 +97,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Aperçu avant impression";
             ((System.ComponentModel.ISupportInitialize)(this.pdfDoc)).EndInit();
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
+            this.ToolStrip.ResumeLayout(false);
+            this.ToolStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -106,7 +107,7 @@
         #endregion
 
         private AxAcroPDFLib.AxAcroPDF pdfDoc;
-        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStrip ToolStrip;
         private System.Windows.Forms.ToolStripButton TsbPrint;
         private System.Windows.Forms.ToolStripButton TsbClose;
     }

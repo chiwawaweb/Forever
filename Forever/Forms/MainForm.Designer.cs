@@ -32,6 +32,8 @@
             this.ToolStrip = new System.Windows.Forms.ToolStrip();
             this.TsbNewOrder = new System.Windows.Forms.ToolStripButton();
             this.TsbView = new System.Windows.Forms.ToolStripButton();
+            this.TsbPrint = new System.Windows.Forms.ToolStripButton();
+            this.TsbRetour = new System.Windows.Forms.ToolStripButton();
             this.StatusStrip = new System.Windows.Forms.StatusStrip();
             this.MenuStrip = new System.Windows.Forms.MenuStrip();
             this.fichiersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -40,7 +42,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.TxtSearch = new System.Windows.Forms.TextBox();
             this.BtnSearch = new System.Windows.Forms.Button();
-            this.TsbPrint = new System.Windows.Forms.ToolStripButton();
             this.ToolStrip.SuspendLayout();
             this.MenuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvOrders)).BeginInit();
@@ -52,7 +53,8 @@
             this.ToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.TsbNewOrder,
             this.TsbView,
-            this.TsbPrint});
+            this.TsbPrint,
+            this.TsbRetour});
             this.ToolStrip.Location = new System.Drawing.Point(0, 24);
             this.ToolStrip.Name = "ToolStrip";
             this.ToolStrip.Size = new System.Drawing.Size(628, 31);
@@ -76,6 +78,23 @@
             this.TsbView.Size = new System.Drawing.Size(84, 28);
             this.TsbView.Text = "Visualiser";
             this.TsbView.Click += new System.EventHandler(this.TsbView_Click);
+            // 
+            // TsbPrint
+            // 
+            this.TsbPrint.Image = global::Forever.Properties.Resources.icon_print_24;
+            this.TsbPrint.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.TsbPrint.Name = "TsbPrint";
+            this.TsbPrint.Size = new System.Drawing.Size(97, 28);
+            this.TsbPrint.Text = "Réimprimer";
+            this.TsbPrint.Click += new System.EventHandler(this.TsbPrint_Click);
+            // 
+            // TsbRetour
+            // 
+            this.TsbRetour.Image = global::Forever.Properties.Resources.icon_valider_24;
+            this.TsbRetour.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.TsbRetour.Name = "TsbRetour";
+            this.TsbRetour.Size = new System.Drawing.Size(70, 28);
+            this.TsbRetour.Text = "Retour";
             // 
             // StatusStrip
             // 
@@ -173,15 +192,6 @@
             this.BtnSearch.UseVisualStyleBackColor = true;
             this.BtnSearch.Click += new System.EventHandler(this.BtnSearch_Click);
             // 
-            // TsbPrint
-            // 
-            this.TsbPrint.Image = ((System.Drawing.Image)(resources.GetObject("TsbPrint.Image")));
-            this.TsbPrint.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.TsbPrint.Name = "TsbPrint";
-            this.TsbPrint.Size = new System.Drawing.Size(97, 28);
-            this.TsbPrint.Text = "Réimprimer";
-            this.TsbPrint.Click += new System.EventHandler(this.TsbPrint_Click);
-            // 
             // MainForm
             // 
             this.AcceptButton = this.BtnSearch;
@@ -228,5 +238,6 @@
         private System.Windows.Forms.Button BtnSearch;
         private System.Windows.Forms.ToolStripButton TsbView;
         private System.Windows.Forms.ToolStripButton TsbPrint;
+        private System.Windows.Forms.ToolStripButton TsbRetour;
     }
 }

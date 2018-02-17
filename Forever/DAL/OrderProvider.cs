@@ -66,13 +66,13 @@ namespace Forever.DAL
             }
         }
 
-        public Order GetOrderById(int ID)
+        public Order GetOrderById(int id)
         {
             using (Context context = new Context())
             {
                 try
                 {
-                    return context.Orders.Find(ID);
+                    return context.Orders.Find(id);
                 }
                 catch
                 {
@@ -124,11 +124,6 @@ namespace Forever.DAL
                 {
                     var result = context.Orders.Select(v => v.Vendeur).Distinct();
 
-                    var vendeurs = from b in context.Orders
-                                   orderby b.Vendeur ascending
-
-                                   select b
-                                   ;
                     return result.ToList();
                 }
                 catch
