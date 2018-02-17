@@ -229,7 +229,7 @@
             // TxtNbUnitCond
             // 
             this.TxtNbUnitCond.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold);
-            this.TxtNbUnitCond.Location = new System.Drawing.Point(276, 73);
+            this.TxtNbUnitCond.Location = new System.Drawing.Point(275, 73);
             this.TxtNbUnitCond.Margin = new System.Windows.Forms.Padding(4);
             this.TxtNbUnitCond.MaxLength = 4;
             this.TxtNbUnitCond.Name = "TxtNbUnitCond";
@@ -241,7 +241,7 @@
             // TxtNbDiapos
             // 
             this.TxtNbDiapos.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold);
-            this.TxtNbDiapos.Location = new System.Drawing.Point(614, 73);
+            this.TxtNbDiapos.Location = new System.Drawing.Point(610, 73);
             this.TxtNbDiapos.Margin = new System.Windows.Forms.Padding(4);
             this.TxtNbDiapos.MaxLength = 4;
             this.TxtNbDiapos.Name = "TxtNbDiapos";
@@ -253,7 +253,7 @@
             // TxtNbPhotos
             // 
             this.TxtNbPhotos.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold);
-            this.TxtNbPhotos.Location = new System.Drawing.Point(614, 107);
+            this.TxtNbPhotos.Location = new System.Drawing.Point(610, 107);
             this.TxtNbPhotos.Margin = new System.Windows.Forms.Padding(4);
             this.TxtNbPhotos.MaxLength = 4;
             this.TxtNbPhotos.Name = "TxtNbPhotos";
@@ -265,7 +265,7 @@
             // TxtNbNegatifs
             // 
             this.TxtNbNegatifs.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold);
-            this.TxtNbNegatifs.Location = new System.Drawing.Point(614, 141);
+            this.TxtNbNegatifs.Location = new System.Drawing.Point(610, 141);
             this.TxtNbNegatifs.Margin = new System.Windows.Forms.Padding(4);
             this.TxtNbNegatifs.MaxLength = 4;
             this.TxtNbNegatifs.Name = "TxtNbNegatifs";
@@ -623,7 +623,7 @@
             // 
             this.LblNbNegatifsView.AutoSize = true;
             this.LblNbNegatifsView.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblNbNegatifsView.Location = new System.Drawing.Point(614, 144);
+            this.LblNbNegatifsView.Location = new System.Drawing.Point(610, 144);
             this.LblNbNegatifsView.Name = "LblNbNegatifsView";
             this.LblNbNegatifsView.Size = new System.Drawing.Size(18, 19);
             this.LblNbNegatifsView.TabIndex = 114;
@@ -634,7 +634,7 @@
             // 
             this.LblNbPhotosView.AutoSize = true;
             this.LblNbPhotosView.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblNbPhotosView.Location = new System.Drawing.Point(614, 110);
+            this.LblNbPhotosView.Location = new System.Drawing.Point(610, 110);
             this.LblNbPhotosView.Name = "LblNbPhotosView";
             this.LblNbPhotosView.Size = new System.Drawing.Size(18, 19);
             this.LblNbPhotosView.TabIndex = 113;
@@ -645,7 +645,7 @@
             // 
             this.LblNbDiaposView.AutoSize = true;
             this.LblNbDiaposView.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblNbDiaposView.Location = new System.Drawing.Point(614, 76);
+            this.LblNbDiaposView.Location = new System.Drawing.Point(610, 76);
             this.LblNbDiaposView.Name = "LblNbDiaposView";
             this.LblNbDiaposView.Size = new System.Drawing.Size(18, 19);
             this.LblNbDiaposView.TabIndex = 112;
@@ -656,7 +656,7 @@
             // 
             this.LblNbUnitCondView.AutoSize = true;
             this.LblNbUnitCondView.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblNbUnitCondView.Location = new System.Drawing.Point(276, 76);
+            this.LblNbUnitCondView.Location = new System.Drawing.Point(275, 76);
             this.LblNbUnitCondView.Name = "LblNbUnitCondView";
             this.LblNbUnitCondView.Size = new System.Drawing.Size(18, 19);
             this.LblNbUnitCondView.TabIndex = 111;
@@ -728,7 +728,7 @@
             // LblPersoDvd
             // 
             this.LblPersoDvd.AutoSize = true;
-            this.LblPersoDvd.Location = new System.Drawing.Point(433, 35);
+            this.LblPersoDvd.Location = new System.Drawing.Point(437, 35);
             this.LblPersoDvd.Name = "LblPersoDvd";
             this.LblPersoDvd.Size = new System.Drawing.Size(174, 16);
             this.LblPersoDvd.TabIndex = 12;
@@ -737,7 +737,7 @@
             // LblNbNegatifs
             // 
             this.LblNbNegatifs.AutoSize = true;
-            this.LblNbNegatifs.Location = new System.Drawing.Point(476, 146);
+            this.LblNbNegatifs.Location = new System.Drawing.Point(472, 146);
             this.LblNbNegatifs.Name = "LblNbNegatifs";
             this.LblNbNegatifs.Size = new System.Drawing.Size(139, 16);
             this.LblNbNegatifs.TabIndex = 16;
@@ -746,7 +746,7 @@
             // LblNbPhotos
             // 
             this.LblNbPhotos.AutoSize = true;
-            this.LblNbPhotos.Location = new System.Drawing.Point(483, 112);
+            this.LblNbPhotos.Location = new System.Drawing.Point(479, 112);
             this.LblNbPhotos.Name = "LblNbPhotos";
             this.LblNbPhotos.Size = new System.Drawing.Size(132, 16);
             this.LblNbPhotos.TabIndex = 15;
@@ -755,7 +755,7 @@
             // LblNbDiapos
             // 
             this.LblNbDiapos.AutoSize = true;
-            this.LblNbDiapos.Location = new System.Drawing.Point(484, 78);
+            this.LblNbDiapos.Location = new System.Drawing.Point(480, 78);
             this.LblNbDiapos.Name = "LblNbDiapos";
             this.LblNbDiapos.Size = new System.Drawing.Size(131, 16);
             this.LblNbDiapos.TabIndex = 14;

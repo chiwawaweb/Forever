@@ -11,6 +11,8 @@ using Forever.DAL;
 using Forever.DTO;
 using Forever.Classes;
 using System.ComponentModel.DataAnnotations;
+using System.Threading;
+using System.Diagnostics;
 
 namespace Forever.Forms
 {
@@ -76,10 +78,10 @@ namespace Forever.Forms
             BtnEdit.Visible = true;
             LblDate.Visible = true;
             LblDateView.Visible = true;
-            LblDateRetour.Visible = true;
-            LblDateRetourView.Visible = true;
             CbxVendeur.Visible = false;
             LblVendeurView.Visible = true;
+            LblDateRetour.Visible = true;
+            LblDateRetourView.Visible = true;
             TxtNom.Visible = false;
             LblNomView.Visible = true;
             TxtPrenom.Visible = false;
@@ -127,67 +129,221 @@ namespace Forever.Forms
             LblLinkView.Visible = true;
 
             /* Récupération des données */
-            date = orderProvider.GetOrderById(_id).Date;
-            vendeur = orderProvider.GetOrderById(_id).Vendeur;
-            nom = orderProvider.GetOrderById(_id).Nom;
-            prenom = orderProvider.GetOrderById(_id).Prenom;
-            adresse = orderProvider.GetOrderById(_id).Adresse;
-            cp = orderProvider.GetOrderById(_id).CP;
-            ville = orderProvider.GetOrderById(_id).Ville;
-            tel = orderProvider.GetOrderById(_id).Tel;
-            gsm = orderProvider.GetOrderById(_id).Gsm;
-            email = orderProvider.GetOrderById(_id).Email;
-            nbBobines = orderProvider.GetOrderById(_id).NbBobines;
-            nbCassettes = orderProvider.GetOrderById(_id).NbCassettes;
-            persoDvdInternet = orderProvider.GetOrderById(_id).PersoDvdInternet;
-            persoDvdPapier = orderProvider.GetOrderById(_id).PersoDvdPapier;
-            nbUnitCond = orderProvider.GetOrderById(_id).NbUnitCond;
-            nbDiapos = orderProvider.GetOrderById(_id).NbDiapos;
-            nbPhotos = orderProvider.GetOrderById(_id).NbPhotos;
-            nbNegatifs = orderProvider.GetOrderById(_id).NbNegatifs;
-            dvdStandard = orderProvider.GetOrderById(_id).DvdStandard;
-            dvdPersonnalise = orderProvider.GetOrderById(_id).DvdPersonnalise;
-            nbCopiesSupp = orderProvider.GetOrderById(_id).NbCopiesSupp;
-            montageAvi = orderProvider.GetOrderById(_id).MontageAvi;
-            cleUsb = orderProvider.GetOrderById(_id).CleUsb;
-            hdd = orderProvider.GetOrderById(_id).Hdd;
-            link = orderProvider.GetOrderById(_id).Link;
-            dateRetour = orderProvider.GetOrderById(_id).DateRetour;
-            createdAt = orderProvider.GetOrderById(_id).CreatedAt;
-            updatedAt = orderProvider.GetOrderById(_id).UpdatedAt;
+            CheckForIllegalCrossThreadCalls = false;
+
+            Thread TDate = new Thread(delegate ()
+            {
+                date = orderProvider.GetOrderById(_id).Date;
+                LblDateView.Text = date.ToShortDateString();
+                
+            });
+
+            Thread TVendeur = new Thread(delegate ()
+            {
+                vendeur = orderProvider.GetOrderById(_id).Vendeur;
+                CbxVendeur.Text = vendeur;
+                LblVendeurView.Text = vendeur;
+                
+            });
+
+            Thread TNom = new Thread(delegate ()
+            {
+                nom = orderProvider.GetOrderById(_id).Nom;
+                TxtNom.Text = nom;
+                LblNomView.Text = nom;
+                
+            });
+
+            Thread TPrenom = new Thread(delegate ()
+            {
+                prenom = orderProvider.GetOrderById(_id).Prenom;
+                TxtPrenom.Text = prenom;
+                LblPrenomView.Text = prenom;
+                
+            });
+
+            Thread TAdresse = new Thread(delegate ()
+            {
+                adresse = orderProvider.GetOrderById(_id).Adresse;
+                TxtAdresse.Text = adresse;
+                LblAdresseView.Text = adresse;
+                
+            });
+
+            Thread TCp = new Thread(delegate ()
+            {
+                cp = orderProvider.GetOrderById(_id).CP;
+                TxtCp.Text = cp;
+                LblCpView.Text = cp;
+            });
+
+            Thread TVille = new Thread(delegate ()
+            {
+                ville = orderProvider.GetOrderById(_id).Ville;
+                TxtVille.Text = ville;
+                LblVilleView.Text = ville;
+            });
+
+            Thread TTel = new Thread(delegate ()
+            {
+                tel = orderProvider.GetOrderById(_id).Tel;
+                TxtTel.Text = tel;
+                LblTelView.Text = tel;
+            });
+
+            Thread TGsm = new Thread(delegate ()
+            {
+                gsm = orderProvider.GetOrderById(_id).Gsm;
+                TxtGsm.Text = gsm;
+                LblGsmView.Text = gsm;
+            });
+
+            Thread TEmail = new Thread(delegate ()
+            {
+                email = orderProvider.GetOrderById(_id).Email;
+                TxtEmail.Text = LblEmailView.Text = email;
+            });
+
+            Thread TNbBobines = new Thread(delegate ()
+            {
+                nbBobines = orderProvider.GetOrderById(_id).NbBobines;
+                TxtNbBobines.Text = LblNbBobinesView.Text = nbBobines.ToString();
+            });
+
+            Thread TNbCassettes = new Thread(delegate ()
+            {
+                nbCassettes = orderProvider.GetOrderById(_id).NbCassettes;
+                TxtNbCassettes.Text = LblNbCassettesView.Text = nbCassettes.ToString();
+            });
+
+            Thread TPersoDvdInternet = new Thread(delegate ()
+            {
+                persoDvdInternet = orderProvider.GetOrderById(_id).PersoDvdInternet;
+                if (persoDvdInternet == true)
+                {
+                    LblPersonnalisationView.Text = "Sur Internet";
+                    RbtPersoDvdInternet.Checked = true;
+                }
+                    
+            });
+
+            Thread TPersoDvdPapier = new Thread(delegate ()
+            {
+                persoDvdPapier = orderProvider.GetOrderById(_id).PersoDvdPapier;
+                if (persoDvdPapier == true)
+                {
+                    LblPersonnalisationView.Text = "Sur papier";
+                    RbtDvdPapier.Checked = true;
+                }
+            });
+
+            Thread TNbUnitCond = new Thread(delegate ()
+            {
+                nbUnitCond = orderProvider.GetOrderById(_id).NbUnitCond;
+                TxtNbUnitCond.Text = LblNbUnitCondView.Text = nbUnitCond.ToString();
+            });
+
+            Thread TNbDiapos = new Thread(delegate ()
+            {
+                nbDiapos = orderProvider.GetOrderById(_id).NbDiapos;
+                TxtNbDiapos.Text = LblNbDiaposView.Text = nbDiapos.ToString();
+            });
+
+            Thread TNbPhotos = new Thread(delegate ()
+            {
+                nbPhotos = orderProvider.GetOrderById(_id).NbPhotos;
+                TxtNbPhotos.Text = LblNbPhotosView.Text = nbPhotos.ToString();
+            });
+
+            Thread TNbNegatifs = new Thread(delegate ()
+            {
+                nbNegatifs = orderProvider.GetOrderById(_id).NbNegatifs;
+                TxtNbNegatifs.Text = LblNbNegatifsView.Text = nbNegatifs.ToString();
+            });
+
+            Thread TDvdStandard = new Thread(delegate ()
+            {
+                dvdStandard = orderProvider.GetOrderById(_id).DvdStandard;
+                if (dvdStandard == true)
+                {
+                    LblDvdStandardView.Text = "OUI";
+                    ChkDvdStandard.Checked = true;
+                }
+                else
+                {
+                    LblDvdStandardView.Text = "NON";
+                    ChkDvdStandard.Checked = true;
+                }
+            });
+
+            Thread TDvdPersonnalise = new Thread(delegate ()
+            {
+                dvdPersonnalise = orderProvider.GetOrderById(_id).DvdPersonnalise;
+            });
+
+            Thread TNbCopiesSupp = new Thread(delegate ()
+            {
+                nbCopiesSupp = orderProvider.GetOrderById(_id).NbCopiesSupp;
+                TxtCopiesSupp.Text = LblNbCopiesSuppView.Text = nbCopiesSupp.ToString();
+            });
+
+            Thread TMontageAvi = new Thread(delegate ()
+            {
+                montageAvi = orderProvider.GetOrderById(_id).MontageAvi;
+            });
+
+            Thread TCleUsb = new Thread(delegate ()
+            {
+                cleUsb = orderProvider.GetOrderById(_id).CleUsb;
+            });
+
+            Thread THdd = new Thread(delegate ()
+            {
+                hdd = orderProvider.GetOrderById(_id).Hdd;
+            });
+
+            Thread TLink = new Thread(delegate ()
+            {
+                link = orderProvider.GetOrderById(_id).Link;
+            });
+
+            Thread TDateRetour = new Thread(delegate ()
+            {
+                dateRetour = orderProvider.GetOrderById(_id).DateRetour;
+            });
+
+            Thread TCreatedAt = new Thread(delegate ()
+            {
+                createdAt = orderProvider.GetOrderById(_id).CreatedAt;
+            });
+
+            Thread TUpdatedAt = new Thread(delegate ()
+            {
+                updatedAt = orderProvider.GetOrderById(_id).UpdatedAt;
+            });
+
+
+            TDate.Start();
+            TVendeur.Start();
+            TNom.Start();
+            TPrenom.Start();
+            TAdresse.Start();
+            TCp.Start();
+            TVille.Start();
+            TTel.Start();
+            TGsm.Start();
+            TEmail.Start();
+            TNbBobines.Start();
+            TNbCassettes.Start();
+
 
             /* Affichage des données */
-            LblDateView.Text = date.ToShortDateString();
-            CbxVendeur.Text = vendeur;
-            LblVendeurView.Text = vendeur;
-            TxtNom.Text = nom;
-            LblNomView.Text = nom;
-            TxtPrenom.Text = prenom;
-            LblPrenomView.Text = prenom;
-            LblAdresseView.Text = adresse;
-            LblCpView.Text = cp;
-            LblVilleView.Text = ville;
-            LblTelView.Text = tel;
-            LblGsmView.Text = gsm;
-            LblEmailView.Text = email;
-            LblNbBobinesView.Text = nbBobines.ToString();
-            LblNbCassettesView.Text = nbCassettes.ToString();
-            LblNbUnitCondView.Text = nbUnitCond.ToString();
-            LblNbDiaposView.Text = nbDiapos.ToString();
-            LblNbPhotosView.Text = nbPhotos.ToString();
-            LblNbNegatifsView.Text = nbNegatifs.ToString();
-            LblNbCopiesSuppView.Text = nbCopiesSupp.ToString();
 
-            if (persoDvdInternet==true)
-                LblPersonnalisationView.Text = "Sur Internet";
 
-            if (persoDvdPapier == true)
-                LblPersonnalisationView.Text = "Sur papier";
 
-            if (dvdStandard == true)
-                LblDvdStandardView.Text = "OUI";
-            else
-                LblDvdStandardView.Text = "NON";
+
+
+            
 
             if (dvdPersonnalise == true)
                 LblDvdPersonnaliseView.Text = "OUI";
@@ -404,9 +560,12 @@ namespace Forever.Forms
                 CreatedAt = DateTime.Now
             };
 
-            orderProvider.Create(order);
+            
 
+            orderProvider.Create(order);
             _id = order.Id;
+
+
         }
 
         private void PrintOrder()
