@@ -73,6 +73,7 @@ namespace Forever.Forms
             BtnSave.Visible = false;
             BtnFermer.Visible = true;
             BtnPrint.Visible = true;
+            BtnEdit.Visible = true;
             LblDate.Visible = true;
             LblDateView.Visible = true;
             LblDateRetour.Visible = true;
@@ -212,6 +213,16 @@ namespace Forever.Forms
                 LblLinkView.Text = "OUI";
             else
                 LblLinkView.Text = "NON";
+
+            if (dateRetour == new DateTime(1899, 12, 30))
+                LblDateRetourView.Text = "n.c.";
+            else
+                LblDateRetourView.Text = dateRetour.ToShortDateString();
+        }
+
+        private void Edit()
+        {
+
         }
 
         private void Save()
@@ -474,6 +485,11 @@ namespace Forever.Forms
         private void BtnPrint_Click(object sender, EventArgs e)
         {
             PrintOrder();
+        }
+
+        private void BtnEdit_Click(object sender, EventArgs e)
+        {
+            Edit();
         }
 
         #endregion

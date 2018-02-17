@@ -39,7 +39,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(22, 22);
+            this.label1.Location = new System.Drawing.Point(23, 27);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(237, 18);
             this.label1.TabIndex = 0;
@@ -49,7 +49,7 @@
             // 
             this.DtpDateRetour.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DtpDateRetour.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DtpDateRetour.Location = new System.Drawing.Point(265, 19);
+            this.DtpDateRetour.Location = new System.Drawing.Point(266, 24);
             this.DtpDateRetour.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DtpDateRetour.Name = "DtpDateRetour";
             this.DtpDateRetour.Size = new System.Drawing.Size(103, 25);
@@ -58,7 +58,7 @@
             // 
             // BtnSave
             // 
-            this.BtnSave.Location = new System.Drawing.Point(265, 83);
+            this.BtnSave.Location = new System.Drawing.Point(266, 80);
             this.BtnSave.Name = "BtnSave";
             this.BtnSave.Size = new System.Drawing.Size(103, 27);
             this.BtnSave.TabIndex = 2;
@@ -70,7 +70,7 @@
             // BtnCancel
             // 
             this.BtnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.BtnCancel.Location = new System.Drawing.Point(157, 83);
+            this.BtnCancel.Location = new System.Drawing.Point(158, 80);
             this.BtnCancel.Name = "BtnCancel";
             this.BtnCancel.Size = new System.Drawing.Size(102, 27);
             this.BtnCancel.TabIndex = 3;
@@ -82,12 +82,12 @@
             // 
             this.ChkNotReturned.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.ChkNotReturned.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ChkNotReturned.Location = new System.Drawing.Point(195, 51);
+            this.ChkNotReturned.Location = new System.Drawing.Point(158, 54);
             this.ChkNotReturned.Name = "ChkNotReturned";
-            this.ChkNotReturned.Size = new System.Drawing.Size(173, 19);
+            this.ChkNotReturned.Size = new System.Drawing.Size(211, 19);
             this.ChkNotReturned.TabIndex = 5;
             this.ChkNotReturned.TabStop = false;
-            this.ChkNotReturned.Text = "Aucune date de retour";
+            this.ChkNotReturned.Text = "Supprimer la date de retour";
             this.ChkNotReturned.UseVisualStyleBackColor = true;
             this.ChkNotReturned.CheckedChanged += new System.EventHandler(this.ChkNotReturned_CheckedChanged);
             // 

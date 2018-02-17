@@ -29,7 +29,15 @@ namespace Forever.Forms
             InitializeComponent();
 
             dateRetour = orderProvider.GetOrderById(_id).DateRetour;
-            DtpDateRetour.Value = dateRetour;
+            if (dateRetour == new DateTime(1899, 12, 30))
+            { 
+                ChkNotReturned.Visible = false;
+            }
+            else
+            {
+                DtpDateRetour.Value = dateRetour;
+            }
+                
         }
 
         private void Save()

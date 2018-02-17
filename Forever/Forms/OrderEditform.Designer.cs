@@ -110,6 +110,7 @@
             this.LblDateRetour = new System.Windows.Forms.Label();
             this.LblDateRetourView = new System.Windows.Forms.Label();
             this.BtnPrint = new System.Windows.Forms.Button();
+            this.BtnEdit = new System.Windows.Forms.Button();
             this.GrpCoordonnees.SuspendLayout();
             this.GrpElements.SuspendLayout();
             this.GrpSupports.SuspendLayout();
@@ -228,7 +229,7 @@
             // TxtNbUnitCond
             // 
             this.TxtNbUnitCond.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold);
-            this.TxtNbUnitCond.Location = new System.Drawing.Point(220, 73);
+            this.TxtNbUnitCond.Location = new System.Drawing.Point(276, 73);
             this.TxtNbUnitCond.Margin = new System.Windows.Forms.Padding(4);
             this.TxtNbUnitCond.MaxLength = 4;
             this.TxtNbUnitCond.Name = "TxtNbUnitCond";
@@ -279,7 +280,7 @@
             this.ChkDvdStandard.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.ChkDvdStandard.Checked = true;
             this.ChkDvdStandard.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.ChkDvdStandard.Location = new System.Drawing.Point(164, 36);
+            this.ChkDvdStandard.Location = new System.Drawing.Point(164, 35);
             this.ChkDvdStandard.Margin = new System.Windows.Forms.Padding(4);
             this.ChkDvdStandard.Name = "ChkDvdStandard";
             this.ChkDvdStandard.Size = new System.Drawing.Size(15, 14);
@@ -290,7 +291,7 @@
             // 
             this.ChkDvdPersonnalise.AutoSize = true;
             this.ChkDvdPersonnalise.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.ChkDvdPersonnalise.Location = new System.Drawing.Point(164, 64);
+            this.ChkDvdPersonnalise.Location = new System.Drawing.Point(164, 65);
             this.ChkDvdPersonnalise.Margin = new System.Windows.Forms.Padding(4);
             this.ChkDvdPersonnalise.Name = "ChkDvdPersonnalise";
             this.ChkDvdPersonnalise.Size = new System.Drawing.Size(15, 14);
@@ -301,7 +302,7 @@
             // 
             this.ChkMontageAvi.AutoSize = true;
             this.ChkMontageAvi.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.ChkMontageAvi.Location = new System.Drawing.Point(421, 35);
+            this.ChkMontageAvi.Location = new System.Drawing.Point(500, 35);
             this.ChkMontageAvi.Margin = new System.Windows.Forms.Padding(4);
             this.ChkMontageAvi.Name = "ChkMontageAvi";
             this.ChkMontageAvi.Size = new System.Drawing.Size(15, 14);
@@ -323,7 +324,7 @@
             // 
             this.ChkCleUsb.AutoSize = true;
             this.ChkCleUsb.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.ChkCleUsb.Location = new System.Drawing.Point(422, 67);
+            this.ChkCleUsb.Location = new System.Drawing.Point(500, 65);
             this.ChkCleUsb.Margin = new System.Windows.Forms.Padding(4);
             this.ChkCleUsb.Name = "ChkCleUsb";
             this.ChkCleUsb.Size = new System.Drawing.Size(15, 14);
@@ -334,7 +335,7 @@
             // 
             this.ChkHdd.AutoSize = true;
             this.ChkHdd.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.ChkHdd.Location = new System.Drawing.Point(672, 33);
+            this.ChkHdd.Location = new System.Drawing.Point(806, 35);
             this.ChkHdd.Margin = new System.Windows.Forms.Padding(4);
             this.ChkHdd.Name = "ChkHdd";
             this.ChkHdd.Size = new System.Drawing.Size(15, 14);
@@ -345,7 +346,7 @@
             // 
             this.ChkLink.AutoSize = true;
             this.ChkLink.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.ChkLink.Location = new System.Drawing.Point(674, 61);
+            this.ChkLink.Location = new System.Drawing.Point(806, 65);
             this.ChkLink.Margin = new System.Windows.Forms.Padding(4);
             this.ChkLink.Name = "ChkLink";
             this.ChkLink.Size = new System.Drawing.Size(15, 14);
@@ -491,7 +492,7 @@
             // 
             this.LblEmailView.AutoSize = true;
             this.LblEmailView.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblEmailView.Location = new System.Drawing.Point(515, 108);
+            this.LblEmailView.Location = new System.Drawing.Point(515, 107);
             this.LblEmailView.Name = "LblEmailView";
             this.LblEmailView.Size = new System.Drawing.Size(18, 19);
             this.LblEmailView.TabIndex = 108;
@@ -502,7 +503,7 @@
             // 
             this.LblVilleView.AutoSize = true;
             this.LblVilleView.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblVilleView.Location = new System.Drawing.Point(622, 74);
+            this.LblVilleView.Location = new System.Drawing.Point(622, 73);
             this.LblVilleView.Name = "LblVilleView";
             this.LblVilleView.Size = new System.Drawing.Size(18, 19);
             this.LblVilleView.TabIndex = 107;
@@ -513,7 +514,7 @@
             // 
             this.LblCpView.AutoSize = true;
             this.LblCpView.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblCpView.Location = new System.Drawing.Point(514, 74);
+            this.LblCpView.Location = new System.Drawing.Point(514, 73);
             this.LblCpView.Name = "LblCpView";
             this.LblCpView.Size = new System.Drawing.Size(18, 19);
             this.LblCpView.TabIndex = 106;
@@ -524,7 +525,7 @@
             // 
             this.LblGsmView.AutoSize = true;
             this.LblGsmView.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblGsmView.Location = new System.Drawing.Point(293, 107);
+            this.LblGsmView.Location = new System.Drawing.Point(293, 106);
             this.LblGsmView.Name = "LblGsmView";
             this.LblGsmView.Size = new System.Drawing.Size(18, 19);
             this.LblGsmView.TabIndex = 105;
@@ -535,7 +536,7 @@
             // 
             this.LblTelView.AutoSize = true;
             this.LblTelView.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblTelView.Location = new System.Drawing.Point(96, 107);
+            this.LblTelView.Location = new System.Drawing.Point(96, 106);
             this.LblTelView.Name = "LblTelView";
             this.LblTelView.Size = new System.Drawing.Size(18, 19);
             this.LblTelView.TabIndex = 104;
@@ -546,7 +547,7 @@
             // 
             this.LblAdresseView.AutoSize = true;
             this.LblAdresseView.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblAdresseView.Location = new System.Drawing.Point(97, 74);
+            this.LblAdresseView.Location = new System.Drawing.Point(97, 73);
             this.LblAdresseView.Name = "LblAdresseView";
             this.LblAdresseView.Size = new System.Drawing.Size(18, 19);
             this.LblAdresseView.TabIndex = 103;
@@ -557,7 +558,7 @@
             // 
             this.LblPrenomView.AutoSize = true;
             this.LblPrenomView.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblPrenomView.Location = new System.Drawing.Point(515, 40);
+            this.LblPrenomView.Location = new System.Drawing.Point(515, 39);
             this.LblPrenomView.Name = "LblPrenomView";
             this.LblPrenomView.Size = new System.Drawing.Size(18, 19);
             this.LblPrenomView.TabIndex = 102;
@@ -568,7 +569,7 @@
             // 
             this.LblNomView.AutoSize = true;
             this.LblNomView.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblNomView.Location = new System.Drawing.Point(97, 40);
+            this.LblNomView.Location = new System.Drawing.Point(97, 39);
             this.LblNomView.Name = "LblNomView";
             this.LblNomView.Size = new System.Drawing.Size(18, 19);
             this.LblNomView.TabIndex = 101;
@@ -611,7 +612,7 @@
             // 
             this.LblPersonnalisationView.AutoSize = true;
             this.LblPersonnalisationView.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblPersonnalisationView.Location = new System.Drawing.Point(610, 34);
+            this.LblPersonnalisationView.Location = new System.Drawing.Point(610, 33);
             this.LblPersonnalisationView.Name = "LblPersonnalisationView";
             this.LblPersonnalisationView.Size = new System.Drawing.Size(18, 19);
             this.LblPersonnalisationView.TabIndex = 115;
@@ -622,7 +623,7 @@
             // 
             this.LblNbNegatifsView.AutoSize = true;
             this.LblNbNegatifsView.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblNbNegatifsView.Location = new System.Drawing.Point(614, 145);
+            this.LblNbNegatifsView.Location = new System.Drawing.Point(614, 144);
             this.LblNbNegatifsView.Name = "LblNbNegatifsView";
             this.LblNbNegatifsView.Size = new System.Drawing.Size(18, 19);
             this.LblNbNegatifsView.TabIndex = 114;
@@ -633,7 +634,7 @@
             // 
             this.LblNbPhotosView.AutoSize = true;
             this.LblNbPhotosView.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblNbPhotosView.Location = new System.Drawing.Point(614, 111);
+            this.LblNbPhotosView.Location = new System.Drawing.Point(614, 110);
             this.LblNbPhotosView.Name = "LblNbPhotosView";
             this.LblNbPhotosView.Size = new System.Drawing.Size(18, 19);
             this.LblNbPhotosView.TabIndex = 113;
@@ -644,7 +645,7 @@
             // 
             this.LblNbDiaposView.AutoSize = true;
             this.LblNbDiaposView.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblNbDiaposView.Location = new System.Drawing.Point(614, 77);
+            this.LblNbDiaposView.Location = new System.Drawing.Point(614, 76);
             this.LblNbDiaposView.Name = "LblNbDiaposView";
             this.LblNbDiaposView.Size = new System.Drawing.Size(18, 19);
             this.LblNbDiaposView.TabIndex = 112;
@@ -655,7 +656,7 @@
             // 
             this.LblNbUnitCondView.AutoSize = true;
             this.LblNbUnitCondView.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblNbUnitCondView.Location = new System.Drawing.Point(220, 77);
+            this.LblNbUnitCondView.Location = new System.Drawing.Point(276, 76);
             this.LblNbUnitCondView.Name = "LblNbUnitCondView";
             this.LblNbUnitCondView.Size = new System.Drawing.Size(18, 19);
             this.LblNbUnitCondView.TabIndex = 111;
@@ -666,7 +667,7 @@
             // 
             this.LblNbCassettesView.AutoSize = true;
             this.LblNbCassettesView.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblNbCassettesView.Location = new System.Drawing.Point(384, 34);
+            this.LblNbCassettesView.Location = new System.Drawing.Point(384, 33);
             this.LblNbCassettesView.Name = "LblNbCassettesView";
             this.LblNbCassettesView.Size = new System.Drawing.Size(18, 19);
             this.LblNbCassettesView.TabIndex = 110;
@@ -677,7 +678,7 @@
             // 
             this.LblNbBobinesView.AutoSize = true;
             this.LblNbBobinesView.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblNbBobinesView.Location = new System.Drawing.Point(169, 34);
+            this.LblNbBobinesView.Location = new System.Drawing.Point(169, 33);
             this.LblNbBobinesView.Name = "LblNbBobinesView";
             this.LblNbBobinesView.Size = new System.Drawing.Size(18, 19);
             this.LblNbBobinesView.TabIndex = 109;
@@ -763,11 +764,11 @@
             // LblUnitCond
             // 
             this.LblUnitCond.AutoSize = true;
-            this.LblUnitCond.Location = new System.Drawing.Point(26, 78);
+            this.LblUnitCond.Location = new System.Drawing.Point(17, 78);
             this.LblUnitCond.Name = "LblUnitCond";
-            this.LblUnitCond.Size = new System.Drawing.Size(190, 16);
+            this.LblUnitCond.Size = new System.Drawing.Size(253, 16);
             this.LblUnitCond.TabIndex = 13;
-            this.LblUnitCond.Text = "Nb unités conditionnements :";
+            this.LblUnitCond.Text = "Nombre d\'unités de conditionnements :";
             // 
             // GrpSupports
             // 
@@ -802,7 +803,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(505, 63);
+            this.label6.Location = new System.Drawing.Point(638, 63);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(165, 16);
             this.label6.TabIndex = 126;
@@ -811,7 +812,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(514, 33);
+            this.label5.Location = new System.Drawing.Point(647, 33);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(156, 16);
             this.label5.TabIndex = 125;
@@ -820,7 +821,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(291, 63);
+            this.label4.Location = new System.Drawing.Point(367, 63);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(130, 16);
             this.label4.TabIndex = 124;
@@ -829,7 +830,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(240, 33);
+            this.label3.Location = new System.Drawing.Point(316, 33);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(181, 16);
             this.label3.TabIndex = 124;
@@ -839,7 +840,7 @@
             // 
             this.LblNbCopiesSuppView.AutoSize = true;
             this.LblNbCopiesSuppView.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblNbCopiesSuppView.Location = new System.Drawing.Point(164, 92);
+            this.LblNbCopiesSuppView.Location = new System.Drawing.Point(161, 91);
             this.LblNbCopiesSuppView.Name = "LblNbCopiesSuppView";
             this.LblNbCopiesSuppView.Size = new System.Drawing.Size(18, 19);
             this.LblNbCopiesSuppView.TabIndex = 121;
@@ -850,7 +851,7 @@
             // 
             this.LblLinkView.AutoSize = true;
             this.LblLinkView.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblLinkView.Location = new System.Drawing.Point(671, 62);
+            this.LblLinkView.Location = new System.Drawing.Point(804, 61);
             this.LblLinkView.Name = "LblLinkView";
             this.LblLinkView.Size = new System.Drawing.Size(18, 19);
             this.LblLinkView.TabIndex = 120;
@@ -861,7 +862,7 @@
             // 
             this.LblHddView.AutoSize = true;
             this.LblHddView.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblHddView.Location = new System.Drawing.Point(671, 32);
+            this.LblHddView.Location = new System.Drawing.Point(804, 31);
             this.LblHddView.Name = "LblHddView";
             this.LblHddView.Size = new System.Drawing.Size(18, 19);
             this.LblHddView.TabIndex = 119;
@@ -872,7 +873,7 @@
             // 
             this.LblCleUsbView.AutoSize = true;
             this.LblCleUsbView.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblCleUsbView.Location = new System.Drawing.Point(418, 62);
+            this.LblCleUsbView.Location = new System.Drawing.Point(497, 61);
             this.LblCleUsbView.Name = "LblCleUsbView";
             this.LblCleUsbView.Size = new System.Drawing.Size(18, 19);
             this.LblCleUsbView.TabIndex = 118;
@@ -883,7 +884,7 @@
             // 
             this.LblMontageAviView.AutoSize = true;
             this.LblMontageAviView.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblMontageAviView.Location = new System.Drawing.Point(418, 32);
+            this.LblMontageAviView.Location = new System.Drawing.Point(497, 31);
             this.LblMontageAviView.Name = "LblMontageAviView";
             this.LblMontageAviView.Size = new System.Drawing.Size(18, 19);
             this.LblMontageAviView.TabIndex = 117;
@@ -894,7 +895,7 @@
             // 
             this.LblDvdPersonnaliseView.AutoSize = true;
             this.LblDvdPersonnaliseView.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblDvdPersonnaliseView.Location = new System.Drawing.Point(161, 62);
+            this.LblDvdPersonnaliseView.Location = new System.Drawing.Point(161, 61);
             this.LblDvdPersonnaliseView.Name = "LblDvdPersonnaliseView";
             this.LblDvdPersonnaliseView.Size = new System.Drawing.Size(18, 19);
             this.LblDvdPersonnaliseView.TabIndex = 116;
@@ -905,7 +906,7 @@
             // 
             this.LblDvdStandardView.AutoSize = true;
             this.LblDvdStandardView.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblDvdStandardView.Location = new System.Drawing.Point(161, 32);
+            this.LblDvdStandardView.Location = new System.Drawing.Point(161, 31);
             this.LblDvdStandardView.Name = "LblDvdStandardView";
             this.LblDvdStandardView.Size = new System.Drawing.Size(18, 19);
             this.LblDvdStandardView.TabIndex = 115;
@@ -968,7 +969,7 @@
             // 
             this.LblVendeurView.AutoSize = true;
             this.LblVendeurView.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblVendeurView.Location = new System.Drawing.Point(128, 17);
+            this.LblVendeurView.Location = new System.Drawing.Point(128, 16);
             this.LblVendeurView.Name = "LblVendeurView";
             this.LblVendeurView.Size = new System.Drawing.Size(18, 19);
             this.LblVendeurView.TabIndex = 100;
@@ -993,7 +994,7 @@
             // LblDate
             // 
             this.LblDate.AutoSize = true;
-            this.LblDate.Location = new System.Drawing.Point(649, 24);
+            this.LblDate.Location = new System.Drawing.Point(389, 18);
             this.LblDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblDate.Name = "LblDate";
             this.LblDate.Size = new System.Drawing.Size(139, 16);
@@ -1005,7 +1006,7 @@
             // 
             this.LblDateView.AutoSize = true;
             this.LblDateView.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblDateView.Location = new System.Drawing.Point(795, 22);
+            this.LblDateView.Location = new System.Drawing.Point(528, 16);
             this.LblDateView.Name = "LblDateView";
             this.LblDateView.Size = new System.Drawing.Size(18, 19);
             this.LblDateView.TabIndex = 109;
@@ -1015,7 +1016,7 @@
             // LblDateRetour
             // 
             this.LblDateRetour.AutoSize = true;
-            this.LblDateRetour.Location = new System.Drawing.Point(28, 557);
+            this.LblDateRetour.Location = new System.Drawing.Point(683, 18);
             this.LblDateRetour.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblDateRetour.Name = "LblDateRetour";
             this.LblDateRetour.Size = new System.Drawing.Size(108, 16);
@@ -1027,7 +1028,7 @@
             // 
             this.LblDateRetourView.AutoSize = true;
             this.LblDateRetourView.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblDateRetourView.Location = new System.Drawing.Point(143, 556);
+            this.LblDateRetourView.Location = new System.Drawing.Point(793, 16);
             this.LblDateRetourView.Name = "LblDateRetourView";
             this.LblDateRetourView.Size = new System.Drawing.Size(45, 19);
             this.LblDateRetourView.TabIndex = 122;
@@ -1036,15 +1037,29 @@
             // 
             // BtnPrint
             // 
+            this.BtnPrint.Image = global::Forever.Properties.Resources.icon_print_24;
             this.BtnPrint.Location = new System.Drawing.Point(619, 557);
             this.BtnPrint.Name = "BtnPrint";
             this.BtnPrint.Size = new System.Drawing.Size(131, 34);
             this.BtnPrint.TabIndex = 123;
             this.BtnPrint.TabStop = false;
             this.BtnPrint.Text = "Réimprimer";
+            this.BtnPrint.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.BtnPrint.UseVisualStyleBackColor = true;
             this.BtnPrint.Visible = false;
             this.BtnPrint.Click += new System.EventHandler(this.BtnPrint_Click);
+            // 
+            // BtnEdit
+            // 
+            this.BtnEdit.Image = global::Forever.Properties.Resources.icon_cadenas_16;
+            this.BtnEdit.Location = new System.Drawing.Point(31, 557);
+            this.BtnEdit.Name = "BtnEdit";
+            this.BtnEdit.Size = new System.Drawing.Size(36, 34);
+            this.BtnEdit.TabIndex = 124;
+            this.BtnEdit.TabStop = false;
+            this.BtnEdit.UseVisualStyleBackColor = true;
+            this.BtnEdit.Visible = false;
+            this.BtnEdit.Click += new System.EventHandler(this.BtnEdit_Click);
             // 
             // OrderEditForm
             // 
@@ -1052,11 +1067,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.BtnFermer;
             this.ClientSize = new System.Drawing.Size(922, 607);
+            this.Controls.Add(this.BtnEdit);
             this.Controls.Add(this.BtnPrint);
             this.Controls.Add(this.LblDateRetourView);
-            this.Controls.Add(this.LblDateRetour);
             this.Controls.Add(this.LblDateView);
-            this.Controls.Add(this.LblDate);
             this.Controls.Add(this.BtnFermer);
             this.Controls.Add(this.LblVendeurView);
             this.Controls.Add(this.BtnCancel);
@@ -1066,6 +1080,8 @@
             this.Controls.Add(this.GrpCoordonnees);
             this.Controls.Add(this.CbxVendeur);
             this.Controls.Add(this.LblVendeur);
+            this.Controls.Add(this.LblDateRetour);
+            this.Controls.Add(this.LblDate);
             this.Font = new System.Drawing.Font("Arial", 10F);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -1170,5 +1186,6 @@
         private System.Windows.Forms.Label LblDateRetour;
         private System.Windows.Forms.Label LblDateRetourView;
         private System.Windows.Forms.Button BtnPrint;
+        private System.Windows.Forms.Button BtnEdit;
     }
 }
