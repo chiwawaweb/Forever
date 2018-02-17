@@ -47,7 +47,7 @@
             this.pdfDoc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pdfDoc.Name = "pdfDoc";
             this.pdfDoc.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("pdfDoc.OcxState")));
-            this.pdfDoc.Size = new System.Drawing.Size(592, 600);
+            this.pdfDoc.Size = new System.Drawing.Size(687, 745);
             this.pdfDoc.TabIndex = 0;
             // 
             // ToolStrip
@@ -57,7 +57,7 @@
             this.TsbClose});
             this.ToolStrip.Location = new System.Drawing.Point(0, 0);
             this.ToolStrip.Name = "ToolStrip";
-            this.ToolStrip.Size = new System.Drawing.Size(592, 25);
+            this.ToolStrip.Size = new System.Drawing.Size(687, 25);
             this.ToolStrip.TabIndex = 1;
             // 
             // TsbPrint
@@ -67,6 +67,7 @@
             this.TsbPrint.Name = "TsbPrint";
             this.TsbPrint.Size = new System.Drawing.Size(76, 22);
             this.TsbPrint.Text = "Imprimer";
+            this.TsbPrint.Click += new System.EventHandler(this.TsbPrint_Click);
             // 
             // TsbClose
             // 
@@ -83,7 +84,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(592, 629);
+            this.ClientSize = new System.Drawing.Size(687, 774);
             this.Controls.Add(this.ToolStrip);
             this.Controls.Add(this.pdfDoc);
             this.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

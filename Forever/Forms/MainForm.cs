@@ -27,8 +27,6 @@ namespace Forever.Forms
 
             OrderProvider orderProvider = new OrderProvider();
             orderProvider.CountAll();
-
-            
         }
 
         private void OpenOrderForm(bool view)
@@ -117,9 +115,6 @@ namespace Forever.Forms
                 Width = 140
             };
 
-
-
-
             /* Création des colonnes */
             DgvOrders.Columns.Add(idCol);
             DgvOrders.Columns.Add(dateCol);
@@ -131,22 +126,27 @@ namespace Forever.Forms
             /* Ajout des lignes */
             for (int i = 0; i < list.Count; i++)
             {
+                string dateRetourStr;
                 int number = DgvOrders.Rows.Add();
 
                 int id = list[i].Id;
                 DateTime date = list[i].Date;
+                
                 string client = (list[i].Nom + " " + list[i].Prenom).Trim();
                 string localite = (list[i].CP + " " + list[i].Ville).Trim();
                 DateTime dateRetour = list[i].DateRetour;
+                if (dateRetour == new DateTime(1899, 12, 30))
+                    dateRetourStr = "";
+                else
+                    dateRetourStr = dateRetour.ToString("dd/MM/yyyy");
                 string vendeur = list[i].Vendeur;
 
                 DgvOrders.Rows[number].Cells[0].Value = id.ToString("000000");
                 DgvOrders.Rows[number].Cells[1].Value = date.ToShortDateString();
                 DgvOrders.Rows[number].Cells[2].Value = client;
                 DgvOrders.Rows[number].Cells[3].Value = localite;
-                DgvOrders.Rows[number].Cells[4].Value = dateRetour.ToShortDateString();
+                DgvOrders.Rows[number].Cells[4].Value = dateRetourStr;
                 DgvOrders.Rows[number].Cells[5].Value = vendeur;
-
 
                 /* pointe sur l'enregistrement courant */
                 if (list[i].Id == idRetour)
@@ -160,9 +160,20 @@ namespace Forever.Forms
         {
             if (DgvOrders.RowCount > 0)
             {
-                int ID = int.Parse(DgvOrders.CurrentRow.Cells[0].Value.ToString());
-                idRetour = ID;
-                OrderToPdf frm = new OrderToPdf(ID);
+                int id = int.Parse(DgvOrders.CurrentRow.Cells[0].Value.ToString());
+                idRetour = id;
+                OrderToPdf frm = new OrderToPdf(id);
+                frm.ShowDialog();
+            }
+        }
+
+        private void DateRetour()
+        {
+            if (DgvOrders.RowCount > 0)
+            {
+                int id = int.Parse(DgvOrders.CurrentRow.Cells[0].Value.ToString());
+                idRetour = id;
+                ReturnEditForm frm = new ReturnEditForm(this, id);
                 frm.ShowDialog();
             }
         }
@@ -202,6 +213,11 @@ namespace Forever.Forms
         private void TsbPrint_Click(object sender, EventArgs e)
         {
             PrintOrder();
+        }
+
+        private void TsbRetour_Click(object sender, EventArgs e)
+        {
+            DateRetour();
         }
 
         #endregion

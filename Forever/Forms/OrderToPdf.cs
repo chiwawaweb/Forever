@@ -14,7 +14,6 @@ namespace Forever.Forms
 {
     public partial class OrderToPdf : Form
     {
-
         int _id;
         double decalage;
         string PDF_FileName, PDF_Directory, emailUser, emailDomain;
@@ -22,11 +21,6 @@ namespace Forever.Forms
         Utils utils = new Utils();
         OrderProvider orderProvider = new OrderProvider();
         PdfContentByte cb;
-
-        private void TsbClose_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
 
         public OrderToPdf(int id)
         {
@@ -210,5 +204,27 @@ namespace Forever.Forms
         {
             cb.ShowTextAligned(PdfContentByte.ALIGN_CENTER, phrase.ToString(), x, y, 0);
         }
+
+        /// <summary>
+        /// Ouvre la boîte de dialogue pour l'impression du PDF.
+        /// </summary>
+        private void PrintPdf()
+        {
+            pdfDoc.printWithDialog();
+        }
+
+        #region Gestion des événements
+
+        private void TsbClose_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void TsbPrint_Click(object sender, EventArgs e)
+        {
+            PrintPdf();
+        }
+
+        #endregion
     }
 }

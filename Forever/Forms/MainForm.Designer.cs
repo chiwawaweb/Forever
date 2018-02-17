@@ -42,6 +42,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.TxtSearch = new System.Windows.Forms.TextBox();
             this.BtnSearch = new System.Windows.Forms.Button();
+            this.paramètresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.ToolStrip.SuspendLayout();
             this.MenuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvOrders)).BeginInit();
@@ -95,6 +97,7 @@
             this.TsbRetour.Name = "TsbRetour";
             this.TsbRetour.Size = new System.Drawing.Size(70, 28);
             this.TsbRetour.Text = "Retour";
+            this.TsbRetour.Click += new System.EventHandler(this.TsbRetour_Click);
             // 
             // StatusStrip
             // 
@@ -122,15 +125,17 @@
             // fichiersToolStripMenuItem
             // 
             this.fichiersToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.paramètresToolStripMenuItem,
+            this.toolStripMenuItem1,
             this.quitterToolStripMenuItem});
             this.fichiersToolStripMenuItem.Name = "fichiersToolStripMenuItem";
-            this.fichiersToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
-            this.fichiersToolStripMenuItem.Text = "Fichiers";
+            this.fichiersToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
+            this.fichiersToolStripMenuItem.Text = "Fichier";
             // 
             // quitterToolStripMenuItem
             // 
             this.quitterToolStripMenuItem.Name = "quitterToolStripMenuItem";
-            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
+            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.quitterToolStripMenuItem.Text = "Quitter";
             this.quitterToolStripMenuItem.Click += new System.EventHandler(this.quitterToolStripMenuItem_Click);
             // 
@@ -146,7 +151,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DgvOrders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvOrders.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.DgvOrders.Location = new System.Drawing.Point(0, 112);
+            this.DgvOrders.Location = new System.Drawing.Point(0, 90);
             this.DgvOrders.Margin = new System.Windows.Forms.Padding(2);
             this.DgvOrders.MultiSelect = false;
             this.DgvOrders.Name = "DgvOrders";
@@ -157,7 +162,7 @@
             this.DgvOrders.ShowCellToolTips = false;
             this.DgvOrders.ShowEditingIcon = false;
             this.DgvOrders.ShowRowErrors = false;
-            this.DgvOrders.Size = new System.Drawing.Size(628, 352);
+            this.DgvOrders.Size = new System.Drawing.Size(628, 374);
             this.DgvOrders.TabIndex = 5;
             this.DgvOrders.TabStop = false;
             this.DgvOrders.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvOrders_CellDoubleClick);
@@ -165,7 +170,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(9, 81);
+            this.label1.Location = new System.Drawing.Point(9, 64);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(78, 16);
@@ -175,7 +180,7 @@
             // TxtSearch
             // 
             this.TxtSearch.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.TxtSearch.Location = new System.Drawing.Point(87, 79);
+            this.TxtSearch.Location = new System.Drawing.Point(87, 62);
             this.TxtSearch.Margin = new System.Windows.Forms.Padding(2);
             this.TxtSearch.Name = "TxtSearch";
             this.TxtSearch.Size = new System.Drawing.Size(244, 22);
@@ -183,7 +188,7 @@
             // 
             // BtnSearch
             // 
-            this.BtnSearch.Location = new System.Drawing.Point(337, 77);
+            this.BtnSearch.Location = new System.Drawing.Point(337, 60);
             this.BtnSearch.Margin = new System.Windows.Forms.Padding(2);
             this.BtnSearch.Name = "BtnSearch";
             this.BtnSearch.Size = new System.Drawing.Size(77, 26);
@@ -191,6 +196,17 @@
             this.BtnSearch.Text = "Chercher";
             this.BtnSearch.UseVisualStyleBackColor = true;
             this.BtnSearch.Click += new System.EventHandler(this.BtnSearch_Click);
+            // 
+            // paramètresToolStripMenuItem
+            // 
+            this.paramètresToolStripMenuItem.Name = "paramètresToolStripMenuItem";
+            this.paramètresToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.paramètresToolStripMenuItem.Text = "Paramètres";
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(149, 6);
             // 
             // MainForm
             // 
@@ -239,5 +255,7 @@
         private System.Windows.Forms.ToolStripButton TsbView;
         private System.Windows.Forms.ToolStripButton TsbPrint;
         private System.Windows.Forms.ToolStripButton TsbRetour;
+        private System.Windows.Forms.ToolStripMenuItem paramètresToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
     }
 }

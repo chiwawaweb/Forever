@@ -20,9 +20,6 @@ namespace Forever.Forms
         int _id, nbBobines, nbCassettes, nbUnitCond, nbDiapos, nbPhotos, nbNegatifs, nbCopiesSupp;
         string vendeur, nom, prenom, adresse, cp, ville, email, tel, gsm, notes;
         bool _view, persoDvdInternet, persoDvdPapier, dvdStandard, dvdPersonnalise, montageAvi, cleUsb, hdd, link;
-
-        
-
         DateTime date, dateRetour, createdAt, updatedAt;
 
         MainForm _owner;
@@ -359,7 +356,7 @@ namespace Forever.Forms
 
         private void UpdateDatabase()
         {
-
+            
         }
 
         private void AddDatabase()
@@ -392,6 +389,7 @@ namespace Forever.Forms
                 Hdd = hdd,
                 Link = link,
                 Notes = notes,
+                DateRetour = new DateTime(1899,12,30),
                 CreatedAt = DateTime.Now
             };
 
