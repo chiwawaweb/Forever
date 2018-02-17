@@ -107,6 +107,8 @@ namespace Forever.Forms
                 HeaderText = "Retour",
                 Width = 100
             };
+            dateRetourCol.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dateRetourCol.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
             DataGridViewTextBoxColumn vendeurCol = new DataGridViewTextBoxColumn
             {

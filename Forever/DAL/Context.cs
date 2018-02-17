@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Forever.DTO;
 using System.Data.Entity;
+using Forever.Migrations;
 
 namespace Forever.DAL
 {
@@ -18,12 +19,19 @@ namespace Forever.DAL
         public DbSet<Order> Orders { get; set; }
 
         public class ContextInitializer : DropCreateDatabaseIfModelChanges<Context>
-        //public class ContextInitializer : MigrateDatabaseToLatestVersion<Context>
         {
             protected override void Seed(Context context)
             {
                 base.Seed(context);
             }
+
+            
+        }
+
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<Context, Configuration>());
         }
     }
 }

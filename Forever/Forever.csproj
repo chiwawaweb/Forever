@@ -84,6 +84,7 @@
     <Compile Include="Forms\OrderToPdf.Designer.cs">
       <DependentUpon>OrderToPdf.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\MainForm.resx">
