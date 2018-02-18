@@ -68,6 +68,8 @@ namespace Forever.Forms
             DgvOrders.Rows.Clear();
             DgvOrders.Columns.Clear();
 
+            this.DgvOrders.DefaultCellStyle.Font = new Font("Consolas", 10);
+
             /* Mise en forme */
             DataGridViewTextBoxColumn idCol = new DataGridViewTextBoxColumn
             {
@@ -82,28 +84,56 @@ namespace Forever.Forms
             {
                 Name = "DATE",
                 HeaderText = "Date",
-                Width = 100
+                Width = 95
             };
+            dateCol.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dateCol.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
             DataGridViewTextBoxColumn clientCol = new DataGridViewTextBoxColumn
             {
                 Name = "CLIENT",
                 HeaderText = "Nom du client",
-                Width = 300
+                Width = 450
             };
+            clientCol.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            DataGridViewTextBoxColumn adresseCol = new DataGridViewTextBoxColumn
+            {
+                Name = "ADRESSE",
+                HeaderText = "Adresse",
+                Width = 230
+            };
+            adresseCol.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
             DataGridViewTextBoxColumn localiteCol = new DataGridViewTextBoxColumn
             {
                 Name = "LOCALITE",
-                HeaderText = "Localite",
-                Width = 200
+                HeaderText = "Code postal / Localite",
+                Width = 220
             };
+            localiteCol.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            DataGridViewTextBoxColumn telCol = new DataGridViewTextBoxColumn
+            {
+                Name = "TELEPHONE",
+                HeaderText = "Téléphone",
+                Width = 90
+            };
+            telCol.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            DataGridViewTextBoxColumn gsmCol = new DataGridViewTextBoxColumn
+            {
+                Name = "PORTABLE",
+                HeaderText = "Portable",
+                Width = 90
+            };
+            gsmCol.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
             DataGridViewTextBoxColumn dateRetourCol = new DataGridViewTextBoxColumn
             {
                 Name = "DATERETOUR",
                 HeaderText = "Retour",
-                Width = 100
+                Width = 95
             };
             dateRetourCol.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dateRetourCol.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
@@ -112,14 +142,18 @@ namespace Forever.Forms
             {
                 Name = "VENDEUR",
                 HeaderText = "Vendeur",
-                Width = 140
+                Width = 160
             };
+            vendeurCol.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
             /* Création des colonnes */
             DgvOrders.Columns.Add(idCol);
             DgvOrders.Columns.Add(dateCol);
             DgvOrders.Columns.Add(clientCol);
+            DgvOrders.Columns.Add(adresseCol);
             DgvOrders.Columns.Add(localiteCol);
+            DgvOrders.Columns.Add(telCol);
+            DgvOrders.Columns.Add(gsmCol);
             DgvOrders.Columns.Add(dateRetourCol);
             DgvOrders.Columns.Add(vendeurCol);
 
@@ -131,9 +165,11 @@ namespace Forever.Forms
 
                 int id = list[i].Id;
                 DateTime date = list[i].Date;
-                
                 string client = (list[i].Nom + " " + list[i].Prenom).Trim();
+                string adresse = list[i].Adresse.Trim();
                 string localite = (list[i].CP + " " + list[i].Ville).Trim();
+                string tel = list[i].Tel;
+                string gsm = list[i].Gsm;
                 DateTime dateRetour = list[i].DateRetour;
                 if (dateRetour == new DateTime(1899, 12, 30))
                     dateRetourStr = "";
@@ -144,9 +180,12 @@ namespace Forever.Forms
                 DgvOrders.Rows[number].Cells[0].Value = id.ToString("000000");
                 DgvOrders.Rows[number].Cells[1].Value = date.ToShortDateString();
                 DgvOrders.Rows[number].Cells[2].Value = client;
-                DgvOrders.Rows[number].Cells[3].Value = localite;
-                DgvOrders.Rows[number].Cells[4].Value = dateRetourStr;
-                DgvOrders.Rows[number].Cells[5].Value = vendeur;
+                DgvOrders.Rows[number].Cells[3].Value = adresse;
+                DgvOrders.Rows[number].Cells[4].Value = localite;
+                DgvOrders.Rows[number].Cells[5].Value = tel;
+                DgvOrders.Rows[number].Cells[6].Value = gsm;
+                DgvOrders.Rows[number].Cells[7].Value = dateRetourStr;
+                DgvOrders.Rows[number].Cells[8].Value = vendeur;
 
                 /* pointe sur l'enregistrement courant */
                 if (list[i].Id == idRetour)

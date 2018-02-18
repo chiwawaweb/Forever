@@ -229,7 +229,7 @@
             // TxtNbUnitCond
             // 
             this.TxtNbUnitCond.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold);
-            this.TxtNbUnitCond.Location = new System.Drawing.Point(275, 73);
+            this.TxtNbUnitCond.Location = new System.Drawing.Point(275, 69);
             this.TxtNbUnitCond.Margin = new System.Windows.Forms.Padding(4);
             this.TxtNbUnitCond.MaxLength = 4;
             this.TxtNbUnitCond.Name = "TxtNbUnitCond";
@@ -241,7 +241,7 @@
             // TxtNbDiapos
             // 
             this.TxtNbDiapos.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold);
-            this.TxtNbDiapos.Location = new System.Drawing.Point(610, 73);
+            this.TxtNbDiapos.Location = new System.Drawing.Point(610, 69);
             this.TxtNbDiapos.Margin = new System.Windows.Forms.Padding(4);
             this.TxtNbDiapos.MaxLength = 4;
             this.TxtNbDiapos.Name = "TxtNbDiapos";
@@ -253,7 +253,7 @@
             // TxtNbPhotos
             // 
             this.TxtNbPhotos.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold);
-            this.TxtNbPhotos.Location = new System.Drawing.Point(610, 107);
+            this.TxtNbPhotos.Location = new System.Drawing.Point(610, 103);
             this.TxtNbPhotos.Margin = new System.Windows.Forms.Padding(4);
             this.TxtNbPhotos.MaxLength = 4;
             this.TxtNbPhotos.Name = "TxtNbPhotos";
@@ -265,7 +265,7 @@
             // TxtNbNegatifs
             // 
             this.TxtNbNegatifs.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold);
-            this.TxtNbNegatifs.Location = new System.Drawing.Point(610, 141);
+            this.TxtNbNegatifs.Location = new System.Drawing.Point(610, 137);
             this.TxtNbNegatifs.Margin = new System.Windows.Forms.Padding(4);
             this.TxtNbNegatifs.MaxLength = 4;
             this.TxtNbNegatifs.Name = "TxtNbNegatifs";
@@ -603,7 +603,7 @@
             this.GrpElements.Controls.Add(this.LblUnitCond);
             this.GrpElements.Location = new System.Drawing.Point(31, 215);
             this.GrpElements.Name = "GrpElements";
-            this.GrpElements.Size = new System.Drawing.Size(859, 187);
+            this.GrpElements.Size = new System.Drawing.Size(859, 180);
             this.GrpElements.TabIndex = 31;
             this.GrpElements.TabStop = false;
             this.GrpElements.Text = "Eléments déposés";
@@ -623,7 +623,7 @@
             // 
             this.LblNbNegatifsView.AutoSize = true;
             this.LblNbNegatifsView.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblNbNegatifsView.Location = new System.Drawing.Point(610, 144);
+            this.LblNbNegatifsView.Location = new System.Drawing.Point(610, 140);
             this.LblNbNegatifsView.Name = "LblNbNegatifsView";
             this.LblNbNegatifsView.Size = new System.Drawing.Size(18, 19);
             this.LblNbNegatifsView.TabIndex = 114;
@@ -634,7 +634,7 @@
             // 
             this.LblNbPhotosView.AutoSize = true;
             this.LblNbPhotosView.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblNbPhotosView.Location = new System.Drawing.Point(610, 110);
+            this.LblNbPhotosView.Location = new System.Drawing.Point(610, 106);
             this.LblNbPhotosView.Name = "LblNbPhotosView";
             this.LblNbPhotosView.Size = new System.Drawing.Size(18, 19);
             this.LblNbPhotosView.TabIndex = 113;
@@ -645,7 +645,7 @@
             // 
             this.LblNbDiaposView.AutoSize = true;
             this.LblNbDiaposView.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblNbDiaposView.Location = new System.Drawing.Point(610, 76);
+            this.LblNbDiaposView.Location = new System.Drawing.Point(610, 72);
             this.LblNbDiaposView.Name = "LblNbDiaposView";
             this.LblNbDiaposView.Size = new System.Drawing.Size(18, 19);
             this.LblNbDiaposView.TabIndex = 112;
@@ -656,7 +656,7 @@
             // 
             this.LblNbUnitCondView.AutoSize = true;
             this.LblNbUnitCondView.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblNbUnitCondView.Location = new System.Drawing.Point(275, 76);
+            this.LblNbUnitCondView.Location = new System.Drawing.Point(275, 72);
             this.LblNbUnitCondView.Name = "LblNbUnitCondView";
             this.LblNbUnitCondView.Size = new System.Drawing.Size(18, 19);
             this.LblNbUnitCondView.TabIndex = 111;
@@ -737,7 +737,7 @@
             // LblNbNegatifs
             // 
             this.LblNbNegatifs.AutoSize = true;
-            this.LblNbNegatifs.Location = new System.Drawing.Point(472, 146);
+            this.LblNbNegatifs.Location = new System.Drawing.Point(472, 142);
             this.LblNbNegatifs.Name = "LblNbNegatifs";
             this.LblNbNegatifs.Size = new System.Drawing.Size(139, 16);
             this.LblNbNegatifs.TabIndex = 16;
@@ -746,7 +746,7 @@
             // LblNbPhotos
             // 
             this.LblNbPhotos.AutoSize = true;
-            this.LblNbPhotos.Location = new System.Drawing.Point(479, 112);
+            this.LblNbPhotos.Location = new System.Drawing.Point(479, 108);
             this.LblNbPhotos.Name = "LblNbPhotos";
             this.LblNbPhotos.Size = new System.Drawing.Size(132, 16);
             this.LblNbPhotos.TabIndex = 15;
@@ -755,7 +755,7 @@
             // LblNbDiapos
             // 
             this.LblNbDiapos.AutoSize = true;
-            this.LblNbDiapos.Location = new System.Drawing.Point(480, 78);
+            this.LblNbDiapos.Location = new System.Drawing.Point(480, 74);
             this.LblNbDiapos.Name = "LblNbDiapos";
             this.LblNbDiapos.Size = new System.Drawing.Size(131, 16);
             this.LblNbDiapos.TabIndex = 14;
@@ -764,7 +764,7 @@
             // LblUnitCond
             // 
             this.LblUnitCond.AutoSize = true;
-            this.LblUnitCond.Location = new System.Drawing.Point(17, 78);
+            this.LblUnitCond.Location = new System.Drawing.Point(17, 74);
             this.LblUnitCond.Name = "LblUnitCond";
             this.LblUnitCond.Size = new System.Drawing.Size(253, 16);
             this.LblUnitCond.TabIndex = 13;
@@ -793,7 +793,7 @@
             this.GrpSupports.Controls.Add(this.label2);
             this.GrpSupports.Controls.Add(this.label1);
             this.GrpSupports.Controls.Add(this.LblCopiesSupp);
-            this.GrpSupports.Location = new System.Drawing.Point(31, 408);
+            this.GrpSupports.Location = new System.Drawing.Point(31, 403);
             this.GrpSupports.Name = "GrpSupports";
             this.GrpSupports.Size = new System.Drawing.Size(859, 127);
             this.GrpSupports.TabIndex = 32;
@@ -944,7 +944,7 @@
             // BtnSave
             // 
             this.BtnSave.Image = global::Forever.Properties.Resources.icon_save_24;
-            this.BtnSave.Location = new System.Drawing.Point(759, 557);
+            this.BtnSave.Location = new System.Drawing.Point(759, 542);
             this.BtnSave.Name = "BtnSave";
             this.BtnSave.Size = new System.Drawing.Size(131, 34);
             this.BtnSave.TabIndex = 99;
@@ -956,7 +956,7 @@
             // 
             // BtnCancel
             // 
-            this.BtnCancel.Location = new System.Drawing.Point(619, 557);
+            this.BtnCancel.Location = new System.Drawing.Point(619, 542);
             this.BtnCancel.Name = "BtnCancel";
             this.BtnCancel.Size = new System.Drawing.Size(131, 34);
             this.BtnCancel.TabIndex = 33;
@@ -980,7 +980,7 @@
             // 
             this.BtnFermer.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.BtnFermer.Image = global::Forever.Properties.Resources.icon_close_24;
-            this.BtnFermer.Location = new System.Drawing.Point(759, 557);
+            this.BtnFermer.Location = new System.Drawing.Point(759, 542);
             this.BtnFermer.Name = "BtnFermer";
             this.BtnFermer.Size = new System.Drawing.Size(131, 34);
             this.BtnFermer.TabIndex = 101;
@@ -1038,7 +1038,7 @@
             // BtnPrint
             // 
             this.BtnPrint.Image = global::Forever.Properties.Resources.icon_print_24;
-            this.BtnPrint.Location = new System.Drawing.Point(619, 557);
+            this.BtnPrint.Location = new System.Drawing.Point(619, 542);
             this.BtnPrint.Name = "BtnPrint";
             this.BtnPrint.Size = new System.Drawing.Size(131, 34);
             this.BtnPrint.TabIndex = 123;
@@ -1052,7 +1052,7 @@
             // BtnEdit
             // 
             this.BtnEdit.Image = global::Forever.Properties.Resources.icon_cadenas_16;
-            this.BtnEdit.Location = new System.Drawing.Point(31, 557);
+            this.BtnEdit.Location = new System.Drawing.Point(31, 542);
             this.BtnEdit.Name = "BtnEdit";
             this.BtnEdit.Size = new System.Drawing.Size(36, 34);
             this.BtnEdit.TabIndex = 124;
@@ -1066,7 +1066,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.BtnFermer;
-            this.ClientSize = new System.Drawing.Size(922, 607);
+            this.ClientSize = new System.Drawing.Size(922, 596);
             this.Controls.Add(this.BtnEdit);
             this.Controls.Add(this.BtnPrint);
             this.Controls.Add(this.LblDateRetourView);

@@ -1,4 +1,5 @@
 ﻿using Forever.DAL;
+using Forever.DTO;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
 using System;
@@ -19,6 +20,7 @@ namespace Forever.Forms
         string PDF_FileName, PDF_Directory, emailUser, emailDomain;
 
         Utils utils = new Utils();
+        Order order;
         OrderProvider orderProvider = new OrderProvider();
         PdfContentByte cb;
 
@@ -61,30 +63,34 @@ namespace Forever.Forms
                     cb = writer.DirectContent;
                     cb.AddTemplate(importedPage, 0, 0);
 
-                    DateTime date = orderProvider.GetOrderById(_id).Date;
-                    string nom = orderProvider.GetOrderById(_id).Nom;
-                    string prenom = orderProvider.GetOrderById(_id).Prenom;
-                    string adresse = orderProvider.GetOrderById(_id).Adresse;
-                    string cp = orderProvider.GetOrderById(_id).CP;
-                    string ville = orderProvider.GetOrderById(_id).Ville;
-                    string tel = orderProvider.GetOrderById(_id).Tel;
-                    string gsm = orderProvider.GetOrderById(_id).Gsm;
-                    string email = orderProvider.GetOrderById(_id).Email;
-                    int nbBobines = orderProvider.GetOrderById(_id).NbBobines;
-                    int nbCassettes = orderProvider.GetOrderById(_id).NbCassettes;
-                    int nbUnitCond = orderProvider.GetOrderById(_id).NbUnitCond;
-                    int nbDiapos = orderProvider.GetOrderById(_id).NbDiapos;
-                    int nbPhotos = orderProvider.GetOrderById(_id).NbPhotos;
-                    int nbNegatifs = orderProvider.GetOrderById(_id).NbNegatifs;
-                    bool persoDvdInternet = orderProvider.GetOrderById(_id).PersoDvdInternet;
-                    bool persoDvdPapier = orderProvider.GetOrderById(_id).PersoDvdPapier;
-                    bool dvdStandard = orderProvider.GetOrderById(_id).DvdStandard;
-                    bool dvdPersonnalise = orderProvider.GetOrderById(_id).DvdPersonnalise;
-                    int nbCopiesSupp = orderProvider.GetOrderById(_id).NbCopiesSupp;
-                    bool montageAvi = orderProvider.GetOrderById(_id).MontageAvi;
-                    bool cleUsb = orderProvider.GetOrderById(_id).CleUsb;
-                    bool hdd = orderProvider.GetOrderById(_id).Hdd;
-                    bool link = orderProvider.GetOrderById(_id).Link;
+                    order = orderProvider.GetOrderById(_id);
+
+                    DateTime date = order.Date;
+                    string vendeur = order.Vendeur;
+                    string nom = order.Nom;
+                    string prenom = order.Prenom;
+                    string adresse = order.Adresse;
+                    string cp = order.CP;
+                    string ville = order.Ville;
+                    string tel = order.Tel;
+                    string gsm = order.Gsm;
+                    string email = order.Email;
+                    int nbBobines = order.NbBobines;
+                    int nbCassettes = order.NbCassettes;
+                    bool persoDvdInternet = order.PersoDvdInternet;
+                    bool persoDvdPapier = order.PersoDvdPapier;
+                    int nbUnitCond = order.NbUnitCond;
+                    int nbDiapos = order.NbDiapos;
+                    int nbPhotos = order.NbPhotos;
+                    int nbNegatifs = order.NbNegatifs;
+                    bool dvdStandard = order.DvdStandard;
+                    bool dvdPersonnalise = order.DvdPersonnalise;
+                    int nbCopiesSupp = order.NbCopiesSupp;
+                    bool montageAvi = order.MontageAvi;
+                    bool cleUsb = order.CleUsb;
+                    bool hdd = order.Hdd;
+                    bool link = order.Link;
+                    DateTime dateRetour = order.DateRetour;
 
                     /* Split de l'adresse email */
                     if (email != "")
@@ -203,6 +209,11 @@ namespace Forever.Forms
         private void WriteInBigCase(int phrase = 0, int x = 0, int y = 0)
         {
             cb.ShowTextAligned(PdfContentByte.ALIGN_CENTER, phrase.ToString(), x, y, 0);
+        }
+
+        private void OrderToPdf_Load(object sender, EventArgs e)
+        {
+            pdfDoc.printWithDialog();
         }
 
         /// <summary>

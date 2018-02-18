@@ -156,7 +156,6 @@ namespace Forever.Forms
             nbCopiesSupp = order.NbCopiesSupp;
             montageAvi = order.MontageAvi;
             cleUsb = order.CleUsb;
-            cleUsb = orderProvider.GetOrderById(_id).CleUsb;
             hdd = order.Hdd;
             link = order.Link;
             dateRetour = order.DateRetour;
@@ -400,11 +399,11 @@ namespace Forever.Forms
                         AddDatabase();
                     }
 
-                    //Visible = false;
+                    Close();
                     OrderToPdf orderToPdf = new OrderToPdf(_id);
                     orderToPdf.ShowDialog();
 
-                    Close();
+                    
                 }
             }
         }
@@ -450,6 +449,8 @@ namespace Forever.Forms
 
             orderProvider.Create(order);
             _id = order.Id;
+
+            Close();
         }
 
         private void PrintOrder()

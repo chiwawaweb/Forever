@@ -97,6 +97,7 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Aperçu avant impression";
+            this.Load += new System.EventHandler(this.OrderToPdf_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pdfDoc)).EndInit();
             this.ToolStrip.ResumeLayout(false);
             this.ToolStrip.PerformLayout();
