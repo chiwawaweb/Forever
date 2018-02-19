@@ -58,7 +58,7 @@ namespace Forever.Forms
 
                 /* Mode mise à jour */
                 case true:
-                    View();
+                    ViewMode();
                     break;
             }
         }
@@ -68,7 +68,7 @@ namespace Forever.Forms
             this.Text = "Nouvelle commande";
         }
 
-        private void View()
+        private void ViewMode()
         {
             this.Text = "Visualisation d'une commande";
 
@@ -104,7 +104,7 @@ namespace Forever.Forms
             LblNbBobinesView.Visible = true;
             TxtNbCassettes.Visible = false;
             LblNbCassettesView.Visible = true;
-            RbtDvdPapier.Visible = false;
+            RbtPersoDvdPapier.Visible = false;
             RbtPersoDvdInternet.Visible = false;
             LblPersonnalisationView.Visible = true;
             TxtNbUnitCond.Visible = false;
@@ -185,7 +185,7 @@ namespace Forever.Forms
             if (persoDvdPapier == true)
             {
                 LblPersonnalisationView.Text = "Sur papier";
-                RbtDvdPapier.Checked = true;
+                RbtPersoDvdPapier.Checked = true;
             }
 
             TxtNbUnitCond.Text = LblNbUnitCondView.Text = nbUnitCond.ToString();
@@ -268,7 +268,72 @@ namespace Forever.Forms
 
         private void Edit()
         {
-            MessageBox.Show("Etes-vous certain de vouloir modifier cette fiche ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            DialogResult result = MessageBox.Show("Etes-vous certain de vouloir modifier cette fiche ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (result==DialogResult.Yes)
+            {
+                UpdateMode();
+            }
+        }
+
+        private void UpdateMode()
+        {
+            /* Modifications des contrôles */
+            BtnFermer.Visible = false;
+            BtnPrint.Visible = false;
+            BtnCancel.Visible = true;
+            BtnSave.Visible = true;
+            BtnEdit.Visible = false;
+            CbxVendeur.Visible = true;
+            LblVendeurView.Visible = false;
+            LblDate.Visible = false;
+            LblDateView.Visible = false;
+            LblDateRetour.Visible = false;
+            LblDateRetourView.Visible = false;
+            LblNomView.Visible = false;
+            TxtNom.Visible = true;
+            LblPrenomView.Visible = false;
+            TxtPrenom.Visible = true;
+            LblAdresseView.Visible = false;
+            TxtAdresse.Visible = true;
+            LblCpView.Visible = false;
+            TxtCp.Visible = true;
+            LblVilleView.Visible = false;
+            TxtVille.Visible = true;
+            LblTelView.Visible = false;
+            TxtTel.Visible = true;
+            LblGsmView.Visible = false;
+            TxtGsm.Visible = true;
+            LblEmailView.Visible = false;
+            TxtEmail.Visible = true;
+            LblNbBobinesView.Visible = false;
+            TxtNbBobines.Visible = true;
+            LblNbCassettesView.Visible = false;
+            TxtNbCassettes.Visible = true;
+            LblPersonnalisationView.Visible = false;
+            RbtPersoDvdPapier.Visible = true;
+            RbtPersoDvdInternet.Visible = true;
+            LblNbUnitCondView.Visible = false;
+            TxtNbUnitCond.Visible = true;
+            LblNbDiaposView.Visible = false;
+            TxtNbDiapos.Visible = true;
+            LblNbPhotosView.Visible = false;
+            TxtNbPhotos.Visible = true;
+            LblNbNegatifsView.Visible = false;
+            TxtNbNegatifs.Visible = true;
+            LblDvdStandardView.Visible = false;
+            ChkDvdStandard.Visible = true;
+            LblDvdPersonnaliseView.Visible = false;
+            ChkDvdPersonnalise.Visible = true;
+            LblNbCopiesSuppView.Visible = false;
+            TxtCopiesSupp.Visible = true;
+            LblMontageAviView.Visible = false;
+            ChkMontageAvi.Visible = true;
+            LblCleUsbView.Visible = false;
+            ChkCleUsb.Visible = true;
+            LblHddView.Visible = false;
+            ChkHdd.Visible = true;
+            LblLinkView.Visible = false;
+            ChkLink.Visible = true;
         }
 
         private void Save()
@@ -286,7 +351,7 @@ namespace Forever.Forms
             if (String.IsNullOrEmpty(TxtNbBobines.Text)) { nbBobines = 0; } else { nbBobines = int.Parse(TxtNbBobines.Text); ; }
             if (String.IsNullOrEmpty(TxtNbCassettes.Text)) { nbCassettes = 0; } else { nbCassettes = int.Parse(TxtNbCassettes.Text); ; }
             persoDvdInternet = RbtPersoDvdInternet.Checked;
-            persoDvdPapier = RbtDvdPapier.Checked;
+            persoDvdPapier = RbtPersoDvdPapier.Checked;
             if (String.IsNullOrEmpty(TxtNbUnitCond.Text)) { nbUnitCond = 0; } else { nbUnitCond = int.Parse(TxtNbUnitCond.Text); ; }
             if (String.IsNullOrEmpty(TxtNbDiapos.Text)) { nbDiapos = 0; } else { nbDiapos = int.Parse(TxtNbDiapos.Text); ; }
             if (String.IsNullOrEmpty(TxtNbPhotos.Text)) { nbPhotos = 0; } else { nbPhotos = int.Parse(TxtNbPhotos.Text); ; }
@@ -410,7 +475,35 @@ namespace Forever.Forms
 
         private void UpdateDatabase()
         {
-            
+            Order order = orderProvider.GetOrderById(_id);
+
+            order.Vendeur = vendeur;
+            order.Nom = nom;
+            order.Prenom = prenom;
+            order.Adresse = adresse;
+            order.CP = cp;
+            order.Ville = ville;
+            order.Tel = tel;
+            order.Gsm = gsm;
+            order.Email = email;
+            order.NbBobines = nbBobines;
+            order.NbCassettes = nbCassettes;
+            order.PersoDvdInternet = persoDvdInternet;
+            order.PersoDvdPapier = persoDvdPapier;
+            order.NbUnitCond = nbUnitCond;
+            order.NbDiapos = nbDiapos;
+            order.NbPhotos = nbPhotos;
+            order.NbNegatifs = nbNegatifs;
+            order.DvdStandard = dvdStandard;
+            order.DvdPersonnalise = dvdPersonnalise;
+            order.NbCopiesSupp = nbCopiesSupp;
+            order.MontageAvi = montageAvi;
+            order.CleUsb = cleUsb;
+            order.Hdd = hdd;
+            order.Link = link;
+
+            orderProvider.Update(order);
+
         }
 
         private void AddDatabase()

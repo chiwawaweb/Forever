@@ -77,7 +77,7 @@
             this.LblNbUnitCondView = new System.Windows.Forms.Label();
             this.LblNbCassettesView = new System.Windows.Forms.Label();
             this.LblNbBobinesView = new System.Windows.Forms.Label();
-            this.RbtDvdPapier = new System.Windows.Forms.RadioButton();
+            this.RbtPersoDvdPapier = new System.Windows.Forms.RadioButton();
             this.RbtPersoDvdInternet = new System.Windows.Forms.RadioButton();
             this.LblNbCassettes = new System.Windows.Forms.Label();
             this.LblNbBobines = new System.Windows.Forms.Label();
@@ -586,7 +586,7 @@
             this.GrpElements.Controls.Add(this.LblNbUnitCondView);
             this.GrpElements.Controls.Add(this.LblNbCassettesView);
             this.GrpElements.Controls.Add(this.LblNbBobinesView);
-            this.GrpElements.Controls.Add(this.RbtDvdPapier);
+            this.GrpElements.Controls.Add(this.RbtPersoDvdPapier);
             this.GrpElements.Controls.Add(this.RbtPersoDvdInternet);
             this.GrpElements.Controls.Add(this.TxtNbBobines);
             this.GrpElements.Controls.Add(this.TxtNbCassettes);
@@ -687,13 +687,13 @@
             // 
             // RbtDvdPapier
             // 
-            this.RbtDvdPapier.AutoSize = true;
-            this.RbtDvdPapier.Location = new System.Drawing.Point(728, 33);
-            this.RbtDvdPapier.Name = "RbtDvdPapier";
-            this.RbtDvdPapier.Size = new System.Drawing.Size(92, 20);
-            this.RbtDvdPapier.TabIndex = 3;
-            this.RbtDvdPapier.Text = "Sur papier";
-            this.RbtDvdPapier.UseVisualStyleBackColor = true;
+            this.RbtPersoDvdPapier.AutoSize = true;
+            this.RbtPersoDvdPapier.Location = new System.Drawing.Point(728, 33);
+            this.RbtPersoDvdPapier.Name = "RbtDvdPapier";
+            this.RbtPersoDvdPapier.Size = new System.Drawing.Size(92, 20);
+            this.RbtPersoDvdPapier.TabIndex = 3;
+            this.RbtPersoDvdPapier.Text = "Sur papier";
+            this.RbtPersoDvdPapier.UseVisualStyleBackColor = true;
             // 
             // RbtPersoDvdInternet
             // 
@@ -1139,7 +1139,7 @@
         private System.Windows.Forms.GroupBox GrpCoordonnees;
         private System.Windows.Forms.GroupBox GrpElements;
         private System.Windows.Forms.GroupBox GrpSupports;
-        private System.Windows.Forms.RadioButton RbtDvdPapier;
+        private System.Windows.Forms.RadioButton RbtPersoDvdPapier;
         private System.Windows.Forms.RadioButton RbtPersoDvdInternet;
         private System.Windows.Forms.Button BtnSave;
         private System.Windows.Forms.Label LblCopiesSupp;
